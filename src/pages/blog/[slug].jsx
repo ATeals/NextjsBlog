@@ -8,7 +8,24 @@ export default ({ post }) => {
         <>
             <div>{post.title}</div>
             <div className="markdown-body">
-                <MDXComponent />
+                <MDXComponent
+                    components={{
+                        blockquote({ node, children, ...props }) {
+                            return (
+                                <div
+                                    style={{
+                                        background: "#f0f0f0",
+                                        padding: "1px 15px",
+                                        borderRadius: "10px",
+                                    }}
+                                    {...props}
+                                >
+                                    {children}
+                                </div>
+                            );
+                        },
+                    }}
+                />
             </div>
         </>
     );
