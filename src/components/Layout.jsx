@@ -11,10 +11,10 @@ export default function Layout({ children }) {
     return (
         <>
             <Head>
-                <title>{router.query.slug} | Blog</title>
+                <title>{router.query.slug || pathObject[router.asPath]} | Blog</title>
             </Head>
             <header>
-                <h1>{pathObject[router.query.slug]}</h1>
+                <h1>{router.query.slug || pathObject[router.asPath]}</h1>
                 <Nav />
             </header>
 
