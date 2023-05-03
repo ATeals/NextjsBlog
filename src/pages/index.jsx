@@ -4,7 +4,7 @@ import RecentPosts from "../components/RecentPosts";
 export default ({ posts }) => {
     return (
         <>
-            <h1>It's Home Page</h1>
+            <h1 className="text-3xl underline">It's Home Page</h1>
             <RecentPosts posts={posts} />
         </>
     );

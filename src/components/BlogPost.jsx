@@ -7,9 +7,9 @@ export default ({ date, title, des, slug }) => {
             passHref
         >
             <div>
-                <div>{date}</div>
                 <div>{title}</div>
                 <div>{des}</div>
+                <div>{date}</div>
             </div>
         </Link>
     );

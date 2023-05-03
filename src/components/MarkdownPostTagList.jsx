@@ -9,6 +9,7 @@ function blockquote({ node, children, ...props }) {
                 background: "#f0f0f0",
                 padding: "1px 15px",
                 borderRadius: "10px",
+                display: "inline",
             }}
             {...props}
         >
@@ -16,7 +17,20 @@ function blockquote({ node, children, ...props }) {
         </div>
     );
 }
-
+function strong({ node, children, ...props }) {
+    return (
+        <strong
+            style={{
+                background: "tomato",
+                padding: "1px 15px",
+                borderRadius: "10px",
+            }}
+            {...props}
+        >
+            {children}
+        </strong>
+    );
+}
 //코드블럭
 function code({ node, inline, className, children, ...props }) {
     const match = /language-(\w+)/.exec(className || "");
@@ -56,5 +70,6 @@ function code({ node, inline, className, children, ...props }) {
 const TagList = {
     blockquote,
     code,
+    strong,
 };
 export default TagList;
