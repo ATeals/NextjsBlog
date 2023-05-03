@@ -1,32 +1,13 @@
-import { useMDXComponent } from "next-contentlayer/hooks";
 import { allPosts } from "contentlayer/gererated";
 import "github-markdown-css";
+import MarkdownPost from "../../components/markdownPost";
 
 export default ({ post }) => {
-    const MDXComponent = useMDXComponent(post.body.code);
     return (
         <>
             <div>{post.title}</div>
-            <div className="markdown-body">
-                <MDXComponent
-                    components={{
-                        blockquote({ node, children, ...props }) {
-                            return (
-                                <div
-                                    style={{
-                                        background: "#f0f0f0",
-                                        padding: "1px 15px",
-                                        borderRadius: "10px",
-                                    }}
-                                    {...props}
-                                >
-                                    {children}
-                                </div>
-                            );
-                        },
-                    }}
-                />
-            </div>
+            <div className="markdown-body"></div>
+            <MarkdownPost post={post.body.code} />
         </>
     );
 };
