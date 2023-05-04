@@ -1,19 +1,47 @@
 import Link from "next/link";
-import navList from "./pathList";
+import navList from "./PathList";
 
 export default function Nav() {
     return (
         <>
-            {navList.map(({ title, path }) => {
-                return (
-                    <Link
-                        href={path}
-                        key={title}
-                    >
-                        {title}
-                    </Link>
-                );
-            })}
+            <nav>
+                <Link href="/">
+                    <h1>Ateal's Blog</h1>
+                </Link>
+                <div>
+                    {navList.map(({ title, path }) => {
+                        return (
+                            <div>
+                                <Link
+                                    href={path}
+                                    key={title}
+                                >
+                                    {title}
+                                </Link>
+                            </div>
+                        );
+                    })}
+                </div>
+            </nav>
+
+            <style jsx>{`
+                nav {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    font-size: 1rem;
+                    padding: 0.5em;
+                }
+                h1 {
+                    font-size: 2em;
+                    font-weight: 600;
+                }
+                div {
+                    margin: 0 10px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+            `}</style>
         </>
     );
 }

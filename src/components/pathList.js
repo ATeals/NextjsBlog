@@ -11,19 +11,19 @@ const pathList = [
     },
 ];
 
-export function setPath() {
-    const obj = {};
-    allPosts.map((p) => {
-        pathList.push({
-            title: p._raw.flattenedPath,
-            path: `/blog/${p._raw.flattenedPath}`,
-        });
-    });
+// export function setPath() {
+//     const obj = {};
+//     allPosts.map((p) => {
+//         pathList.push({
+//             title: p._raw.flattenedPath,
+//             path: `/blog/${p._raw.flattenedPath}`,
+//         });
+//     });
 
-    pathList.map(({ title, path }) => {
-        return (obj[`${path}`] = title);
-    });
-    return obj;
-}
+//     pathList.map(({ title, path }) => {
+//         return (obj[`${path}`] = title);
+//     });
+//     return obj;
+// }
 
 export default pathList;
