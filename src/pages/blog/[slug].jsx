@@ -1,12 +1,15 @@
 import { allPosts } from "contentlayer/gererated";
 import "github-markdown-css";
 import MarkdownPost from "../../components/markdownPost";
+import { useEffect, useState } from "react";
+import Toc from "../../components/Toc";
 
 export default ({ post }) => {
     return (
         <>
             <article className="post">
                 <h1>{post.title}</h1>
+                <Toc post={post} />
                 <div className="log">
                     <MarkdownPost post={post.body.code} />
                 </div>
