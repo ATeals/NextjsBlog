@@ -1,6 +1,6 @@
 import { allPosts } from "contentlayer/gererated";
 
-const pathList = [
+const PathList = [
     {
         title: "Home",
         path: "/",
@@ -26,4 +26,4 @@ const pathList = [
 //     return obj;
 // }
 
-export default pathList;
+export default PathList;
