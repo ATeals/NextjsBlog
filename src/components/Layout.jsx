@@ -1,7 +1,7 @@
 import Nav from "@/components/Nav";
 import { useRouter } from "next/router";
 import Head from "next/head";
-import pathList from "./PathList";
+import pathList from "@/components/PathList";
 
 export default function Layout({ children }) {
     const router = useRouter();
