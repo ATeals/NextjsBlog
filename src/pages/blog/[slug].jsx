@@ -1,7 +1,6 @@
 import { allPosts } from "contentlayer/gererated";
 import "github-markdown-css";
 import MarkdownPost from "../../components/markdownPost";
-import { useEffect, useState } from "react";
 import Toc from "../../components/Toc";
 
 export default ({ post }) => {
