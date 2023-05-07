@@ -7,7 +7,6 @@ export default function Layout({ children }) {
     const router = useRouter();
     const pathObject = {};
     pathList.map((item) => (pathObject[item.path] = item.title));
-    console.log(router);
 
     return (
         <>
