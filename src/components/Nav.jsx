@@ -1,5 +1,15 @@
 import Link from "next/link";
-import PathList from "./PathList";
+
+const PathList = [
+    {
+        title: "Home",
+        path: "/",
+    },
+    {
+        title: "Blog",
+        path: "/blog",
+    },
+];
 
 export default function Nav() {
     return (
