@@ -1,5 +1,5 @@
 import Link from "next/link";
-import navList from "./PathList";
+import PathList from "./PathList";
 
 export default function Nav() {
     return (
@@ -9,7 +9,7 @@ export default function Nav() {
                     <h1>Ateal's Blog</h1>
                 </Link>
                 <div>
-                    {navList.map(({ title, path }) => {
+                    {PathList.map(({ title, path }) => {
                         return (
                             <div>
                                 <Link

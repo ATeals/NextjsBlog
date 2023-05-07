@@ -1,7 +1,7 @@
 import { allPosts } from "contentlayer/gererated";
 import "github-markdown-css";
 import Toc from "@/components/Toc";
-import MarkdownPost from "../../components/markdownPost";
+import MarkdownPost from "../../components/MarkdownPost";
 
 export default ({ post }) => {
     return (
