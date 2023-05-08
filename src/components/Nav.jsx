@@ -21,14 +21,12 @@ export default function Nav() {
                 <div>
                     {PathList.map(({ title, path }) => {
                         return (
-                            <div>
-                                <Link
-                                    href={path}
-                                    key={title}
-                                >
-                                    {title}
-                                </Link>
-                            </div>
+                            <Link
+                                href={path}
+                                key={title}
+                            >
+                                <div>{title}</div>
+                            </Link>
                         );
                     })}
                 </div>
@@ -51,6 +49,7 @@ export default function Nav() {
                     display: flex;
                     align-items: center;
                     justify-content: center;
+                }
             `}</style>
         </>
     );

@@ -6,4 +6,5 @@ ul {
     position: absolute;
     align-items: center;
     justify-content: space-between;
+    flex-direction: column;
 }
