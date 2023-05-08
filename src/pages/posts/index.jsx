@@ -1,12 +1,12 @@
 import { allPosts } from "contentlayer/gererated";
-import BlogPost from "../components/BlogPost";
+import BlogPost from "@/components/BlogPost";
 
 export default ({ posts }) => {
     return (
         <>
             <h1>Blog Page</h1>
 
-            <div>
+            <div className="p-[2em]">
                 {posts.map((post) => {
                     return (
                         <BlogPost

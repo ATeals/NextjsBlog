@@ -1,7 +1,9 @@
 div {
-    margin-left: 10px;
+    margin-top: 10px;
 }
 
 ul {
-    list-style-type: disc;
+    position: absolute;
+    align-items: center;
+    justify-content: space-between;
 }

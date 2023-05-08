@@ -1,7 +1,7 @@
 import { allPosts } from "contentlayer/gererated";
 import "github-markdown-css";
 import Toc from "@/components/Toc";
-import MarkdownPost from "../../components/MarkdownPost";
+import MarkdownPost from "@/components/MarkdownPost";
 
 export default ({ post }) => {
     return (
@@ -22,9 +22,8 @@ export default ({ post }) => {
                     flex-direction: column;
                     padding: 20px;
                     margin: 20px;
+                    margib-bottom: 100px;
                     border-radius: 50px;
-                    background: #e9eaf5;
-                    box-shadow: 20px 20px 60px #c6c7d0, -20px -20px 60px #ffffff;
                 }
 
                 h1 {

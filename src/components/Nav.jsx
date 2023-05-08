@@ -6,8 +6,8 @@ const PathList = [
         path: "/",
     },
     {
-        title: "Blog",
-        path: "/blog",
+        title: "posts",
+        path: "/posts",
     },
 ];
 

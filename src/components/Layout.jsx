@@ -1,75 +1,20 @@
 import Nav from "@/components/Nav";
-import { useRouter } from "next/router";
 import Head from "next/head";
 
-const pathList = [
-    {
-        title: "Home",
-        path: "/",
-    },
-    {
-        title: "Blog",
-        path: "/blog",
-    },
-];
-
 export default function Layout({ children }) {
-    const router = useRouter();
-    const pathObject = {};
-    pathList.map((item) => (pathObject[item.path] = item.title));
-
     return (
         <>
             <Head>
-                <title>{router.query.slug || pathObject[router.asPath]} | Blog</title>
+                <title>Ateal's Blog</title>
             </Head>
-            <div className="root">
+            <div className="@apply min-h-screen relative flex aline-center flex-col">
                 <header>
                     <Nav />
                 </header>
 
-                <main>{children}</main>
+                <main className="mb-[100px]">{children}</main>
+                <footer className="absolute bottom-0 w-screen  py-[20px] border-t-black border-t border-solid flex aline-center justify-center py-[30px]">&copy; Ateals</footer>
             </div>
-            <footer>&copy;</footer>
-            <style jsx>{`
-                .root {
-                    background-color: #eeeff2;
-                    width: 100vw;
-                    height: 100vh;
-                    position: relative;
-                    font-size: 0.5vw;
-                }
-                header {
-                    font-size: 1rem;
-                    background-color: #eeeff2;
-                    width: 100%;
-                    height: 10%;
-                    position: fixed;
-                    color: #eeeff2;
-                    border-bottom-left-radius: 15px;
-                    border-bottom-right-radius: 15px;
-                    background: #577cf1;
-                    box-shadow: 12px 12px 24px #4c6cd2, -12px -12px 24px #628cff;
-                    z-index: 1;
-                }
-
-                main {
-                    padding-top: 10vh;
-                    width: 100%;
-                    height: 100%;
-                    overflow: scroll;
-                }
-
-                footer {
-                    font-size: 1rem;
-                    background-color: #656a7e;
-                    width: 100%;
-                    height: 300px;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                }
-            `}</style>
         </>
     );
 }

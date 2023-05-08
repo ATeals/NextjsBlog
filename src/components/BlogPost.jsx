@@ -4,13 +4,15 @@ export default ({ date, title, des, slug }) => {
     return (
         <>
             <Link
-                href={`/blog/${slug}`}
+                href={`/posts/${slug}`}
                 passHref
             >
                 <div className="post">
-                    <h1>{title}</h1>
+                    <div className="title">
+                        <h1>{title}</h1>
+                        <h6>{date}</h6>
+                    </div>
                     <h4>{des}</h4>
-                    <h6>{date}</h6>
                 </div>
             </Link>
             <style jsx>{`
@@ -21,15 +23,19 @@ export default ({ date, title, des, slug }) => {
                     padding: 10px;
                     margin: 10px;
                     border-radius: 10px;
-                    background-color: #ffffff;
                     position: relative;
+                }
+                .title {
+                    border-bottom: 1px solid #eeeff2;
+                    margin-bottom: 10px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
                 }
 
                 h1 {
                     font-size: 1.7em;
                     font-weight: 600;
-                    border-bottom: 1px solid #eeeff2;
-                    margin-bottom: 10px;
                 }
 
                 h4 {
@@ -41,8 +47,7 @@ export default ({ date, title, des, slug }) => {
                 h6 {
                     font-size: 0.5em;
                     font-weight: 400;
-                    display: flex;
-                    justify-content: end;
+                    margin: 0 10px;
                 }
             `}</style>
         </>
