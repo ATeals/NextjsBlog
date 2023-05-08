@@ -2,8 +2,10 @@ import { allPosts } from "contentlayer/gererated";
 import "github-markdown-css";
 import Toc from "@/components/blogPost/Toc";
 import MarkdownPost from "@/components/blogPost/MarkdownPost";
+import Link from "next/link";
 
-export default ({ post, index }) => {
+export default ({ post, index, prePost, nextPost }) => {
+    console.log(prePost, nextPost);
     return (
         <>
             <article className="post">
@@ -11,6 +13,10 @@ export default ({ post, index }) => {
                 <Toc post={post} />
                 <div className="log">
                     <MarkdownPost post={post.body.code} />
+                </div>
+                <div>
+                    {prePost ? <Link href={`/posts/${prePost._raw.flattenedPath}`}>이전 글</Link> : null}
+                    {nextPost ? <Link href={`/posts/${nextPost._raw.flattenedPath}`}>다음 글</Link> : null}
                 </div>
             </article>
 
@@ -52,11 +58,15 @@ export const getStaticPaths = async () => {
 
 export const getStaticProps = async ({ params }) => {
     const post = allPosts.find((p) => p._raw.flattenedPath === params.slug);
-    const index = Number(Object.keys(allPosts).find((key) => allPosts[key] === post));
+    const index = allPosts.findIndex((p) => p._raw.flattenedPath === params.slug);
+    const prePost = allPosts[index + 1] || null;
+    const nextPost = allPosts[index - 1] || null;
     return {
         props: {
             post,
             index,
+            prePost,
+            nextPost,
         },
     };
 };
