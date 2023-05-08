@@ -3,8 +3,7 @@ import "github-markdown-css";
 import Toc from "@/components/blogPost/Toc";
 import MarkdownPost from "@/components/blogPost/MarkdownPost";
 
-export default ({ post }) => {
-    console.log(post);
+export default ({ post, index }) => {
     return (
         <>
             <article className="post">
@@ -53,9 +52,11 @@ export const getStaticPaths = async () => {
 
 export const getStaticProps = async ({ params }) => {
     const post = allPosts.find((p) => p._raw.flattenedPath === params.slug);
+    const index = Number(Object.keys(allPosts).find((key) => allPosts[key] === post));
     return {
         props: {
             post,
+            index,
         },
     };
 };

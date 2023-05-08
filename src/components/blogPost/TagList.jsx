@@ -53,7 +53,6 @@ function h1({ node, children, ...props }) {
         <h1
             style={{
                 fontSize: "2em",
-                borderRadius: "10px",
                 borderBottom: "1px solid #A1AAC6",
                 margin: "1em 0",
                 padding: "0.4em",
@@ -62,6 +61,21 @@ function h1({ node, children, ...props }) {
         >
             {children}
         </h1>
+    );
+}
+function h2({ node, children, ...props }) {
+    return (
+        <h2
+            style={{
+                fontSize: "1.5em",
+                borderBottom: "1px solid #A1AAC6",
+                margin: "1em 0",
+                padding: "0.4em",
+            }}
+            {...props}
+        >
+            {children}
+        </h2>
     );
 }
 
@@ -141,5 +155,6 @@ const TagList = {
     h1,
     pre,
     p,
+    h2,
 };
 export default TagList;
