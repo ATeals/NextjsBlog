@@ -1,5 +1,5 @@
 import { allPosts } from "contentlayer/gererated";
-import RecentPosts from "../components/RecentPosts";
+import RecentPosts from "@/components/blogPost/RecentPosts";
 
 export default ({ posts }) => {
     return (

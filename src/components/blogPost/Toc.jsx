@@ -15,8 +15,6 @@ export default ({ post }) => {
             return { title: item.split("# ")[1].replace(/`/g, "").trim(), count };
         });
 
-    console.log(result);
-
     return (
         <>
             <ul style={{ display: "flex", justifyContent: "center", flexDirection: "column", width: "100%", borderBottom: "1px solid #A1AAC6", borderTop: "1px solid #A1AAC6", padding: "10px" }}>

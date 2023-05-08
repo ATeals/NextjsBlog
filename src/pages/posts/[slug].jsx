@@ -1,9 +1,10 @@
 import { allPosts } from "contentlayer/gererated";
 import "github-markdown-css";
-import Toc from "@/components/Toc";
-import MarkdownPost from "@/components/MarkdownPost";
+import Toc from "@/components/blogPost/Toc";
+import MarkdownPost from "@/components/blogPost/MarkdownPost";
 
 export default ({ post }) => {
+    console.log(post);
     return (
         <>
             <article className="post">

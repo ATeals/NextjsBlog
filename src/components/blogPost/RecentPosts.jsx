@@ -1,5 +1,5 @@
 import Link from "next/link";
-import BlogPost from "./BlogPost";
+import BlogPost from "@/components/blogPost/BlogPost";
 
 export default ({ posts }) => {
     return (
