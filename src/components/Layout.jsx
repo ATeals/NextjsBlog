@@ -1,5 +1,6 @@
 import Nav from "@/components/Nav";
 import Head from "next/head";
+import Footer from "@/components/seo/Footer";
 
 export default function Layout({ children }) {
     return (
@@ -13,7 +14,7 @@ export default function Layout({ children }) {
                 </header>
 
                 <main className="mb-[100px]">{children}</main>
-                <footer className="absolute bottom-0 w-screen  py-[20px] border-t-black border-t border-solid flex aline-center justify-center py-[30px]">&copy; Ateals</footer>
+                <Footer />
             </div>
         </>
     );

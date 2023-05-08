@@ -4,8 +4,6 @@ import BlogPost from "@/components/blogPost/BlogPost";
 export default ({ posts }) => {
     return (
         <>
-            <h1>Blog Page</h1>
-
             <div className="p-[2em]">
                 {posts.map((post) => {
                     return (
