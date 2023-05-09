@@ -37,14 +37,14 @@ function strong({ node, children, ...props }) {
 
 function p({ node, children, ...props }) {
     return (
-        <h1
+        <p
             style={{
                 marginBottom: "10px",
             }}
             {...props}
         >
             {children}
-        </h1>
+        </p>
     );
 }
 
