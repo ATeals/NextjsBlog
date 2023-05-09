@@ -2,7 +2,7 @@ import { allPosts } from "contentlayer/gererated";
 import "github-markdown-css";
 import Toc from "@/components/blogPost/Toc";
 import MarkdownPost from "@/components/blogPost/MarkdownPost";
-import PreviewNav from "@/components/blogPost/previewNav";
+import PreviewNav from "@/components/blogPost/PreviewNav";
 
 export default ({ post, preNavProp }) => {
     return (

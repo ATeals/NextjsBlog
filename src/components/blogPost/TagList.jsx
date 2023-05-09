@@ -120,7 +120,7 @@ function pre({ node, children, ...props }) {
                 padding: "20px 20px",
                 background: "#2B303B",
                 borderRadius: " 10px",
-                margin: "10px",
+                margin: "30px 10px",
             }}
             {...props}
         >
