@@ -1,5 +1,6 @@
-import { allPosts } from "contentlayer/gererated";
+import { getAllPosts } from "../components/dataSet/setPostData";
 import RecentPosts from "@/components/blogPost/RecentPosts";
+import Link from "next/link";
 
 export default ({ posts }) => {
     return (
@@ -27,7 +28,7 @@ export default ({ posts }) => {
 };
 
 export const getStaticProps = async () => {
-    const posts = allPosts.sort((a, b) => Number(new Date(b.date)) - Number(new Date(a.date)));
+    const posts = getAllPosts().sort((a, b) => Number(new Date(b.date)) - Number(new Date(a.date)));
 
     return {
         props: {

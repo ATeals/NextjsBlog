@@ -1,19 +1,20 @@
 import { allPosts } from "contentlayer/gererated";
 import BlogPost from "@/components/blogPost/BlogPost";
+import { getCollaction } from "../../components/dataSet/setPostData";
+import Link from "next/link";
 
-export default ({ posts }) => {
+export default ({ CollectionList }) => {
+    console.log(CollectionList);
     return (
         <>
             <div className="p-[2em]">
-                {posts.map((post) => {
+                {CollectionList.map((item) => {
                     return (
-                        <BlogPost
-                            key={post._id}
-                            date={post.date}
-                            title={post.title}
-                            des={post.description}
-                            slug={post._raw.flattenedPath}
-                        />
+                        <Link href={`posts/${item._raw.flattenedPath}`}>
+                            <h1>{item.title}</h1>
+                            <h1>{item.description}</h1>
+                            <h1>{item.posts.length}</h1>
+                        </Link>
                     );
                 })}
             </div>
@@ -23,11 +24,11 @@ export default ({ posts }) => {
 
 export const getStaticProps = async () => {
     //allPosts => 해당 경로의 mdx파일을 배열에 담아서 전송해줌!
-    const posts = allPosts.sort((a, b) => Number(new Date(b.date)) - Number(new Date(a.date)));
+    const CollectionList = getCollaction();
 
     return {
         props: {
-            posts,
+            CollectionList,
         },
     };
 };
