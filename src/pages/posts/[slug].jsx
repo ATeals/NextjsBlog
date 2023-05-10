@@ -9,7 +9,7 @@ import { getCollaction, getCollactionItem } from "../../components/dataSet/setPo
 export default ({ collection }) => {
     return (
         <>
-            <div>test</div>
+            test
             {/* <h1>{collection.title}</h1>
             <h1>{collection.description}</h1>
             {collection.posts.map((post) => {

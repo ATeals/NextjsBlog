@@ -6,7 +6,7 @@ import Link from "next/link";
 export default ({ CollectionList }) => {
     return (
         <>
-            <div>test</div>
+            test2
             {/* <div className="p-[2em]">
                 {CollectionList.map((item) => {
                     return (
