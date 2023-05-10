@@ -24,7 +24,8 @@ export default ({ CollectionList }) => {
 
 export const getStaticProps = async () => {
     //allPosts => 해당 경로의 mdx파일을 배열에 담아서 전송해줌!
-    const CollectionList = getCollaction();
+    // const CollectionList = getCollaction();
+    const CollectionList = allPosts;
 
     return {
         props: {
