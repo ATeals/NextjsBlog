@@ -4,7 +4,6 @@ import { getCollaction } from "../../components/dataSet/setPostData";
 import Link from "next/link";
 
 export default ({ CollectionList }) => {
-    console.log(CollectionList);
     return (
         <>
             <div className="p-[2em]">
