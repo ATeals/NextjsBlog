@@ -8,24 +8,21 @@ import { getCollaction, getCollactionItem } from "../../components/dataSet/setPo
 import { useEffect, useState } from "react";
 
 export default ({ collection }) => {
-    const [items, setItems] = useState(null);
-    useEffect(() => {
-        setItems(collection);
-    });
-    return (
-        <>
-            {/* <h1>{collection.title}</h1>
-            <h1>{collection.description}</h1>
-            {collection.posts.map((post) => {
-                return (
-                    <BlogPost
-                        key={post._id}
-                        post={post}
-                    />
-                );
-            })} */}
-        </>
-    );
+    return <div>hello</div>;
+    // return (
+    //     <>
+    //         {/* <h1>{collection.title}</h1>
+    //         <h1>{collection.description}</h1>
+    //         {collection.posts.map((post) => {
+    //             return (
+    //                 <BlogPost
+    //                     key={post._id}
+    //                     post={post}
+    //                 />
+    //             );
+    //         })} */}
+    //     </>
+    // );
 };
 
 export const getStaticPaths = async () => {
