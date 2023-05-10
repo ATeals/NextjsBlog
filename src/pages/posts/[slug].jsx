@@ -5,8 +5,13 @@ import MarkdownPost from "@/components/blogPost/MarkdownPost";
 import PreviewNav from "@/components/blogPost/PreviewNav";
 import BlogPost from "../../components/blogPost/BlogPost";
 import { getCollaction, getCollactionItem } from "../../components/dataSet/setPostData";
+import { useEffect, useState } from "react";
 
 export default ({ collection }) => {
+    const [collection, setCollection] = useState(null);
+    useEffect(() => {
+        setCollection(collection);
+    });
     return (
         <>
             {/* <h1>{collection.title}</h1>
