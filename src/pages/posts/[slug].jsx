@@ -31,7 +31,6 @@ export const getStaticPaths = async () => {
 };
 
 export const getStaticProps = async ({ params }) => {
-    console.log(params);
     const collection = getCollactionItem(params.slug);
     return {
         props: {

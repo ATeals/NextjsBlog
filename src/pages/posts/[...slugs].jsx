@@ -52,7 +52,6 @@ export const getStaticPaths = async () => {
 };
 
 export const getStaticProps = async ({ params }) => {
-    console.log(params);
     const post = allPosts.find((p) => p._raw.flattenedPath === params.slugs.join("/"));
     return {
         props: {
