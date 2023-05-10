@@ -4,10 +4,9 @@ import Toc from "@/components/blogPost/Toc";
 import MarkdownPost from "@/components/blogPost/MarkdownPost";
 import PreviewNav from "@/components/blogPost/PreviewNav";
 import BlogPost from "../../components/blogPost/BlogPost";
-import { getCollactionItem } from "../../components/dataSet/setPostData";
+import { getCollaction, getCollactionItem } from "../../components/dataSet/setPostData";
 
 export default ({ collection }) => {
-    console.log(collection);
     return (
         <>
             <h1>{collection.title}</h1>
@@ -32,6 +31,7 @@ export const getStaticPaths = async () => {
 };
 
 export const getStaticProps = async ({ params }) => {
+    console.log(params);
     const collection = getCollactionItem(params.slug);
     return {
         props: {

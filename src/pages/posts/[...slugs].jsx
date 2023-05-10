@@ -2,6 +2,7 @@ import { allPosts } from "contentlayer/gererated";
 import "github-markdown-css";
 import Toc from "@/components/blogPost/Toc";
 import MarkdownPost from "@/components/blogPost/MarkdownPost";
+import { getAllPosts } from "../../components/dataSet/setPostData";
 
 export default ({ post }) => {
     return (
@@ -45,12 +46,13 @@ export default ({ post }) => {
 
 export const getStaticPaths = async () => {
     return {
-        paths: allPosts.map((p) => ({ params: { slugs: p._raw.flattenedPath.split("/") } })),
+        paths: getAllPosts().map((p) => ({ params: { slugs: p._raw.flattenedPath.split("/") } })),
         fallback: "blocking",
     };
 };
 
 export const getStaticProps = async ({ params }) => {
+    console.log(params);
     const post = allPosts.find((p) => p._raw.flattenedPath === params.slugs.join("/"));
     return {
         props: {
