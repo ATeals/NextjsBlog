@@ -3,69 +3,39 @@ import "github-markdown-css";
 import Toc from "@/components/blogPost/Toc";
 import MarkdownPost from "@/components/blogPost/MarkdownPost";
 import PreviewNav from "@/components/blogPost/PreviewNav";
+import BlogPost from "../../components/blogPost/BlogPost";
+import { getCollactionItem } from "../../components/dataSet/setPostData";
 
-export default ({ post, preNavProp }) => {
+export default ({ collection }) => {
+    console.log(collection);
     return (
         <>
-            <article className="post">
-                <h1>{post.title}</h1>
-                <Toc post={post} />
-                <div className="log">
-                    <MarkdownPost post={post.body.code} />
-                </div>
-
-                <PreviewNav preNavProp={preNavProp} />
-            </article>
-
-            <style jsx>{`
-                .post {
-                    display: flex;
-                    justify-content: center;
-                    font-size: 1rem;
-                    flex-direction: column;
-                    padding: 20px;
-                    margin: 20px;
-                    margib-bottom: 100px;
-                    border-radius: 50px;
-                }
-
-                h1 {
-                    font-size: 2em;
-                    font-weight: 700;
-                    display: flex;
-                    justify-content: center;
-                    margin: 50px;
-                }
-
-                .log {
-                    border-top: 1px solid #c6d6f5;
-                    padding-top: 10px;
-                }
-            `}</style>
+            <h1>{collection.title}</h1>
+            <h1>{collection.description}</h1>
+            {collection.posts.map((post) => {
+                return (
+                    <BlogPost
+                        key={post._id}
+                        post={post}
+                    />
+                );
+            })}
         </>
     );
 };
 
 export const getStaticPaths = async () => {
     return {
-        paths: allPosts.map((p) => ({ params: { slug: p._raw.flattenedPath } })),
+        paths: allPosts.map((p) => ({ params: { slug: p._raw.flattenedPath.split("/")[0] } })),
         fallback: false,
     };
 };
 
 export const getStaticProps = async ({ params }) => {
-    const post = allPosts.find((p) => p._raw.flattenedPath === params.slug);
-    const index = allPosts.findIndex((p) => p._raw.flattenedPath === params.slug);
-    const prePost = allPosts[index + 1] || null;
-    const nextPost = allPosts[index - 1] || null;
-
+    const collection = getCollactionItem(params.slug);
     return {
         props: {
-            post,
-            preNavProp: {
-                prePost,
-                nextPost,
-            },
+            collection,
         },
     };
 };

@@ -1,18 +1,18 @@
 import Link from "next/link";
 
-export default ({ date, title, des, slug }) => {
+export default ({ post }) => {
     return (
         <>
             <Link
-                href={`/posts/${slug}`}
+                href={`/posts/${post._raw.flattenedPath}`}
                 passHref
             >
                 <div className="post">
                     <div className="title">
-                        <h1>{title}</h1>
-                        <h6>{date}</h6>
+                        <h1>{post.title}</h1>
+                        <h6>{post.date}</h6>
                     </div>
-                    <h4>{des}</h4>
+                    <h4>{post.description}</h4>
                 </div>
             </Link>
             <style jsx>{`
