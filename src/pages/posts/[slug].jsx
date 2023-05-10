@@ -8,9 +8,9 @@ import { getCollaction, getCollactionItem } from "../../components/dataSet/setPo
 import { useEffect, useState } from "react";
 
 export default ({ collection }) => {
-    const [collection, setCollection] = useState(null);
+    const [items, setItems] = useState(null);
     useEffect(() => {
-        setCollection(collection);
+        setItems(collection);
     });
     return (
         <>
