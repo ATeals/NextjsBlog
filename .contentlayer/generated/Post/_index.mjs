@@ -3,8 +3,8 @@
 import js__jsType2Mdx from './JS__JS type2.mdx.json' assert { type: 'json' }
 import js__jsValueMdx from './JS__JS value.mdx.json' assert { type: 'json' }
 import js__jsTypeMdx from './JS__Js type.mdx.json' assert { type: 'json' }
+import js__indexMdx from './JS__index.mdx.json' assert { type: 'json' }
 import life__helloMdx from './life__hello.mdx.json' assert { type: 'json' }
 import life__indexMdx from './life__index.mdx.json' assert { type: 'json' }
-import js__indexMdx from './JS__index.mdx.json' assert { type: 'json' }
 
-export const allPosts = [js__jsType2Mdx, js__jsValueMdx, js__jsTypeMdx, life__helloMdx, life__indexMdx, js__indexMdx]
+export const allPosts = [js__jsType2Mdx, js__jsValueMdx, js__jsTypeMdx, js__indexMdx, life__helloMdx, life__indexMdx]
