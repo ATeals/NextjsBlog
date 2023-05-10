@@ -46,7 +46,7 @@ export default ({ post }) => {
 export const getStaticPaths = async () => {
     return {
         paths: allPosts.map((p) => ({ params: { slugs: p._raw.flattenedPath.split("/") } })),
-        fallback: false,
+        fallback: "blocking",
     };
 };
 
