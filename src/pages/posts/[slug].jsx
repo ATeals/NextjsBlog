@@ -7,10 +7,10 @@ import BlogPost from "../../components/blogPost/BlogPost";
 import { getCollaction, getCollactionItem } from "../../components/dataSet/setPostData";
 
 export default ({ collection }) => {
-    console.log(collection);
     return (
         <>
-            <h1>{collection.title}</h1>
+            <div>test</div>
+            {/* <h1>{collection.title}</h1>
             <h1>{collection.description}</h1>
             {collection.posts.map((post) => {
                 return (
@@ -19,7 +19,7 @@ export default ({ collection }) => {
                         post={post}
                     />
                 );
-            })}
+            })} */}
         </>
     );
 };

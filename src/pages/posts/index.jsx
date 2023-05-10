@@ -6,7 +6,8 @@ import Link from "next/link";
 export default ({ CollectionList }) => {
     return (
         <>
-            <div className="p-[2em]">
+            <div>test</div>
+            {/* <div className="p-[2em]">
                 {CollectionList.map((item) => {
                     return (
                         <Link href={`posts/${item._raw.flattenedPath}`}>
@@ -16,7 +17,7 @@ export default ({ CollectionList }) => {
                         </Link>
                     );
                 })}
-            </div>
+            </div> */}
         </>
     );
 };
