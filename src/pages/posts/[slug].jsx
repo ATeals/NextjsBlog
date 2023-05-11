@@ -1,28 +1,23 @@
 import { allPosts } from "contentlayer/gererated";
 import "github-markdown-css";
-import Toc from "@/components/blogPost/Toc";
-import MarkdownPost from "@/components/blogPost/MarkdownPost";
-import PreviewNav from "@/components/blogPost/PreviewNav";
-import BlogPost from "../../components/blogPost/BlogPost";
-import { getCollaction, getCollactionItem } from "../../components/dataSet/setPostData";
-import { useEffect, useState } from "react";
+import Link from "next/link";
 
 export default ({ collection }) => {
-    return <div>hello</div>;
-    // return (
-    //     <>
-    //         {/* <h1>{collection.title}</h1>
-    //         <h1>{collection.description}</h1>
-    //         {collection.posts.map((post) => {
-    //             return (
-    //                 <BlogPost
-    //                     key={post._id}
-    //                     post={post}
-    //                 />
-    //             );
-    //         })} */}
-    //     </>
-    // );
+    console.log(collection);
+    return (
+        <div>
+            {collection.map((item) => {
+                return (
+                    <Link href={`/posts/${item._raw.flattenedPath}`}>
+                        <h1>{item.title}</h1>
+                        <h1>{item.description}</h1>
+                        <h1>{item.date}</h1>
+                        <br />
+                    </Link>
+                );
+            })}
+        </div>
+    );
 };
 
 export const getStaticPaths = async () => {
@@ -34,7 +29,7 @@ export const getStaticPaths = async () => {
 
 export const getStaticProps = async ({ params }) => {
     // const collection = getCollactionItem(params.slug);
-    const collection = allPosts;
+    const collection = allPosts.filter((i) => !i._raw.sourceFilePath.includes("/index.mdx")).filter((i) => i._raw.flattenedPath.includes(params.slug));
     return {
         props: {
             collection,

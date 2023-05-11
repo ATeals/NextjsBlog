@@ -1,36 +1,33 @@
 import { allPosts } from "contentlayer/gererated";
 import BlogPost from "@/components/blogPost/BlogPost";
-import { getCollaction } from "../../components/dataSet/setPostData";
-import Link from "next/link";
 
-export default ({ CollectionList }) => {
-    return <div>posts</div>;
-    // return (
-    //     <>
-    //         test2
-    //         {/* <div className="p-[2em]">
-    //             {CollectionList.map((item) => {
-    //                 return (
-    //                     <Link href={`posts/${item._raw.flattenedPath}`}>
-    //                         <h1>{item.title}</h1>
-    //                         <h1>{item.description}</h1>
-    //                         <h1>{item.posts.length}</h1>
-    //                     </Link>
-    //                 );
-    //             })}
-    //         </div> */}
-    //     </>
-    // );
+export default ({ posts }) => {
+    return (
+        <>
+            <div className="p-[2em]">
+                {posts.map((post) => {
+                    return (
+                        <BlogPost
+                            key={post._id}
+                            date={post.date}
+                            title={post.title}
+                            des={post.description}
+                            slug={post._raw.flattenedPath}
+                        />
+                    );
+                })}
+            </div>
+        </>
+    );
 };
 
 export const getStaticProps = async () => {
     //allPosts => 해당 경로의 mdx파일을 배열에 담아서 전송해줌!
-    // const CollectionList = getCollaction();
-    const CollectionList = allPosts;
+    const posts = allPosts.filter((i) => i._raw.sourceFilePath.includes("/index.mdx"));
 
     return {
         props: {
-            CollectionList,
+            posts,
         },
     };
 };
