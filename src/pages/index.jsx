@@ -1,6 +1,6 @@
 import { allPosts } from "contentlayer/gererated";
 
-export default ({ posts }) => {
+export default () => {
     return (
         <>
             <article className="post">
@@ -10,12 +10,12 @@ export default ({ posts }) => {
     );
 };
 
-export const getStaticProps = async () => {
-    const posts = allPosts.sort((a, b) => Number(new Date(b.date)) - Number(new Date(a.date)));
+// export const getStaticProps = async () => {
+//     const posts = allPosts.sort((a, b) => Number(new Date(b.date)) - Number(new Date(a.date)));
 
-    return {
-        props: {
-            posts,
-        },
-    };
-};
+//     return {
+//         props: {
+//             posts,
+//         },
+//     };
+// };
