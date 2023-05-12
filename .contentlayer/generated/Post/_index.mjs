@@ -4,7 +4,7 @@ import js__jsType2Mdx from './js__JS type2.mdx.json' assert { type: 'json' }
 import js__jsValueMdx from './js__JS value.mdx.json' assert { type: 'json' }
 import js__indexMdx from './js__index.mdx.json' assert { type: 'json' }
 import js__jsTypeMdx from './js__js type.mdx.json' assert { type: 'json' }
-import life__indexMdx from './life__index.mdx.json' assert { type: 'json' }
 import life__helloMdx from './life__hello.mdx.json' assert { type: 'json' }
+import life__indexMdx from './life__index.mdx.json' assert { type: 'json' }
 
-export const allPosts = [js__jsType2Mdx, js__jsValueMdx, js__indexMdx, js__jsTypeMdx, life__indexMdx, life__helloMdx]
+export const allPosts = [js__jsType2Mdx, js__jsValueMdx, js__indexMdx, js__jsTypeMdx, life__helloMdx, life__indexMdx]

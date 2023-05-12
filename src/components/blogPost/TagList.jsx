@@ -65,6 +65,7 @@ function h1({ node, children, ...props }) {
                 borderBottom: "1px solid #A1AAC6",
                 margin: "1em 0",
                 padding: "0.4em",
+                fontWeight: "700",
             }}
             {...props}
         >
@@ -81,11 +82,27 @@ function h2({ node, children, ...props }) {
                 borderBottom: "1px solid #A1AAC6",
                 margin: "1em 0",
                 padding: "0.4em",
+                fontWeight: "600",
             }}
             {...props}
         >
             {children}
         </h2>
+    );
+}
+function h3({ node, children, ...props }) {
+    return (
+        <h3
+            id={children}
+            style={{
+                fontSize: "1.5em",
+                margin: "1em 0",
+                padding: "0.4em",
+            }}
+            {...props}
+        >
+            {children}
+        </h3>
     );
 }
 
@@ -166,5 +183,6 @@ const TagList = {
     pre,
     p,
     h2,
+    h3,
 };
 export default TagList;
