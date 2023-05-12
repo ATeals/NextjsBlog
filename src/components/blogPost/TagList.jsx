@@ -5,13 +5,17 @@ import { ocean } from "react-syntax-highlighter/dist/cjs/styles/hljs";
 function blockquote({ node, children, ...props }) {
     return (
         <blockquote
+            className="my-10 p-1"
             style={{
-                background: "#577CF1",
-                padding: "10px 15px",
-                borderRadius: "10px",
-                display: "inline-block",
-                margin: "20px 0",
-                color: "#EEEFF2",
+                // background: "#577CF1",
+                // padding: "10px 15px",
+                // borderRadius: "10px",
+                // display: "inline-block",
+                // margin: "20px 0",
+                // color: "#EEEFF2",
+                borderLeft: "5px solid #577CF1",
+                marginLeft: "15px",
+                background: "#efefef",
             }}
             {...props}
         >
@@ -24,9 +28,10 @@ function strong({ node, children, ...props }) {
         <strong
             style={{
                 color: "#292E85",
-                padding: "1px 15px",
+                padding: "1px 5px",
                 borderRadius: "10px",
-                fontWeight: 400,
+                fontWeight: 500,
+                background: "#cfcfcf",
             }}
             {...props}
         >
@@ -38,9 +43,12 @@ function strong({ node, children, ...props }) {
 function p({ node, children, ...props }) {
     return (
         <p
-            style={{
-                marginBottom: "10px",
-            }}
+            className="mx-5 mb-2 leading-8"
+            style={
+                {
+                    // marginBottom: "10px",
+                }
+            }
             {...props}
         >
             {children}
@@ -51,6 +59,7 @@ function p({ node, children, ...props }) {
 function h1({ node, children, ...props }) {
     return (
         <h1
+            id={children}
             style={{
                 fontSize: "2em",
                 borderBottom: "1px solid #A1AAC6",
@@ -66,6 +75,7 @@ function h1({ node, children, ...props }) {
 function h2({ node, children, ...props }) {
     return (
         <h2
+            id={children}
             style={{
                 fontSize: "1.5em",
                 borderBottom: "1px solid #A1AAC6",
