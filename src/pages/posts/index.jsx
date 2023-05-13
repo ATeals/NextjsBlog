@@ -1,5 +1,5 @@
 import { allPosts } from "contentlayer/gererated";
-import BlogPost from "@/components/blogPost/BlogPost";
+import BlogList from "@/components/blogPost/BlogList";
 
 export default ({ posts }) => {
     return (
@@ -7,7 +7,7 @@ export default ({ posts }) => {
             <div className="p-[2em]">
                 {posts.map((post) => {
                     return (
-                        <BlogPost
+                        <BlogList
                             key={post._id}
                             date={post.date}
                             title={post.title}

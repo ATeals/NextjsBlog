@@ -18,6 +18,7 @@ export type Post = {
   description: string
   collection?: string | undefined
   tags?: string[] | undefined
+  img?: string | undefined
   /** MDX file body */
   body: MDX
 
