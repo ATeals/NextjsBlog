@@ -1,4 +1,4 @@
-export default ({ post }) => {
+export default ({ post, clickHander }) => {
     const titles = post.body.raw.split(`\n`).filter((t) => t.includes("# "));
 
     const result = titles
@@ -37,6 +37,7 @@ export default ({ post }) => {
                             key={item + index}
                             style={{ marginLeft: `${item.count * 3}px`, padding: "5px", fontWeight: `${800 - item.count * 10}`, fontSize: "15px", color: "#aeaeae" }}
                             className="@apply whitespace-nowrap w-[100%]"
+                            onClick={clickHander}
                         >
                             {item.title}
                         </a>

@@ -7,7 +7,7 @@ export default ({ post }) => {
             href={`/posts/${post._raw.flattenedPath}`}
             passHref
         >
-            <div className="@apply w-[100%] relative flex mb-[10px] bg-white shadow-md rounded-lg overflow-hidden p-4">
+            <div className="@apply transform transition-transform duration-200 hover:scale-105 w-[100%] relative flex mb-[10px] bg-white shadow-md rounded-lg overflow-hidden p-4">
                 <div className="">
                     <h1 className="text-[1.5rem] font-bold mb-2">{post.title}</h1>
                     <h4>{post.description}</h4>

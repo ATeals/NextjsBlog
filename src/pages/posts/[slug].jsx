@@ -2,7 +2,6 @@ import { allPosts } from "contentlayer/gererated";
 import CardList from "@/components/blog/blogList/CardList";
 
 export default ({ collection }) => {
-    console.log(collection);
     return (
         <>
             <CardList posts={collection} />
