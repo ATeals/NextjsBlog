@@ -7,7 +7,10 @@ export default ({ posts }) => {
         <>
             <section className="p-[20px]">
                 {posts.map((post) => (
-                    <LineItem post={post} />
+                    <LineItem
+                        key={post._id}
+                        post={post}
+                    />
                 ))}
             </section>
         </>
