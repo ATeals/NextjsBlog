@@ -1,5 +1,6 @@
 import { allPosts } from "contentlayer/gererated";
 import CardList from "@/components/blog/blogList/CardList";
+import { getCollection } from "../../lib/Postdata";
 
 export default ({ collection }) => {
     return (
@@ -17,8 +18,8 @@ export const getStaticPaths = async () => {
 };
 
 export const getStaticProps = async ({ params }) => {
-    // const collection = getCollactionItem(params.slug);
-    const collection = allPosts.filter((i) => !i._raw.sourceFilePath.includes("/index.mdx")).filter((i) => i._raw.flattenedPath.includes(params.slug));
+    // const collection = allPosts.filter((i) => !i._raw.sourceFilePath.includes("/index.mdx")).filter((i) => i._raw.flattenedPath.includes(params.slug));
+    const collection = getCollection(params.slug).posts;
     return {
         props: {
             collection,

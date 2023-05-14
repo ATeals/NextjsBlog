@@ -52,7 +52,7 @@ export const getStaticPaths = async () => {
 
 export const getStaticProps = async ({ params }) => {
     const post = getPost(params.slugs.join("/"));
-    const collection = getCollection(post);
+    const collection = getCollection(post._raw.sourceFileDir);
     return {
         props: {
             post,

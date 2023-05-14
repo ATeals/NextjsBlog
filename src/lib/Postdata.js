@@ -8,7 +8,7 @@ const getPostAll = () => {
     return allPosts.filter((i) => !i._raw.sourceFilePath.includes("/index.mdx"));
 };
 
-const getCollection = (post) => {
+const getCollection = (url) => {
     return allPosts
         .filter((i) => i._raw.sourceFilePath.includes("/index.mdx"))
         .map((item) => ({
@@ -19,7 +19,7 @@ const getCollection = (post) => {
                 .filter((i) => !i._raw.sourceFilePath.includes("/index.mdx"))
                 .sort((a, b) => Number(new Date(a.date)) - Number(new Date(b.date))),
         }))
-        .find((i) => i._raw.sourceFileDir.includes(post._raw.sourceFileDir));
+        .find((i) => i._raw.sourceFileDir.includes(url));
 };
 
 const getCollectionAll = () => {
