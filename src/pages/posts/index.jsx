@@ -19,14 +19,17 @@ export default ({ collections, posts }) => {
     );
 };
 
-export const getStaticProps = async () => {
-    //allPosts => 해당 경로의 mdx파일을 배열에 담아서 전송해줌!
-    const collections = allPosts
+const getCollectionAll = () =>
+    allPosts
         .filter((i) => i._raw.sourceFilePath.includes("/index.mdx"))
         .map((item) => ({
             ...item,
             posts: getPostAll().filter((i) => i._raw.sourceFilePath.includes(item._raw.flattenedPath)),
         }));
+
+export const getStaticProps = async () => {
+    //allPosts => 해당 경로의 mdx파일을 배열에 담아서 전송해줌!
+    const collections = getCollectionAll();
     const posts = getPostAll();
     return {
         props: {
