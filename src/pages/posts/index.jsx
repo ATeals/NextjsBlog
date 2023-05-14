@@ -1,13 +1,13 @@
 import { allPosts } from "contentlayer/gererated";
 import CardList from "@/components/blog/blogList/CardList";
-import LineItem from "@/components/blog/blogList/LineItem";
+import LineList from "@/components/blog/blogList/LineList";
 
 export default ({ collections, posts }) => {
     return (
         <>
             <section className="@apply flex justify-center flex-col">
                 <h1 className="text-center text-[2em]">--- Collection ---</h1>
-                <LineItem posts={collections} />
+                <LineList posts={collections} />
             </section>
 
             <section className="@apply flex justify-center flex-col">

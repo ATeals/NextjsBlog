@@ -1,24 +1,21 @@
 import Link from "next/link";
+import { PaperClipOutlined } from "@ant-design/icons";
 
-export default ({ posts }) => {
+export default ({ post }) => {
     return (
-        <>
-            <section>
-                {posts.map((post) => (
-                    <Link
-                        href={`/posts/${post._raw.flattenedPath}`}
-                        passHref
-                    >
-                        <div className="post">
-                            <div className="title">
-                                <h1>{post.title}</h1>
-                            </div>
-                            <h4>{post.description}</h4>
-                            <h4>글 개수: {post.posts.length}</h4>
-                        </div>
-                    </Link>
-                ))}
-            </section>
-        </>
+        <Link
+            href={`/posts/${post._raw.flattenedPath}`}
+            passHref
+        >
+            <div className="@apply w-[100%] relative flex mb-[10px] bg-white shadow-md rounded-lg overflow-hidden p-4">
+                <div className="">
+                    <h1 className="text-[1.5rem] font-bold mb-2">{post.title}</h1>
+                    <h4>{post.description}</h4>
+                </div>
+                <h4 className="@apply absolute text-[#aaaaaa] w-[100%] h-[100%] text-end bottom-[-2] right-0 p-[1em] text-[1.5em] font-bold">
+                    {post.posts.length} <PaperClipOutlined />
+                </h4>
+            </div>
+        </Link>
     );
 };

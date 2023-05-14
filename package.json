@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@ant-design/icons": "^5.0.1",
     "contentlayer": "^0.3.2",
     "github-markdown-css": "^5.2.0",
     "next": "13.3.2",
