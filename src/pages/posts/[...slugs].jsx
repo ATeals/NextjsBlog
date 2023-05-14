@@ -1,15 +1,10 @@
 import { allPosts } from "contentlayer/gererated";
 import "github-markdown-css";
 import MarkdownPost from "@/components/blog/blogPost/MarkdownPost";
-import Toc from "@/components/blog/blogPost/Toc";
-import { MenuOutlined } from "@ant-design/icons";
-import { useEffect, useRef, useState } from "react";
+import Toc from "@/components/toc/Toc";
+import TocMenu from "@/components/toc/TocMenu";
 
 export default ({ post }) => {
-    const menu = useRef(null);
-    const onClickHandler = () => {
-        menu.current.classList.toggle("hidden");
-    };
     return (
         <>
             <div className="flex flex-col items-center justify-center">
@@ -25,21 +20,7 @@ export default ({ post }) => {
                         </div>
                     </div>
                 </article>
-                <div
-                    onClick={onClickHandler}
-                    className="md:hidden fixed bottom-0 right-0 m-[25px] w-[2em] h-[2em] bg-[gray] rounded-[10px] flex items-center justify-center"
-                >
-                    <MenuOutlined />
-                </div>
-                <div
-                    ref={menu}
-                    className={`hidden fixed bottom-0 right-0 m-[25px] bg-[gray] rounded-[10px]`}
-                >
-                    <Toc
-                        post={post}
-                        clickHander={onClickHandler}
-                    />
-                </div>
+                <TocMenu post={post} />
             </div>
         </>
     );
