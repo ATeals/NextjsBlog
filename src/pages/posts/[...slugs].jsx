@@ -4,7 +4,7 @@ import MarkdownPost from "@/components/blog/blogPost/MarkdownPost";
 import Toc from "@/components/toc/Toc";
 import TocMenu from "@/components/toc/TocMenu";
 import Link from "next/link";
-import { getCollection } from "../../lib/Postdata";
+import { getCollection, getPost } from "../../lib/Postdata";
 
 export default ({ post, collection }) => {
     console.log(collection);
@@ -26,7 +26,10 @@ export default ({ post, collection }) => {
 
                 <div className="my-[40px]">
                     {collection.posts.map((item, index) => (
-                        <Link href={`${item._raw.flattenedPath}`}>
+                        <Link
+                            key={item._id}
+                            href={`${item._raw.flattenedPath}`}
+                        >
                             <h1 className={item.title === post.title ? `font-bold text-[#577cf1]` : ``}>
                                 {index + 1}. {item.title}
                             </h1>
@@ -48,17 +51,7 @@ export const getStaticPaths = async () => {
 };
 
 export const getStaticProps = async ({ params }) => {
-    const post = allPosts.find((p) => p._raw.flattenedPath === params.slugs.join("/"));
-    // const collection = allPosts
-    //     .filter((i) => i._raw.sourceFilePath.includes("/index.mdx"))
-    //     .map((item) => ({
-    //         ...item,
-    //         posts: allPosts
-    //             .filter((i) => i._raw.sourceFilePath.includes(item._raw.flattenedPath))
-    //             .filter((i) => !i._raw.sourceFilePath.includes("/index.mdx"))
-    //             .sort((a, b) => Number(new Date(a.date)) - Number(new Date(b.date))),
-    //     }))
-    //     .find((i) => i._raw.sourceFileDir.includes(post._raw.sourceFileDir));
+    const post = getPost(params.slugs.join("/"));
     const collection = getCollection(post);
     return {
         props: {
