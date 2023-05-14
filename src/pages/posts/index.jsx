@@ -5,7 +5,10 @@ export default ({ posts }) => {
     return (
         <>
             <CardList posts={posts} />
-            <CardList posts={allPosts} />
+            {/* <section className="@apply flex justify-center flex-col">
+                <h1 className="text-center text-[2em]">--- All Post ---</h1>
+                <CardList posts={allPosts} />
+            </section> */}
         </>
     );
 };
