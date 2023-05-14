@@ -4,11 +4,12 @@ import MarkdownPost from "@/components/blog/blogPost/MarkdownPost";
 import Toc from "@/components/toc/Toc";
 import TocMenu from "@/components/toc/TocMenu";
 
-export default ({ post }) => {
+export default ({ post, collection }) => {
+    console.log(collection);
     return (
         <>
-            <div className="flex flex-col items-center justify-center">
-                <h1>{post.title}</h1>
+            <div className="flex flex-col items-center justify-center my-[40px]">
+                <h1 className="font-bold text-[3em] my-[100px]">{post.title}</h1>
                 <article className="post relative flex justify-center w-[90%] md:w-[80%]">
                     <div className="@apply relative py-[40px] w-[20%] hidden md:block"></div>
                     <div className="px-[3px] w-[100%]">
@@ -20,8 +21,15 @@ export default ({ post }) => {
                         </div>
                     </div>
                 </article>
-                <TocMenu post={post} />
             </div>
+            <div className="my-[40px]">
+                {collection.posts.map((item) => (
+                    <div>
+                        <h1>{item.title}</h1>
+                    </div>
+                ))}
+            </div>
+            <TocMenu post={post} />
         </>
     );
 };
@@ -35,9 +43,20 @@ export const getStaticPaths = async () => {
 
 export const getStaticProps = async ({ params }) => {
     const post = allPosts.find((p) => p._raw.flattenedPath === params.slugs.join("/"));
+    const collection = allPosts
+        .filter((i) => i._raw.sourceFilePath.includes("/index.mdx"))
+        .map((item) => ({
+            ...item,
+            posts: allPosts
+                .filter((i) => i._raw.sourceFilePath.includes(item._raw.flattenedPath))
+                .filter((i) => !i._raw.sourceFilePath.includes("/index.mdx"))
+                .sort((a, b) => Number(new Date(a.date)) - Number(new Date(b.date))),
+        }))
+        .find((i) => i._raw.sourceFileDir.includes(post._raw.sourceFileDir));
     return {
         props: {
             post,
+            collection,
         },
     };
 };

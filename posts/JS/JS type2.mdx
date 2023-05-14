@@ -6,10 +6,6 @@ collection: JS
 tags: ["a", "b"]
 ---
 
-# JS 특수 값!
-
-# 목차!
-
 > 이 글의 내용은 You Don’t know Js 타입과 문법, 스코프와 클로저를 읽고 정리한 문서입니다.
 
 # 👋
@@ -109,11 +105,11 @@ typeof a === "number"; // true
 
 그렇다면…. 어떤 변수의 값이 실패한 숫자 즉 `NaN`인지 여부를 확인할때, 코드를 어떤식으로 작성하면 좋을까요?
 
-```
-const a = 2/"f0"
+```jsx
+const a = 2 / "f0";
 
-a == NaN //false
-a === NaN  //false
+a == NaN; //false
+a === NaN; //false
 ```
 
 네 동등 연산자(==, ===)를 사용하면…… 안 되네요…
