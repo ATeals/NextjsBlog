@@ -3,6 +3,7 @@ import "github-markdown-css";
 import MarkdownPost from "@/components/blog/blogPost/MarkdownPost";
 import Toc from "@/components/toc/Toc";
 import TocMenu from "@/components/toc/TocMenu";
+import Link from "next/link";
 
 export default ({ post, collection }) => {
     console.log(collection);
@@ -24,9 +25,9 @@ export default ({ post, collection }) => {
             </div>
             <div className="my-[40px]">
                 {collection.posts.map((item) => (
-                    <div>
-                        <h1>{item.title}</h1>
-                    </div>
+                    <Link href={`${item._raw.flattenedPath}`}>
+                        <h1 className={item.title === post.title ? `font-bold` : ``}>{item.title}</h1>
+                    </Link>
                 ))}
             </div>
             <TocMenu post={post} />
