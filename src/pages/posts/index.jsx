@@ -24,7 +24,7 @@ export const getStaticProps = async () => {
         .filter((i) => i._raw.sourceFilePath.includes("/index.mdx"))
         .map((item) => ({
             ...item,
-            posts: getPostAll().filter((i) => i._raw.sourceFilePath.includes(item._raw.flattenedPath)),
+            posts: allPosts.filter((i) => i._raw.sourceFilePath.includes(item._raw.flattenedPath)).filter((i) => !i._raw.sourceFilePath.includes("/index.mdx")),
         }));
 
     // const collections = getCollectionAll();
