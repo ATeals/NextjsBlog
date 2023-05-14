@@ -13,7 +13,7 @@ export default function Layout({ children }) {
                     <Nav />
                 </header>
 
-                <main className="mb-[100px]">{children}</main>
+                <main className="mb-[100px] @apply">{children}</main>
                 <Footer />
             </div>
         </>

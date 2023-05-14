@@ -1,14 +1,17 @@
 import { allPosts } from "contentlayer/gererated";
 import CardList from "@/components/blog/blogList/CardList";
+import { useEffect, useState } from "react";
 
 export default ({ posts }) => {
+    const [allPost, setAllPost] = useState(allPosts);
+
     return (
         <>
             <CardList posts={posts} />
-            {/* <section className="@apply flex justify-center flex-col">
+            <section className="@apply flex justify-center flex-col">
                 <h1 className="text-center text-[2em]">--- All Post ---</h1>
-                <CardList posts={allPosts} />
-            </section> */}
+                <CardList posts={allPost} />
+            </section>
         </>
     );
 };
