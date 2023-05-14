@@ -1,7 +1,7 @@
 import { allPosts } from "contentlayer/gererated";
 import CardList from "@/components/blog/blogList/CardList";
 import LineList from "@/components/blog/blogList/LineList";
-import { getCollectionAll, getPostAll } from "../../lib/Postdata";
+import { getPostAll } from "../../lib/Postdata";
 
 export default ({ collections, posts }) => {
     return (
@@ -21,7 +21,13 @@ export default ({ collections, posts }) => {
 
 export const getStaticProps = async () => {
     //allPosts => 해당 경로의 mdx파일을 배열에 담아서 전송해줌!
-    const collections = getCollectionAll();
+    const collections = allPosts
+        .filter((i) => i._raw.sourceFilePath.includes("/index.mdx"))
+        .map((item) => ({
+            ...item,
+            posts: allPosts.filter((i) => !i._raw.sourceFilePath.includes("/index.mdx")).filter((i) => i._raw.sourceFilePath.includes(item._raw.flattenedPath)),
+        }));
+
     const posts = getPostAll();
     return {
         props: {
