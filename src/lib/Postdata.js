@@ -24,13 +24,17 @@ const getCollection = (url) => {
 
 export const reducePost = ({ body: _, _raw, _id, ...post }) => post;
 
+// const getCollectionAll = () => {
+//     return allPosts
+//         .filter((i) => i._raw.sourceFilePath.includes("/index.mdx"))
+//         .map((item) => ({
+//             ...item,
+//             posts: getPostAll().filter((i) => i._raw.sourceFilePath.includes(item._raw.flattenedPath)),
+//         }));
+// };
+
 const getCollectionAll = () => {
-    return allPosts
-        .filter((i) => i._raw.sourceFilePath.includes("/index.mdx"))
-        .map((item) => ({
-            ...item,
-            posts: getPostAll().filter((i) => i._raw.sourceFilePath.includes(item._raw.flattenedPath)),
-        }));
+    return allPosts.filter((i) => i._raw.sourceFilePath.includes("/index.mdx"));
 };
 
 export { getPost, getPostAll, getCollection, getCollectionAll };
