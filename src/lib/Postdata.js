@@ -22,11 +22,10 @@ export const getCollection = (post) => {
         .find((i) => i._raw.sourceFileDir.includes(post._raw.sourceFileDir));
 };
 
-export const getCollectionAll = () => {
-    return allPosts
+export const getCollectionAll = () =>
+    allPosts
         .filter((i) => i._raw.sourceFilePath.includes("/index.mdx"))
         .map((item) => ({
             ...item,
             posts: getPostAll().filter((i) => i._raw.sourceFilePath.includes(item._raw.flattenedPath)),
         }));
-};
