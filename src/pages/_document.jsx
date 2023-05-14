@@ -6,7 +6,7 @@ class MyDocument extends Document {
             // html 태그에 언어 설정
             <Html lang="ko">
                 <Head />
-                <body>
+                <body className="md:px-[10%]">
                     <Main />
                     <NextScript />
                 </body>

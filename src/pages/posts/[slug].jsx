@@ -1,22 +1,12 @@
 import { allPosts } from "contentlayer/gererated";
-import "github-markdown-css";
-import Link from "next/link";
+import CardList from "@/components/blog/blogList/CardList";
 
 export default ({ collection }) => {
     console.log(collection);
     return (
-        <div>
-            {collection.map((item) => {
-                return (
-                    <Link href={`/posts/${item._raw.flattenedPath}`}>
-                        <h1>{item.title}</h1>
-                        <h1>{item.description}</h1>
-                        <h1>{item.date}</h1>
-                        <br />
-                    </Link>
-                );
-            })}
-        </div>
+        <>
+            <CardList posts={collection} />
+        </>
     );
 };
 

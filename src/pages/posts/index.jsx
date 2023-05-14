@@ -1,22 +1,11 @@
 import { allPosts } from "contentlayer/gererated";
-import BlogList from "@/components/blogPost/BlogList";
+import CardList from "@/components/blog/blogList/CardList";
 
 export default ({ posts }) => {
     return (
         <>
-            <div className="p-[2em]">
-                {posts.map((post) => {
-                    return (
-                        <BlogList
-                            key={post._id}
-                            date={post.date}
-                            title={post.title}
-                            des={post.description}
-                            slug={post._raw.flattenedPath}
-                        />
-                    );
-                })}
-            </div>
+            <CardList posts={posts} />
+            <CardList posts={allPosts} />
         </>
     );
 };

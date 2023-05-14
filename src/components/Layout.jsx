@@ -8,7 +8,7 @@ export default function Layout({ children }) {
             <Head>
                 <title>Ateal's Blog</title>
             </Head>
-            <div className="@apply min-h-screen relative flex aline-center flex-col">
+            <div className="@apply min-h-screen relative flex flex-col">
                 <header>
                     <Nav />
                 </header>

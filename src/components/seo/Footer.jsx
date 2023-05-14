@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default () => {
     return (
-        <footer className="absolute bottom-0 w-screen  py-[20px] border-t-black border-t border-solid flex aline-center justify-center py-[30px] flex-col">
+        <footer className="absolute bottom-0 w-[100%]  py-[20px] border-t-black border-t border-solid flex aline-center justify-center py-[30px] flex-col">
             <div className="flex justify-center">&copy; Ateals </div>
             <div className="flex justify-center">
                 <Link href="https://github.com/ATeals">
