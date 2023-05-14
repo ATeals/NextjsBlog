@@ -2,8 +2,15 @@ import { allPosts } from "contentlayer/gererated";
 import CardList from "@/components/blog/blogList/CardList";
 import LineList from "@/components/blog/blogList/LineList";
 import { getPostAll, getCollectionAll } from "../../lib/Postdata";
+import { useEffect, useState } from "react";
 
-export default ({ collections, posts }) => {
+export default () => {
+    const [posts, setPost] = useState([]);
+    const [collections, setCollections] = useState([]);
+    useEffect(() => {
+        setPost(getPostAll());
+        setCollections(getCollectionAll());
+    }, []);
     return (
         <>
             <section className="@apply flex justify-center flex-col">
@@ -19,15 +26,22 @@ export default ({ collections, posts }) => {
     );
 };
 
-export const getStaticProps = async () => {
-    //allPosts => 해당 경로의 mdx파일을 배열에 담아서 전송해줌!
-    const collections = getCollectionAll();
+// export const getStaticProps = async () => {
+//     //allPosts => 해당 경로의 mdx파일을 배열에 담아서 전송해줌!
+//     const collections = allPosts
+//         .filter((i) => i._raw.sourceFilePath.includes("/index.mdx"))
+//         .map((item) => ({
+//             ...item,
+//             posts: getPostAll().filter((i) => i._raw.sourceFilePath.includes(item._raw.flattenedPath)),
+//         }));
 
-    const posts = getPostAll();
-    return {
-        props: {
-            collections,
-            posts,
-        },
-    };
-};
+//     // const  collections = getCollectionAll()
+
+//     const posts = getPostAll();
+//     return {
+//         props: {
+//             collections,
+//             posts,
+//         },
+//     };
+// };
