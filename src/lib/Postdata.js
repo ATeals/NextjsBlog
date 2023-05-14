@@ -22,6 +22,8 @@ const getCollection = (url) => {
         .find((i) => i._raw.sourceFileDir.includes(url));
 };
 
+export const reducePost = ({ body: _, _raw, _id, ...post }) => post;
+
 const getCollectionAll = () => {
     return allPosts
         .filter((i) => i._raw.sourceFilePath.includes("/index.mdx"))

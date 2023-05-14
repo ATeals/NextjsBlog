@@ -19,13 +19,17 @@ export default ({ collections, posts }) => {
     );
 };
 
+// const getCollectionAll = () => {
+//     return allPosts
+//         .filter((i) => i._raw.sourceFilePath.includes("/index.mdx"))
+//         .map((item) => ({
+//             ...item,
+//             posts: getPostAll().filter((i) => i._raw.sourceFilePath.includes(item._raw.flattenedPath)),
+//         }));
+// };
+
 const getCollectionAll = () => {
-    return allPosts
-        .filter((i) => i._raw.sourceFilePath.includes("/index.mdx"))
-        .map((item) => ({
-            ...item,
-            posts: getPostAll().filter((i) => i._raw.sourceFilePath.includes(item._raw.flattenedPath)),
-        }));
+    return allPosts.filter((i) => i._raw.sourceFilePath.includes("/index.mdx"));
 };
 
 export const getStaticProps = async () => {

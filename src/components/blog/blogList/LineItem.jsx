@@ -12,9 +12,7 @@ export default ({ post }) => {
                     <h1 className="text-[1.5rem] font-bold mb-2">{post.title}</h1>
                     <h4>{post.description}</h4>
                 </div>
-                <h4 className="@apply absolute text-[#aaaaaa] w-[100%] h-[100%] text-end bottom-[-2] right-0 p-[1em] text-[1.5em] font-bold">
-                    {post.posts.length} <PaperClipOutlined />
-                </h4>
+                <h4 className="@apply absolute text-[#aaaaaa] w-[100%] h-[100%] text-end bottom-[-2] right-0 p-[1em] text-[1.5em] font-bold">{/* {post.posts.length} <PaperClipOutlined /> */}</h4>
             </div>
         </Link>
     );
