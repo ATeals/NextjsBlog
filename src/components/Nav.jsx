@@ -17,6 +17,9 @@ const PathList = [
 
 export default function Nav() {
     const [isDarkMode, setIsDarkMode] = useState(false);
+    const modeToggle = () => {
+        document.querySelector("html").classList.toggle("dark");
+    };
 
     return (
         <>
