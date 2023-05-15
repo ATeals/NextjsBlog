@@ -1,7 +1,7 @@
 import { allPosts } from "contentlayer/gererated";
 import CardList from "@/components/blog/blogList/CardList";
 import LineList from "@/components/blog/blogList/LineList";
-import { getPostAll } from "../../lib/Postdata";
+import { getPostAll, getCollectionAll } from "../../lib/Postdata";
 
 export default ({ collections, posts }) => {
     return (
@@ -17,15 +17,6 @@ export default ({ collections, posts }) => {
             </section>
         </>
     );
-};
-
-const getCollectionAll = () => {
-    return allPosts
-        .filter((i) => i._raw.sourceFilePath.includes("/index.mdx"))
-        .map((item) => ({
-            ...item,
-            posts: getPostAll().filter((i) => i._raw.sourceFilePath.includes(item._raw.flattenedPath)),
-        }));
 };
 
 export const getStaticProps = async () => {
