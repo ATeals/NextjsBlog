@@ -1,4 +1,8 @@
 import Link from "next/link";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faMoon } from "@fortawesome/free-solid-svg-icons";
+import { faSun } from "@fortawesome/free-solid-svg-icons";
+import { useEffect, useState } from "react";
 
 const PathList = [
     {
@@ -12,6 +16,8 @@ const PathList = [
 ];
 
 export default function Nav() {
+    const [isDarkMode, setIsDarkMode] = useState(false);
+
     return (
         <>
             <nav>
@@ -29,6 +35,21 @@ export default function Nav() {
                             </Link>
                         );
                     })}
+                    {isDarkMode ? (
+                        <FontAwesomeIcon
+                            icon={faMoon}
+                            size="2x"
+                            className="ml-[10px]"
+                            onClick={modeToggle}
+                        />
+                    ) : (
+                        <FontAwesomeIcon
+                            icon={faSun}
+                            size="2x"
+                            className="ml-[10px]"
+                            onClick={modeToggle}
+                        />
+                    )}
                 </div>
             </nav>
 

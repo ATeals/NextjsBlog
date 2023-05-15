@@ -2,11 +2,12 @@ import Link from "next/link";
 
 export default () => {
     return (
-        <footer className="absolute bottom-0 w-[100%]  py-[20px] border-t-black border-t border-solid flex aline-center justify-center py-[30px] flex-col">
+        <footer className="dark:border-t-[#A1AAC6] absolute bottom-0 w-[100%]  py-[20px] border-t-black border-t border-solid flex aline-center justify-center py-[30px] flex-col">
             <div className="flex justify-center">&copy; Ateals </div>
             <div className="flex justify-center">
                 <Link href="https://github.com/ATeals">
                     <img
+                        className="rounded-[50%] mr-[5px]"
                         alt=""
                         src="https://www.google.com/s2/favicons?domain=https://github.com/ATeals&sz=24"
                     />

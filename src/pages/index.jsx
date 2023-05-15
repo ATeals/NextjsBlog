@@ -5,11 +5,6 @@ export default ({ posts }) => {
     return (
         <>
             <section>
-                <div>
-                    <h1>최신 글</h1>
-                    <h4>모든 포스트 </h4>
-                </div>
-
                 <CardList
                     posts={posts}
                     num={2}
