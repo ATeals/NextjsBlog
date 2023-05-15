@@ -21,4 +21,5 @@ const TagList = {
     tr,
     th,
 };
+
 export default TagList;
