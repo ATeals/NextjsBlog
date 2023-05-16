@@ -29,7 +29,7 @@ const MyDocument = () => {
             <Head>
                 <link
                     rel="icon"
-                    href="/favicon.ico"
+                    href="https://nextjs-blog-ateals.vercel.app/favicon.ico"
                 />
                 <meta
                     name="google-site-verification"
