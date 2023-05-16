@@ -27,6 +27,10 @@ const MyDocument = () => {
             className=""
         >
             <Head>
+                <link
+                    rel="icon"
+                    href="/favicon.ico"
+                />
                 <meta
                     name="google-site-verification"
                     content="Vf0Y1AEjfuPI3lth_ZcM3F4TI0bW9UxJ_7ZJQm_pC4w"
