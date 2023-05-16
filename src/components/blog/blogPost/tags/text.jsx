@@ -47,4 +47,20 @@ function pre({ node, children, ...props }) {
     );
 }
 
-export { pre, p, strong };
+function a({ node, children, ...props }) {
+    return (
+        <a
+            className="italic font-bold mx-1 text-[#292E85]"
+            style={
+                {
+                    // marginBottom: "10px",
+                }
+            }
+            {...props}
+        >
+            {children}
+        </a>
+    );
+}
+
+export { pre, p, strong, a };
