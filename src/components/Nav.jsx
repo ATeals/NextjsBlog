@@ -17,9 +17,22 @@ const PathList = [
 
 export default function Nav() {
     const [isDarkMode, setIsDarkMode] = useState(false);
+    const [saveMode, setSaveMode] = useState();
     const modeToggle = () => {
         document.querySelector("html").classList.toggle("dark");
+        setIsDarkMode((i) => !i);
     };
+
+    useEffect(() => {
+        if (localStorage.getItem("darkMode") === "true") {
+            document.querySelector("html").classList.toggle("dark");
+            setIsDarkMode((i) => !i);
+        }
+    }, []);
+
+    useEffect(() => {
+        localStorage.setItem("darkMode", isDarkMode);
+    }, [isDarkMode]);
 
     return (
         <>
@@ -40,14 +53,14 @@ export default function Nav() {
                     })}
                     {isDarkMode ? (
                         <FontAwesomeIcon
-                            icon={faMoon}
+                            icon={faSun}
                             size="2x"
                             className="ml-[10px]"
                             onClick={modeToggle}
                         />
                     ) : (
                         <FontAwesomeIcon
-                            icon={faSun}
+                            icon={faMoon}
                             size="2x"
                             className="ml-[10px]"
                             onClick={modeToggle}
