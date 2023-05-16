@@ -19,7 +19,7 @@ export const getStaticPaths = async () => {
 
 export const getStaticProps = async ({ params }) => {
     // const collection = allPosts.filter((i) => !i._raw.sourceFilePath.includes("/index.mdx")).filter((i) => i._raw.flattenedPath.includes(params.slug));
-    const collection = getCollection(params.slug).posts;
+    const collection = getCollection(params.slug).posts.sort((a, b) => Number(new Date(b.date)) - Number(new Date(a.date)));
     return {
         props: {
             collection,

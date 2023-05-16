@@ -5,7 +5,16 @@ export default ({ post }) => {
     const MDXComponent = useMDXComponent(post);
     return (
         <>
-            <MDXComponent components={TagList} />
+            <div>
+                <MDXComponent components={TagList} />
+            </div>
+            <style jsx>
+                {`
+                    aside {
+                        color: red;
+                    }
+                `}
+            </style>
         </>
     );
 };

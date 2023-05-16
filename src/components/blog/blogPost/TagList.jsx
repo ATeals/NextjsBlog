@@ -1,5 +1,5 @@
 import { h1, h2, h3 } from "./tags/h";
-import { blockquote, aside } from "./tags/blockquote";
+import { blockquote } from "./tags/blockquote";
 import { code } from "./tags/codeBlock";
 import { ul, li } from "./tags/list";
 import { pre, p, strong } from "./tags/text";
@@ -20,7 +20,6 @@ const TagList = {
     td,
     tr,
     th,
-    aside,
 };
 
 export default TagList;

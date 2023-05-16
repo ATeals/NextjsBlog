@@ -10,6 +10,7 @@ function code({ node, inline, className, children, ...props }) {
             PreTag="div"
             {...props}
             style={ocean}
+            className="text-[15px]"
         >
             {String(children).replace(/\n$/, "")}
         </SyntaxHighlighter>

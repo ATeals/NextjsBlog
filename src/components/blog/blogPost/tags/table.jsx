@@ -37,6 +37,7 @@ function td({ node, children, ...props }) {
 function tr({ node, children, ...props }) {
     return (
         <tr
+            className="dark:bg-[#121212] dark:text-[#e0e0e0]"
             style={{
                 border: "1px solid",
                 borderCollapse: "collapse",
