@@ -11,8 +11,8 @@ export default ({ post, collection }) => {
     return (
         <>
             <div className="flex flex-col items-center justify-center my-[40px]">
-                <h1 className="font-bold text-[3em] my-[100px]">{post.title}</h1>
-                <article className="post relative flex justify-center w-[90%] md:w-[80%]">
+                <h1 className="font-bold text-[2em] md:text-[3em]  my-[100px]">{post.title}</h1>
+                <article className="post relative flex justify-center w-[95%]">
                     <div className="@apply relative py-[40px] w-[20%] hidden md:block"></div>
                     <div className="px-[3px] w-[100%]">
                         <MarkdownPost post={post.body.code} />
