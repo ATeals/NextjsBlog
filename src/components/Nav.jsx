@@ -1,5 +1,5 @@
 import Link from "next/link";
-import DarkModeBtn from "./darkModeBtn";
+import DarkModeBtn from "./DarkModeBtn";
 
 const PathList = [
     {
