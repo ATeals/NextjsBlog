@@ -16,7 +16,7 @@ const DEFAULT_SEO = {
         site_name: "Ateals Blog",
         images: [
             {
-                url: "https://nextjs-blog-ateals.vercel.app/images/logoImg.png",
+                url: "https://nextjs-blog-ateals.vercel.app/images/logoImg.jpg",
                 width: 1900,
                 height: 630,
                 alt: "og: 이미지",
