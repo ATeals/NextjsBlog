@@ -7,7 +7,6 @@ import Link from "next/link";
 import { getCollection, getPost } from "../../lib/Postdata";
 
 export default ({ post, collection }) => {
-    console.log(collection);
     return (
         <>
             <div className="flex flex-col items-center justify-center my-[40px]">

@@ -24,8 +24,6 @@ export default ({ post, clickHander }) => {
                     justifyContent: "center",
                     flexDirection: "column",
                     width: "100%",
-                    borderBottom: "1px solid #A1AAC6",
-                    borderTop: "1px solid #A1AAC6",
                     padding: "10px",
                 }}
                 className="@apply text-ellipsis"

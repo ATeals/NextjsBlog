@@ -1,6 +1,23 @@
 import { Html, Head, Main, NextScript } from "next/document";
 
-const MyDocument = () => {
+const ScriptTag = () => {
+    const codeToRunOnClient = `(function() {
+        if(window.matchMedia("(prefers-color-scheme: dark)").matches && localStorage.getItem("darkMode") !== "false" ){
+            localStorage.setItem("darkMode", "true");
+        } 
+        if (localStorage.getItem("darkMode") === "true") {
+            document.querySelector("html").classList.toggle("dark");
+        }
+        if (localStorage.getItem("darkMode") === null) {
+            localStorage.setItem("darkMode", false);
+        }
+       
+  })()`;
+
+    return <script dangerouslySetInnerHTML={{ __html: codeToRunOnClient }} />;
+};
+
+const Document = () => {
     return (
         // html 태그에 언어 설정
         <Html
@@ -22,6 +39,7 @@ const MyDocument = () => {
                 />
             </Head>
             <body className="md:px-[10%] dark:bg-[#121212] dark:text-[#E0E0E0]">
+                <ScriptTag />
                 <Main />
                 <NextScript />
             </body>
@@ -29,4 +47,4 @@ const MyDocument = () => {
     );
 };
 
-export default MyDocument;
+export default Document;

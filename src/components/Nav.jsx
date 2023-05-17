@@ -17,16 +17,13 @@ const PathList = [
 
 export default function Nav() {
     const [isDarkMode, setIsDarkMode] = useState(false);
-    const [saveMode, setSaveMode] = useState();
     const modeToggle = () => {
         document.querySelector("html").classList.toggle("dark");
         setIsDarkMode((i) => !i);
     };
-
     useEffect(() => {
         if (localStorage.getItem("darkMode") === "true") {
-            document.querySelector("html").classList.toggle("dark");
-            setIsDarkMode((i) => !i);
+            setIsDarkMode(localStorage.getItem("darkMode"));
         }
     }, []);
 
