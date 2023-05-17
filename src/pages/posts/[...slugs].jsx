@@ -18,7 +18,10 @@ export default ({ post, collection }) => {
                     </div>
                     <div className="@apply relative py-[40px] w-[20%] hidden md:block">
                         <div className="@apply sticky right-[50%] top-[25%]">
-                            <Toc post={post} />
+                            <Toc
+                                post={post}
+                                menuToggle={() => {}}
+                            />
                         </div>
                     </div>
                 </article>
