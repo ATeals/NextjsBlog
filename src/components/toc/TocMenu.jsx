@@ -13,13 +13,13 @@ export default ({ post }) => {
         <>
             <div
                 onClick={onClickHandler}
-                className="md:hidden fixed bottom-0 right-0 m-[25px] w-[2em] h-[2em] bg-[gray] rounded-[10px] flex items-center justify-center"
+                className="md:hidden text-[#eeeff2] fixed bottom-0 right-0 m-[25px] w-[2em] h-[2em] bg-[#577cf1] rounded-[10px] flex items-center justify-center"
             >
                 <MenuOutlined />
             </div>
             <div
                 ref={menu}
-                className={`hidden z-[1] fixed bottom-0 right-0 m-[25px] bg-[gray] rounded-[10px]`}
+                className={`dark:bg-[#1E1E1E] hidden z-[1] fixed bottom-0 right-0 m-[25px] bg-[#ffffff] rounded-[10px]`}
             >
                 <Toc
                     post={post}
