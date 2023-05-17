@@ -23,7 +23,7 @@ export default ({ post }) => {
             >
                 <Toc
                     post={post}
-                    clickHander={onClickHandler}
+                    menuToggle={onClickHandler}
                 />
             </div>
         </>

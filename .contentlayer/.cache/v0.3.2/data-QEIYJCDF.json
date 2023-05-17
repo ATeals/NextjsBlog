@@ -139,6 +139,61 @@
       "hasWarnings": false,
       "documentTypeName": "Post"
     },
+    "life/hello.mdx": {
+      "document": {
+        "title": "일상글",
+        "date": "2023-05-09",
+        "description": "일상",
+        "collection": "life",
+        "tags": [
+          "a",
+          "b"
+        ],
+        "body": {
+          "raw": "\n# 안녕\n",
+          "code": "var Component=(()=>{var u=Object.create;var c=Object.defineProperty;var x=Object.getOwnPropertyDescriptor;var d=Object.getOwnPropertyNames;var f=Object.getPrototypeOf,h=Object.prototype.hasOwnProperty;var j=(t,n)=>()=>(n||t((n={exports:{}}).exports,n),n.exports),_=(t,n)=>{for(var e in n)c(t,e,{get:n[e],enumerable:!0})},i=(t,n,e,s)=>{if(n&&typeof n==\"object\"||typeof n==\"function\")for(let o of d(n))!h.call(t,o)&&o!==e&&c(t,o,{get:()=>n[o],enumerable:!(s=x(n,o))||s.enumerable});return t};var p=(t,n,e)=>(e=t!=null?u(f(t)):{},i(n||!t||!t.__esModule?c(e,\"default\",{value:t,enumerable:!0}):e,t)),b=t=>i(c({},\"__esModule\",{value:!0}),t);var l=j((O,a)=>{a.exports=_jsx_runtime});var w={};_(w,{default:()=>M,frontmatter:()=>g});var r=p(l()),g={title:\"\\uC77C\\uC0C1\\uAE00\",description:\"\\uC77C\\uC0C1\",date:new Date(16835904e5),collection:\"life\",tags:[\"a\",\"b\"]};function m(t){let n=Object.assign({h1:\"h1\"},t.components);return(0,r.jsx)(n.h1,{children:\"\\uC548\\uB155\"})}function D(t={}){let{wrapper:n}=t.components||{};return n?(0,r.jsx)(n,Object.assign({},t,{children:(0,r.jsx)(m,t)})):m(t)}var M=D;return b(w);})();\n;return Component;"
+        },
+        "_id": "life/hello.mdx",
+        "_raw": {
+          "sourceFilePath": "life/hello.mdx",
+          "sourceFileName": "hello.mdx",
+          "sourceFileDir": "life",
+          "contentType": "mdx",
+          "flattenedPath": "life/hello"
+        },
+        "type": "Post"
+      },
+      "documentHash": "1684157878345",
+      "hasWarnings": false,
+      "documentTypeName": "Post"
+    },
+    "life/index.mdx": {
+      "document": {
+        "title": "일상",
+        "description": "일상을 정리해 놓은 시리즈!",
+        "collection": "life",
+        "tags": [
+          "a",
+          "b"
+        ],
+        "body": {
+          "raw": "",
+          "code": "var Component=(()=>{var x=Object.create;var a=Object.defineProperty;var f=Object.getOwnPropertyDescriptor;var l=Object.getOwnPropertyNames;var _=Object.getPrototypeOf,d=Object.prototype.hasOwnProperty;var g=(t,e)=>()=>(e||t((e={exports:{}}).exports,e),e.exports),j=(t,e)=>{for(var n in e)a(t,n,{get:e[n],enumerable:!0})},i=(t,e,n,c)=>{if(e&&typeof e==\"object\"||typeof e==\"function\")for(let o of l(e))!d.call(t,o)&&o!==n&&a(t,o,{get:()=>e[o],enumerable:!(c=f(e,o))||c.enumerable});return t};var p=(t,e,n)=>(n=t!=null?x(_(t)):{},i(e||!t||!t.__esModule?a(n,\"default\",{value:t,enumerable:!0}):n,t)),M=t=>i(a({},\"__esModule\",{value:!0}),t);var m=g((h,s)=>{s.exports=_jsx_runtime});var F={};j(F,{default:()=>D,frontmatter:()=>b});var r=p(m()),b={title:\"\\uC77C\\uC0C1\",description:\"\\uC77C\\uC0C1\\uC744 \\uC815\\uB9AC\\uD574 \\uB193\\uC740 \\uC2DC\\uB9AC\\uC988!\",collection:\"life\",tags:[\"a\",\"b\"]};function u(t){return(0,r.jsx)(r.Fragment,{})}function C(t={}){let{wrapper:e}=t.components||{};return e?(0,r.jsx)(e,Object.assign({},t,{children:(0,r.jsx)(u,t)})):u(t)}var D=C;return M(F);})();\n;return Component;"
+        },
+        "_id": "life/index.mdx",
+        "_raw": {
+          "sourceFilePath": "life/index.mdx",
+          "sourceFileName": "index.mdx",
+          "sourceFileDir": "life",
+          "contentType": "mdx",
+          "flattenedPath": "life"
+        },
+        "type": "Post"
+      },
+      "documentHash": "1684157878346",
+      "hasWarnings": false,
+      "documentTypeName": "Post"
+    },
     "js/JS type2.mdx": {
       "document": {
         "title": "JS의 특수 값",
@@ -243,61 +298,6 @@
         "type": "Post"
       },
       "documentHash": "1684157809510",
-      "hasWarnings": false,
-      "documentTypeName": "Post"
-    },
-    "life/hello.mdx": {
-      "document": {
-        "title": "일상글",
-        "date": "2023-05-09",
-        "description": "일상",
-        "collection": "life",
-        "tags": [
-          "a",
-          "b"
-        ],
-        "body": {
-          "raw": "\n# 안녕\n",
-          "code": "var Component=(()=>{var u=Object.create;var c=Object.defineProperty;var x=Object.getOwnPropertyDescriptor;var d=Object.getOwnPropertyNames;var f=Object.getPrototypeOf,h=Object.prototype.hasOwnProperty;var j=(t,n)=>()=>(n||t((n={exports:{}}).exports,n),n.exports),_=(t,n)=>{for(var e in n)c(t,e,{get:n[e],enumerable:!0})},i=(t,n,e,s)=>{if(n&&typeof n==\"object\"||typeof n==\"function\")for(let o of d(n))!h.call(t,o)&&o!==e&&c(t,o,{get:()=>n[o],enumerable:!(s=x(n,o))||s.enumerable});return t};var p=(t,n,e)=>(e=t!=null?u(f(t)):{},i(n||!t||!t.__esModule?c(e,\"default\",{value:t,enumerable:!0}):e,t)),b=t=>i(c({},\"__esModule\",{value:!0}),t);var l=j((O,a)=>{a.exports=_jsx_runtime});var w={};_(w,{default:()=>M,frontmatter:()=>g});var r=p(l()),g={title:\"\\uC77C\\uC0C1\\uAE00\",description:\"\\uC77C\\uC0C1\",date:new Date(16835904e5),collection:\"life\",tags:[\"a\",\"b\"]};function m(t){let n=Object.assign({h1:\"h1\"},t.components);return(0,r.jsx)(n.h1,{children:\"\\uC548\\uB155\"})}function D(t={}){let{wrapper:n}=t.components||{};return n?(0,r.jsx)(n,Object.assign({},t,{children:(0,r.jsx)(m,t)})):m(t)}var M=D;return b(w);})();\n;return Component;"
-        },
-        "_id": "life/hello.mdx",
-        "_raw": {
-          "sourceFilePath": "life/hello.mdx",
-          "sourceFileName": "hello.mdx",
-          "sourceFileDir": "life",
-          "contentType": "mdx",
-          "flattenedPath": "life/hello"
-        },
-        "type": "Post"
-      },
-      "documentHash": "1684157878345",
-      "hasWarnings": false,
-      "documentTypeName": "Post"
-    },
-    "life/index.mdx": {
-      "document": {
-        "title": "일상",
-        "description": "일상을 정리해 놓은 시리즈!",
-        "collection": "life",
-        "tags": [
-          "a",
-          "b"
-        ],
-        "body": {
-          "raw": "",
-          "code": "var Component=(()=>{var x=Object.create;var a=Object.defineProperty;var f=Object.getOwnPropertyDescriptor;var l=Object.getOwnPropertyNames;var _=Object.getPrototypeOf,d=Object.prototype.hasOwnProperty;var g=(t,e)=>()=>(e||t((e={exports:{}}).exports,e),e.exports),j=(t,e)=>{for(var n in e)a(t,n,{get:e[n],enumerable:!0})},i=(t,e,n,c)=>{if(e&&typeof e==\"object\"||typeof e==\"function\")for(let o of l(e))!d.call(t,o)&&o!==n&&a(t,o,{get:()=>e[o],enumerable:!(c=f(e,o))||c.enumerable});return t};var p=(t,e,n)=>(n=t!=null?x(_(t)):{},i(e||!t||!t.__esModule?a(n,\"default\",{value:t,enumerable:!0}):n,t)),M=t=>i(a({},\"__esModule\",{value:!0}),t);var m=g((h,s)=>{s.exports=_jsx_runtime});var F={};j(F,{default:()=>D,frontmatter:()=>b});var r=p(m()),b={title:\"\\uC77C\\uC0C1\",description:\"\\uC77C\\uC0C1\\uC744 \\uC815\\uB9AC\\uD574 \\uB193\\uC740 \\uC2DC\\uB9AC\\uC988!\",collection:\"life\",tags:[\"a\",\"b\"]};function u(t){return(0,r.jsx)(r.Fragment,{})}function C(t={}){let{wrapper:e}=t.components||{};return e?(0,r.jsx)(e,Object.assign({},t,{children:(0,r.jsx)(u,t)})):u(t)}var D=C;return M(F);})();\n;return Component;"
-        },
-        "_id": "life/index.mdx",
-        "_raw": {
-          "sourceFilePath": "life/index.mdx",
-          "sourceFileName": "index.mdx",
-          "sourceFileDir": "life",
-          "contentType": "mdx",
-          "flattenedPath": "life"
-        },
-        "type": "Post"
-      },
-      "documentHash": "1684157878346",
       "hasWarnings": false,
       "documentTypeName": "Post"
     }
