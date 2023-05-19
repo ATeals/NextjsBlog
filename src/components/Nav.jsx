@@ -1,17 +1,6 @@
 import Link from "next/link";
 import DarkModeBtn from "./DarkModeBtn";
 
-const PathList = [
-    {
-        title: "Home",
-        path: "/",
-    },
-    {
-        title: "posts",
-        path: "/posts",
-    },
-];
-
 export default function Nav() {
     return (
         <>
@@ -20,16 +9,10 @@ export default function Nav() {
                     <h1>Ateal's Blog</h1>
                 </Link>
                 <div>
-                    {PathList.map(({ title, path }) => {
-                        return (
-                            <Link
-                                href={path}
-                                key={title}
-                            >
-                                <div>{title}</div>
-                            </Link>
-                        );
-                    })}
+                    <Link href="/posts">
+                        <div>Collection</div>
+                    </Link>
+
                     <DarkModeBtn />
                 </div>
             </nav>
