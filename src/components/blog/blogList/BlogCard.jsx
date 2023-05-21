@@ -2,14 +2,16 @@ import Link from "next/link";
 
 export default ({ post }) => {
     return (
-        <div className="dark:bg-[#1E1E1E] transform transition-transform duration-200 hover:scale-105 m-[1.2em] max-w-[650px] md:max-w-[20em] xl:max-w-[340px] w-full bg-white shadow-md rounded-lg overflow-hidden px-4 ">
+        <div className="dark:bg-[#1E1E1E] transform transition-transform duration-200 hover:scale-105 m-[1.2em] max-w-[650px] w-full bg-white shadow-md rounded-lg overflow-hidden px-4 ">
             <Link href={`/posts/${post._raw.flattenedPath}`}>
-                <div className="w-full h-[200px] rounded-lg overflow-hidden">
-                    <img
-                        src={post.img ? post.img : "/images/logoImg.jpg"}
-                        alt="Image"
-                        className="card-image w-auto "
-                    />
+                <div className="relative">
+                    <div className="w-full h-[144px] rounded-lg overflow-hidden aspect-w-19 aspect-h-6">
+                        <img
+                            src={post.img ? post.img : "/images/logoImg.jpg"}
+                            alt="Image"
+                            className="object-contain object-center h-full w-full"
+                        />
+                    </div>
                 </div>
 
                 <div className="card-content p-4">
