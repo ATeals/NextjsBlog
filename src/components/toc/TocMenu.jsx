@@ -19,7 +19,7 @@ export default ({ post }) => {
             </div>
             <div
                 ref={menu}
-                className={`dark:bg-[#1E1E1E] hidden z-[1] fixed bottom-0 right-0 m-[25px] bg-[#ffffff] rounded-[10px]`}
+                className={`dark:bg-[#1E1E1E] hidden z-[1] w-[70%] fixed bottom-0 right-0 m-[25px] bg-[#ffffff] rounded-[10px]`}
             >
                 <Toc
                     post={post}

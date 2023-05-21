@@ -25,26 +25,25 @@ export default ({ post, menuToggle }) => {
         <>
             <ul
                 style={{
-                    overflow: "hidden",
-                    display: "flex",
-                    justifyContent: "center",
-                    flexDirection: "column",
+                    overflowY: "scroll",
                     width: "100%",
+                    height: "500px",
                     padding: "10px",
                 }}
-                className="@apply text-ellipsis"
             >
                 {result.map((item, index) => {
                     return (
-                        <a
-                            // href={`#${item.title}`}
-                            key={item + index}
-                            style={{ marginLeft: `${item.count * 3}px`, padding: "5px", fontWeight: `${800 - item.count * 10}`, fontSize: "15px", color: "#aeaeae" }}
-                            className="@apply whitespace-nowrap w-[100% cursor-pointer"
-                            onClick={clickHander}
-                        >
-                            {item.title}
-                        </a>
+                        <li>
+                            <a
+                                // href={`#${item.title}`}
+                                key={item + index}
+                                style={{ marginLeft: `${item.count * 3}px`, padding: "5px", fontWeight: `${800 - item.count * 10}`, fontSize: "15px", color: "#aeaeae" }}
+                                className="@apply whitespace-nowrap  cursor-pointer"
+                                onClick={clickHander}
+                            >
+                                {item.title}
+                            </a>
+                        </li>
                     );
                 })}
             </ul>
