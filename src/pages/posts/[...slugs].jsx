@@ -14,6 +14,14 @@ export default ({ post, collection }) => {
             <PostSeo post={post} />
             <div className="flex flex-col items-center justify-center my-[40px]">
                 <h1 className="font-bold text-[2em] md:text-[3em]  my-[100px]">{post.title}</h1>
+                {post.img ? (
+                    <img
+                        src={post.img}
+                        alt=""
+                        className="rounded-[15px] w-[10rem] h-auto  mb-[100px]"
+                    />
+                ) : null}
+
                 <article className="post relative flex justify-center w-[95%]">
                     <div className="@apply relative py-[40px] w-[20%] hidden md:block"></div>
                     <div className="px-[3px] w-[100%]">

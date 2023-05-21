@@ -4,11 +4,13 @@ export default ({ post }) => {
     return (
         <div className="dark:bg-[#1E1E1E] transform transition-transform duration-200 hover:scale-105 m-[1.2em] max-w-[650px] md:max-w-[20em] xl:max-w-[340px] w-full bg-white shadow-md rounded-lg overflow-hidden px-4 ">
             <Link href={`/posts/${post._raw.flattenedPath}`}>
-                <img
-                    src={post.img ? post.img : "/images/logoImg.jpg"}
-                    alt="Image"
-                    className="card-image w-full h-auto rounded-lg "
-                />
+                <div className="w-full h-[200px] rounded-lg overflow-hidden">
+                    <img
+                        src={post.img ? post.img : "/images/logoImg.jpg"}
+                        alt="Image"
+                        className="card-image w-auto "
+                    />
+                </div>
 
                 <div className="card-content p-4">
                     <h2 className="card-title text-[1.2rem] font-bold mb-2">{post.title}</h2>
