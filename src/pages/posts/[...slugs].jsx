@@ -3,6 +3,7 @@ import "github-markdown-css";
 import MarkdownPost from "@/components/blog/blogPost/MarkdownPost";
 import Toc from "@/components/toc/Toc";
 import TocMenu from "@/components/toc/TocMenu";
+import { PostSeo } from "../../components/seo/seoObject";
 
 import { getCollection, getPost } from "../../lib/Postdata";
 import CollectionList from "../../components/blog/blogPost/CollectionList";
@@ -10,6 +11,7 @@ import CollectionList from "../../components/blog/blogPost/CollectionList";
 export default ({ post, collection }) => {
     return (
         <>
+            <PostSeo post={post} />
             <div className="flex flex-col items-center justify-center my-[40px]">
                 <h1 className="font-bold text-[2em] md:text-[3em]  my-[100px]">{post.title}</h1>
                 <article className="post relative flex justify-center w-[95%]">
