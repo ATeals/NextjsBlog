@@ -15,7 +15,12 @@ function code({ node, inline, className, children, ...props }) {
             {String(children).replace(/\n$/, "")}
         </SyntaxHighlighter>
     ) : (
-        <code {...props}>{children}</code>
+        <code
+            className="text-[#ffffff]"
+            {...props}
+        >
+            {children}
+        </code>
     );
 }
 

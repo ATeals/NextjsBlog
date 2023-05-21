@@ -21,7 +21,7 @@ export default ({ collections, posts }) => {
 
 export const getStaticProps = async () => {
     const collections = getCollectionAll();
-    const posts = getPostAll();
+    const posts = getPostAll().sort((a, b) => Number(new Date(b.date)) - Number(new Date(a.date)));
     return {
         props: {
             collections,
