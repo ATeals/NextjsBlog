@@ -9,6 +9,9 @@ export default function Nav() {
                     <h1>Ateal's Blog</h1>
                 </Link>
                 <div>
+                    <Link href="/tags">
+                        <div>Tags</div>
+                    </Link>
                     <Link href="/posts">
                         <div>Collection</div>
                     </Link>

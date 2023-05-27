@@ -1,14 +1,14 @@
 import { allPosts } from "contentlayer/gererated";
 
-const getPost = (url) => {
+export const getPost = (url) => {
     return allPosts.find((p) => p._raw.flattenedPath === url);
 };
 
-const getPostAll = () => {
+export const getPostAll = () => {
     return allPosts.filter((i) => !i._raw.sourceFilePath.includes("/index.mdx"));
 };
 
-const getCollection = (url) => {
+export const getCollection = (url) => {
     return allPosts
         .filter((i) => i._raw.sourceFilePath.includes("/index.mdx"))
         .map((item) => ({
@@ -22,7 +22,7 @@ const getCollection = (url) => {
         .find((i) => i._raw.sourceFileDir.includes(url));
 };
 
-const getCollectionAll = () => {
+export const getCollectionAll = () => {
     return allPosts
         .filter((i) => i._raw.sourceFilePath.includes("/index.mdx"))
         .map((item) => ({
@@ -31,4 +31,11 @@ const getCollectionAll = () => {
         }));
 };
 
-export { getPost, getPostAll, getCollection, getCollectionAll };
+export const getTags = Array.from(
+    new Set(
+        allPosts
+            .filter((i) => i.tags)
+            .map((i) => i.tags)
+            .reduce((start, index) => [...start, ...index], [])
+    )
+);

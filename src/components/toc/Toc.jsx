@@ -33,10 +33,10 @@ export default ({ post, menuToggle }) => {
             >
                 {result.map((item, index) => {
                     return (
-                        <li>
+                        <li key={item + index}>
                             <a
                                 // href={`#${item.title}`}
-                                key={item + index}
+
                                 style={{ marginLeft: `${item.count * 3}px`, padding: "5px", fontWeight: `${800 - item.count * 10}`, fontSize: "15px", color: "#aeaeae" }}
                                 className="@apply whitespace-nowrap  cursor-pointer"
                                 onClick={clickHander}
