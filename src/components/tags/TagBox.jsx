@@ -9,7 +9,11 @@ export default ({ tags, choice }) => {
                         key={index}
                         href={`/tags/${item}`}
                     >
-                        <span className={(item === choice ? "bg-[#577cf1] text-[#e0e0e0] " : "bg-[#cfcfcf] ") + "warp-nowarp text-[5px] mr-[5px] px-[10px] rounded-[10px] inline-block text-center"}>
+                        <span
+                            className={
+                                (item === choice ? "bg-[#577cf1] text-[#e0e0e0] " : "bg-[#cfcfcf] ") + " whitespace-nowrap text-[12px] mr-[5px] px-[10px] rounded-[10px] inline-block text-center"
+                            }
+                        >
                             {item}
                         </span>
                     </Link>
