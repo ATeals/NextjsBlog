@@ -6,7 +6,7 @@ export default function Nav() {
         <>
             <nav>
                 <Link href="/">
-                    <h1>Ateal's Blog</h1>
+                    <h1 className="main">Teal's Log</h1>
                 </Link>
                 <div>
                     <Link href="/tags">
@@ -37,6 +37,9 @@ export default function Nav() {
                     display: flex;
                     align-items: center;
                     justify-content: center;
+                }
+                .main {
+                    font-family: "Bebas Neue", sans-serif;
                 }
             `}</style>
         </>

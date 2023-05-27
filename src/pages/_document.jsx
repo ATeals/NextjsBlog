@@ -37,6 +37,20 @@ const Document = () => {
                     name="naver-site-verification"
                     content="514746f4453f87d737d5f285ed615084022639fc"
                 />
+
+                <link
+                    rel="preconnect"
+                    href="https://fonts.googleapis.com"
+                />
+                <link
+                    rel="preconnect"
+                    href="https://fonts.gstatic.com"
+                    crossorigin
+                />
+                <link
+                    href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Dancing+Script:wght@700&family=Monomaniac+One&family=Nunito&display=swap"
+                    rel="stylesheet"
+                />
             </Head>
             <body className="md:px-[10%] dark:bg-[#121212] dark:text-[#E0E0E0]">
                 <ScriptTag />
