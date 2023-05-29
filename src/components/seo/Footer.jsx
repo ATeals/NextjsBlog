@@ -1,8 +1,10 @@
 import Link from "next/link";
+import { faEnvelope, faFile, faFileAlt } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export default () => {
     return (
-        <footer className="z-[-1] dark:border-t-[#A1AAC6] absolute bottom-0 w-[100%]  py-[20px] border-t-black border-t border-solid flex aline-center justify-center py-[30px] flex-col">
+        <footer className="dark:border-t-[#A1AAC6] absolute bottom-0 w-[100%]  py-[20px] border-t-black border-t border-solid flex aline-center justify-center py-[30px] flex-col">
             <div className="flex justify-center">&copy; Ateals </div>
             <div className="flex justify-center">
                 <Link href="https://github.com/ATeals">
