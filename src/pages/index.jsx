@@ -15,7 +15,7 @@ export default () => {
                 </h4>
                 <CardList
                     posts={posts}
-                    num={3}
+                    num={4}
                 />
             </section>
         </>
