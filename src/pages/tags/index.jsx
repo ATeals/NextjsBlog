@@ -10,7 +10,6 @@ export default () => {
     useEffect(() => {
         setTags(getTags);
         setPosts(getPostAll);
-        console.log(getTags);
     }, []);
 
     return (
