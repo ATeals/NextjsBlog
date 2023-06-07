@@ -62,5 +62,20 @@ function a({ node, children, ...props }) {
         </a>
     );
 }
+function em({ node, children, ...props }) {
+    return (
+        <em
+            className="text-[#858585]"
+            style={
+                {
+                    // marginBottom: "10px",
+                }
+            }
+            {...props}
+        >
+            {children}
+        </em>
+    );
+}
 
-export { pre, p, strong, a };
+export { pre, p, strong, a, em };
