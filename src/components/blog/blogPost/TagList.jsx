@@ -1,7 +1,7 @@
 import { h1, h2, h3 } from "./tags/h";
 import { blockquote } from "./tags/blockquote";
 import { code } from "./tags/codeBlock";
-import { ul, li } from "./tags/list";
+import { ul, li, ol } from "./tags/list";
 import { pre, p, strong, a, em } from "./tags/text";
 import { table, td, th, tr } from "./tags/table";
 
@@ -21,6 +21,7 @@ const TagList = {
     code,
     strong,
     ul,
+    ol,
     li,
     h1,
     pre,
