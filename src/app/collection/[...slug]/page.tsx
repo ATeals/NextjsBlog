@@ -5,10 +5,18 @@ import CollectionList from "./CollectionList";
 import { Toc } from "./toc/Toc";
 import TocMenu from "./toc/TocMenu";
 
+export async function generateStaticParams() {
+    const posts = getPostAll;
+
+    return posts.map((post) => ({
+        slug: post._raw.flattenedPath.split("/"),
+    }));
+}
+
 export default ({ params: { slug } }: { params: { slug: Array<string> } }) => {
     const post = getPostAll.find((p) => p._raw.flattenedPath === slug.map((url: string) => unescape(url)).join("/"));
     const collection = getCollection(post && post._raw.sourceFileDir);
-    console.log(slug.map((url: string) => unescape(url)).join("/"));
+    console.log(slug.map((url: string) => unescape(url)));
     return (
         <>
             {/* <PostSeo post={post} /> */}

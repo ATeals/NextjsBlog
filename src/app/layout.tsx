@@ -82,7 +82,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 
                 <title>Ateal's Blog</title>
             </head>
-            <body className="md:px-[10%] dark:bg-[#121212] dark:text-[#E0E0E0] min-h-screen relative flex flex-col">
+            <body
+                suppressHydrationWarning={true}
+                className="md:px-[10%] dark:bg-[#121212] dark:text-[#E0E0E0] min-h-screen relative flex flex-col"
+            >
                 <header>
                     <Nav />
                 </header>
