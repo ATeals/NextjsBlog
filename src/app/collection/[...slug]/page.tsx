@@ -8,7 +8,7 @@ import TocMenu from "./toc/TocMenu";
 export default ({ params: { slug } }: { params: { slug: Array<string> } }) => {
     const post = getPostAll.find((p) => p._raw.flattenedPath === slug.map((url: string) => unescape(url)).join("/"));
     const collection = getCollection(post && post._raw.sourceFileDir);
-
+    console.log(slug.map((url: string) => unescape(url)).join("/"));
     return (
         <>
             {/* <PostSeo post={post} /> */}
