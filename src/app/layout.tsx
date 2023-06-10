@@ -14,12 +14,12 @@ export const metadata = {
     openGraph: {
         type: "website",
         locale: "ko_KR",
-        url: "https://nextjs-blog-ateals.vercel.app/",
+        url: "https://tealslog.vercel.app/",
         title: "Ateals Blog",
         site_name: "Ateals Blog",
         images: [
             {
-                url: "https://nextjs-blog-ateals.vercel.app/images/logoImg.jpg",
+                url: "https://tealslog.vercel.app/images/logoImg.jpg",
                 width: 1900,
                 height: 630,
                 alt: "og: 이미지",

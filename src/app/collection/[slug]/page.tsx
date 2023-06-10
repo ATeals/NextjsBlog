@@ -23,3 +23,35 @@ export default ({ params: { slug } }: { params: { slug: string } }) => {
         </>
     );
 };
+
+export const generateMetadata = ({ params: { slug } }: { params: { slug: string } }) => {
+    const collection = getCollection(slug);
+
+    return (
+        collection && {
+            title: "Ateals Blog",
+            description: "Welcome my Blog!",
+            canonical: "https://www.carrotins.com",
+            openGraph: {
+                type: "website",
+                locale: "ko_KR",
+                url: `https://tealslog.vercel.app/collection/${collection._raw.flattenedPath}`,
+                title: collection.title,
+                site_name: "Ateals Blog",
+                images: [
+                    {
+                        url: collection.img ? collection.img : "https://tealslog.vercel.app/images/logoImg.jpg",
+                        width: 1900,
+                        height: 630,
+                        alt: "og: 이미지",
+                    },
+                ],
+            },
+            twitter: {
+                handle: "@handle",
+                site: "@site",
+                cardType: "summary_large_image",
+            },
+        }
+    );
+};
