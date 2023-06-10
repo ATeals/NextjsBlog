@@ -1,0 +1,35 @@
+{
+    "name": "mini_project",
+    "version": "0.1.0",
+    "private": true,
+    "scripts": {
+        "dev": "next dev",
+        "build": "next build",
+        "start": "next start",
+        "lint": "next lint"
+    },
+    "dependencies": {
+        "@ant-design/icons": "^5.0.1",
+        "@fortawesome/fontawesome-svg-core": "^6.4.0",
+        "@fortawesome/free-solid-svg-icons": "^6.4.0",
+        "@fortawesome/react-fontawesome": "^0.2.0",
+        "@types/node": "20.2.5",
+        "@types/react": "18.2.8",
+        "@types/react-dom": "18.2.4",
+        "@types/react-syntax-highlighter": "^15.5.7",
+        "autoprefixer": "10.4.14",
+        "contentlayer": "^0.3.2",
+        "github-markdown-css": "^5.2.0",
+        "next": "13.4.4",
+        "next-contentlayer": "^0.3.2",
+        "next-seo": "^6.0.0",
+        "next-sitemap": "^4.0.9",
+        "postcss": "8.4.24",
+        "react": "18.2.0",
+        "react-dom": "18.2.0",
+        "react-syntax-highlighter": "^15.5.0",
+        "remark-gfm": "^3.0.1",
+        "tailwindcss": "3.3.2",
+        "typescript": "5.1.3"
+    }
+}
