@@ -13,18 +13,18 @@ export default ({ params: { slug } }: { params: { slug: string } }) => {
     const posts = getPostAll.filter((i) => i.tags && i.tags.includes(tag));
     return (
         <>
-            <h1 className="text-[2em] mx-[10px] font-bold">
-                {tag} | {posts.length}
-                <FontAwesomeIcon
-                    icon={faPaperclip}
-                    className="ml-[5px] text-[18px]"
-                />
-            </h1>
+            <section className="w-full">
+                <section className=" m-[10px] shadowBottom box-border">
+                    {tag} | {posts.length}
+                    <FontAwesomeIcon
+                        icon={faPaperclip}
+                        className="ml-[5px] text-[18px]"
+                    />
+                    <TagBox tags={tags} />
+                </section>
 
-            <TagBox tags={tags} />
-            <hr className="border-[#A1AAC6] mt-[30px]" />
-
-            <CardList posts={posts} />
+                <CardList posts={posts} />
+            </section>
         </>
     );
 };

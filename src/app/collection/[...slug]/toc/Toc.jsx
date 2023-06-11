@@ -94,11 +94,9 @@ export const Toc = ({ post, menuToggle }) => {
     return (
         <>
             <ul
+                className="shadowBottom w-full h-[500px] p-[10px]"
                 style={{
                     overflowY: "scroll",
-                    width: "100%",
-                    height: "500px",
-                    padding: "10px",
                 }}
             >
                 {result.map((item, index) => {

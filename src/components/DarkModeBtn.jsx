@@ -24,19 +24,27 @@ export default () => {
     return (
         <>
             {isDarkMode ? (
-                <FontAwesomeIcon
-                    icon={faSun}
-                    size="2x"
-                    className="ml-[10px]"
+                // <FontAwesomeIcon
+                //     icon={faSun}
+                //     size="2x"
+                //     className="ml-[10px]"
+                //     onClick={modeToggle}
+                // />
+                <i
+                    className="bi bi-brightness-high text-[20px]"
                     onClick={modeToggle}
-                />
+                ></i>
             ) : (
-                <FontAwesomeIcon
-                    icon={faMoon}
-                    size="2x"
-                    className="ml-[10px]"
+                // <FontAwesomeIcon
+                //     icon={faMoon}
+                //     size="2x"
+                //     className="ml-[10px]"
+                //     onClick={modeToggle}
+                // />
+                <i
+                    className="bi bi-moon text-[20px]"
                     onClick={modeToggle}
-                />
+                ></i>
             )}
         </>
     );

@@ -29,7 +29,7 @@ export default ({ post }) => {
             {onMenu ? (
                 <div
                     ref={menuRef}
-                    className={`dark:bg-[#1E1E1E] z-[1] w-[70%] fixed bottom-0 right-0 m-[25px] bg-[#ffffff] rounded-[10px]`}
+                    className={`dark:bg-[#1E1E1E] z-[999] w-[70%] fixed bottom-0 right-0 m-[25px] bg-[#ffffff] rounded-[10px]`}
                 >
                     <Toc
                         post={post}
@@ -39,7 +39,7 @@ export default ({ post }) => {
             ) : (
                 <div
                     onClick={clickHander}
-                    className=" cursor-pointer md:hidden text-[#eeeff2] fixed bottom-0 right-0 m-[25px] w-[2.5em] h-[2.5em] bg-[#577cf1] rounded-[10px] flex items-center justify-center"
+                    className="z-[999] cursor-pointer md:hidden text-[#eeeff2] fixed bottom-0 right-0 m-[25px] w-[2.5em] h-[2.5em] bg-[#577cf1] rounded-[10px] flex items-center justify-center"
                 >
                     📑
                 </div>

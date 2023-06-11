@@ -4,6 +4,7 @@ import "@fortawesome/fontawesome-svg-core/styles.css";
 
 import Nav from "@/components/Nav";
 import Footer from "@/components/seo/Footer";
+import SideMenu from "@/components/seo/SideMenu";
 
 config.autoAddCss = false;
 
@@ -80,17 +81,27 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                     rel="stylesheet"
                 />
 
+                <link
+                    rel="stylesheet"
+                    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.1/font/bootstrap-icons.css"
+                />
+
                 <title>Ateal's Blog</title>
             </head>
             <body
                 suppressHydrationWarning={true}
-                className="md:px-[10%] dark:bg-[#121212] dark:text-[#E0E0E0] min-h-screen relative flex flex-col"
+                className=" dark:bg-[#121212] dark:text-[#E0E0E0] min-h-screen relative flex flex-col"
             >
-                <header>
+                <header className="shadowBottom mb-[10px] ">
                     <Nav />
                 </header>
 
-                <main className="mb-[100px] @apply">{children}</main>
+                <main className="mb-[150px] flex box-border w-full">
+                    {/* <aside className="shadowBottom w-[70%] m-[10px] hidden md:block">
+                        <SideMenu />
+                    </aside> */}
+                    {children}
+                </main>
                 <Footer />
             </body>
         </html>

@@ -8,10 +8,14 @@ export default () => {
 
     return (
         <>
-            <h1 className="text-[2em] mx-[10px] font-bold">Tags</h1>
-            <TagBox tags={tags} />
-            <hr className="border-[#A1AAC6] mt-[30px]" />
-            <CardList posts={posts} />
+            <section className="w-full">
+                <section className=" m-[10px] shadowBottom box-border">
+                    <h1 className="text-[2em] font-bold">Tags</h1>
+                    <TagBox tags={tags} />
+                </section>
+
+                <CardList posts={posts} />
+            </section>
         </>
     );
 };

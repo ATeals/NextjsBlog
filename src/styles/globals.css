@@ -1,3 +1,17 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+    .shadowBottom {
+        @apply dark:shadow-bottomDark shadow-bottom;
+    }
+
+    .shadowTop {
+        @apply shadow-top dark:shadow-topDark;
+    }
+}
+
+*::-webkit-scrollbar {
+    display: none;
+}

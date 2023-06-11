@@ -16,12 +16,14 @@ export default () => {
 
     return (
         <>
-            <section className="@apply flex justify-center flex-col">
-                <LineList posts={collections} />
-            </section>
+            <section className="w-full">
+                <section className="@apply flex justify-center flex-col">
+                    <LineList posts={collections} />
+                </section>
 
-            <section className="@apply flex justify-center flex-col">
-                <CardList posts={posts} />
+                <section className="@apply flex justify-center flex-col">
+                    <CardList posts={posts} />
+                </section>
             </section>
         </>
     );

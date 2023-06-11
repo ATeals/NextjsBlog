@@ -21,39 +21,43 @@ export default ({ params: { slug } }: { params: { slug: Array<string> } }) => {
 
     return (
         <>
-            <div className="flex flex-col items-center justify-center my-[40px]">
-                <h1 className="font-bold text-[2em] md:text-[3em]  my-[100px]">{post && post.title}</h1>
-                {post && post.img ? (
-                    <img
-                        src={post.img}
-                        alt=""
-                        className="rounded-[15px] w-[10rem] h-auto  mb-[100px]"
-                    />
-                ) : null}
-
-                <article className="post relative flex justify-center w-[95%]">
-                    <div className="@apply relative py-[40px] w-[20%] hidden md:block"></div>
-                    <div className="px-[3px] w-[100%]">
-                        <MarkdownPost post={post && post.body.code} />
-                    </div>
-                    <div className="@apply relative py-[40px] w-[20%] hidden md:block">
-                        <div className="@apply sticky right-[50%] top-[25%]">
-                            <Toc
-                                post={post}
-                                menuToggle={null}
+            <section className="w-full">
+                <div className="flex flex-col items-center justify-center m-[10px] mb-[40px]">
+                    <section className="w-full flex flex-col items-center justify-center shadowBottom">
+                        <h1 className="font-bold text-[2em] md:text-[3em]  my-[100px]">{post && post.title}</h1>
+                        {post && post.img ? (
+                            <img
+                                src={post.img}
+                                alt=""
+                                className="rounded-[15px] w-[10rem] h-auto  mb-[100px]"
                             />
-                        </div>
-                    </div>
-                </article>
-                {post && collection && (
-                    <CollectionList
-                        post={post}
-                        collection={collection}
-                    />
-                )}
-            </div>
+                        ) : null}
+                    </section>
 
-            <TocMenu post={post} />
+                    <article className="w-full post relative flex justify-center">
+                        <div className="px-[3px] m-[10px] w-full md:shadowBottom ">
+                            <MarkdownPost post={post && post.body.code} />
+                        </div>
+                        <div className="@apply relative py-[40px] w-[20%] hidden md:block">
+                            <div className="@apply sticky right-[50%] top-[25%]">
+                                <Toc
+                                    post={post}
+                                    menuToggle={null}
+                                />
+                            </div>
+                        </div>
+                    </article>
+
+                    {post && collection && (
+                        <CollectionList
+                            post={post}
+                            collection={collection}
+                        />
+                    )}
+                </div>
+
+                <TocMenu post={post} />
+            </section>
         </>
     );
 };
