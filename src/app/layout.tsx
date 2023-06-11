@@ -27,7 +27,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                     <aside className="w-[20%] m-[10px] hidden lg:block">
                         <SideMenu />
                     </aside>
-                    <section className="w-full lg:w-[80%]">{children}</section>
+                    <section className="w-full lg:w-[80%]">
+                        {children}
+                        <article className="p-[10px] md:mx-[20%] lg:hidden">
+                            <SideMenu />
+                        </article>
+                    </section>
                 </main>
                 <Footer />
             </body>
