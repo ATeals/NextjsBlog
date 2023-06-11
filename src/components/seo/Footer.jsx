@@ -7,6 +7,7 @@ export default () => {
                 <div className="flex justify-center text-[18px]">&copy; Ateals </div>
                 <Link href="https://github.com/ATeals">
                     <img
+                        className="rounded-[50%]"
                         alt=""
                         src="https://www.google.com/s2/favicons?domain=https://github.com/ATeals&sz=24"
                     />

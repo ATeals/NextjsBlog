@@ -20,6 +20,7 @@ export default () => {
                 <section className="m-2 flex justify-center space-x-2 mb-4">
                     <Link href="https://github.com/ATeals">
                         <img
+                            className="rounded-[50%]"
                             alt=""
                             src="https://www.google.com/s2/favicons?domain=https://github.com/ATeals&sz=16"
                         />
@@ -56,7 +57,7 @@ export default () => {
 
             <section className="my-2 shadowBottom mb-5 p-3 box-border">
                 <h1 className=" my-2">Collection</h1>
-                <article className="text-[#65737E]">
+                <article className="text-[#65737E] dark:text-[#848484] ">
                     {collection.map((item) => (
                         <article className="">
                             <h1 className="pb-2 flex justify-between font-bold">
