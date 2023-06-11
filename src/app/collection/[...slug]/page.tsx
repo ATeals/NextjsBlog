@@ -22,8 +22,8 @@ export default ({ params: { slug } }: { params: { slug: Array<string> } }) => {
     return (
         <>
             <section className="w-full">
-                <div className="flex flex-col items-center justify-center m-[10px] mb-[40px]">
-                    <section className="w-full flex flex-col items-center justify-center shadowBottom">
+                <div className="w-[100%] flex flex-col items-center justify-center">
+                    <section className="w-full flex flex-col items-center justify-center shadowBottom m-[10px]">
                         <h1 className="font-bold text-[2em] md:text-[3em]  my-[100px]">{post && post.title}</h1>
                         {post && post.img ? (
                             <img
@@ -34,12 +34,12 @@ export default ({ params: { slug } }: { params: { slug: Array<string> } }) => {
                         ) : null}
                     </section>
 
-                    <article className="w-full post relative flex justify-center">
-                        <div className="px-[3px] m-[10px] w-full md:shadowBottom ">
+                    <article className="w-full  relative flex justify-center mb-[40px] m-[10px]">
+                        <div className="px-[3px] m-[10px] w-[95%] md:w-[80%] ml-0 box-border md:shadowBottom">
                             <MarkdownPost post={post && post.body.code} />
                         </div>
-                        <div className="@apply relative py-[40px] w-[20%] hidden md:block">
-                            <div className="@apply sticky right-[50%] top-[25%]">
+                        <div className="relative w-[20%] my-[10px] hidden md:block">
+                            <div className="sticky right-[50%] top-[25%]">
                                 <Toc
                                     post={post}
                                     menuToggle={null}

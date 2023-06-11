@@ -1,7 +1,82 @@
+import { getCollectionAll, getPostAll, getTags } from "@/lib/Postdata";
+import Link from "next/link";
+
 export default () => {
+    const postNum = getPostAll.length;
+    const tagNum = getTags.length;
+    const collection = getCollectionAll;
     return (
         <>
-            <h1>hi</h1>
+            <section className="shadowBottom flex flex-col justify-center items-center pb-8 mb-4">
+                <section className="flex flex-col justify-center items-center my-4 pb-4">
+                    <img
+                        src="https://avatars.githubusercontent.com/u/125727432?v=4"
+                        alt="User Profile Img"
+                        className="w-[50%] h-[auto] rounded-[50%] my-5"
+                    />
+                    <h1>A_Teals</h1>
+                </section>
+
+                <section className="m-2 flex justify-center space-x-2 mb-4">
+                    <Link href="https://github.com/ATeals">
+                        <img
+                            alt=""
+                            src="https://www.google.com/s2/favicons?domain=https://github.com/ATeals&sz=16"
+                        />
+                    </Link>
+                    <Link href="https://velog.io/@ateals_12">
+                        <img
+                            alt=""
+                            src="https://www.google.com/s2/favicons?domain=https://velog.io/@ateals_12&sz=16"
+                        />
+                    </Link>
+                    <Link href="mailto:ateals@icloud.com">
+                        <img
+                            alt=""
+                            src="https://www.google.com/s2/favicons?domain=https://support.apple.com/ko-kr/mail&sz=16"
+                        />
+                    </Link>
+                </section>
+
+                <section className="flex justify-center space-x-5">
+                    <article className="text-center">
+                        <h2 className="text-[#65737E]">시리즈</h2>
+                        <h4 className="font-bold text-[20px]">{collection.length}</h4>
+                    </article>
+                    <article className="text-center">
+                        <h2 className="text-[#65737E]">태그</h2>
+                        <h4 className="font-bold text-[20px]">{tagNum}</h4>
+                    </article>
+                    <article className="text-center">
+                        <h2 className="text-[#65737E]">포스트</h2>
+                        <h4 className="font-bold text-[20px]">{postNum}</h4>
+                    </article>
+                </section>
+            </section>
+
+            <section className="my-2 shadowBottom mb-5 p-3 box-border">
+                <h1 className=" my-2">Collection</h1>
+                <article className="text-[#65737E]">
+                    {collection.map((item) => (
+                        <article className="">
+                            <h1 className="pb-2 flex justify-between font-bold">
+                                <span>{item.title}</span>
+                                <div className=" bg-highlight text-darkText rounded-[50%] w-[20px] h-[20px] flex justify-center items-center">{item.posts.length}</div>
+                            </h1>
+                            <div className="border-l-[1px] border-l-solid border-l-[#65737E] ml-1 pb-5">
+                                {item.posts.map((post) => (
+                                    <Link
+                                        href={"/collection/" + post._raw.flattenedPath}
+                                        key={post._id}
+                                    >
+                                        <h1 className="pl-2 pb-2">{post.title}</h1>
+                                    </Link>
+                                ))}
+                            </div>
+                        </article>
+                    ))}
+                </article>
+            </section>
         </>
     );
 };
