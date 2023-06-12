@@ -19,7 +19,8 @@ export default ({ params: { slug } }: { params: { slug: Array<string> } }) => {
 
     return (
         <>
-            <section className="w-full">
+            hello
+            {/* <section className="w-full">
                 <div className="w-[100%] flex flex-col items-center justify-center">
                     <section className="w-full flex flex-col items-center justify-center shadowBottom m-[10px]">
                         <h1 className="font-bold text-[2em] md:text-[3em]  my-[100px]">{post && post.title}</h1>
@@ -55,7 +56,7 @@ export default ({ params: { slug } }: { params: { slug: Array<string> } }) => {
                 </div>
 
                 <TocMenu post={post} />
-            </section>
+            </section> */}
         </>
     );
 };
