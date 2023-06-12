@@ -1,4 +1,5 @@
 import { allPosts } from "contentlayer/gererated";
+import { getColor } from "./type/tagType";
 
 export const getPost = (url) => {
     return allPosts.find((p) => p._raw.flattenedPath === url);
@@ -34,4 +35,15 @@ export const getTags = Array.from(
             .map((i) => i.tags)
             .reduce((start, index) => [...start, ...index], [])
     )
-);
+).map((tag, index) => {
+    const colors = getColor;
+    return {
+        tag,
+        color: {
+            text: colors[index % colors.length].text,
+            bg: colors[index % colors.length].bg,
+            darkText: "",
+            darkBg: "",
+        },
+    };
+});

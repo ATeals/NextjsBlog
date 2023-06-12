@@ -9,7 +9,7 @@ export default ({ tags }) => {
                         key={index}
                         href={`/tags/${item}`}
                     >
-                        <span className={"bg-[#cfcfcf] whitespace-nowrap text-[12px] mr-[5px] px-[10px] rounded-[10px] inline-block text-center"}>{item}</span>
+                        <span className={"bg-[#cfcfcf] whitespace-nowrap text-[15px] mr-[5px] py-[5px] px-[15px] inline-block text-center"}>#{item}</span>
                     </Link>
                 ))
             ) : (

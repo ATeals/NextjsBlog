@@ -5,8 +5,6 @@ import CollectionList from "./CollectionList";
 import { Toc } from "./toc/Toc";
 import TocMenu from "./toc/TocMenu";
 
-import { PostSeo } from "@/components/seo/seoObject";
-
 export async function generateStaticParams() {
     const posts = getPostAll;
 

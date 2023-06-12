@@ -1,9 +1,10 @@
 import { getCollectionAll, getPostAll, getTags } from "@/lib/Postdata";
 import Link from "next/link";
+import TagList from "./TagList";
 
 export default () => {
     const postNum = getPostAll.length;
-    const tagNum = getTags.length;
+    const tags = getTags;
     const collection = getCollectionAll;
     return (
         <>
@@ -46,7 +47,7 @@ export default () => {
                     </article>
                     <article className="text-center">
                         <h2 className="text-[#65737E]">태그</h2>
-                        <h4 className="font-bold text-[20px]">{tagNum}</h4>
+                        <h4 className="font-bold text-[20px]">{tags.length}</h4>
                     </article>
                     <article className="text-center">
                         <h2 className="text-[#65737E]">포스트</h2>
@@ -88,6 +89,11 @@ export default () => {
                         </article>
                     ))}
                 </article>
+            </section>
+
+            <section className="my-2 shadowBottom mb-5 p-3 box-border">
+                <h1 className="my-2">Tags</h1>
+                <TagList tags={tags} />
             </section>
         </>
     );
