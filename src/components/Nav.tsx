@@ -8,15 +8,15 @@ export default function Nav() {
         <>
             <nav className="flex items-center justify-between text-[1rem] p-[0.5em]">
                 <Link href="/">
-                    <h1 className="font-bebas-neue text-[2em] font-bold">Teal's Log</h1>
+                    <h1 className="font-bebas-neue text-[2em] font-bold mx-[20px]">Teal's Log</h1>
                 </Link>
-                <div className="flex items-center justify-center mx-[10px] [&>*]:mr-[10px]">
+                <div className="flex items-center justify-center items-center mx-[10px] [&>*]:mx-[10px]">
                     <Link href="/collection">
-                        <div>Collection</div>
+                        <i className="bi bi-file-earmark-ppt text-[20px]"></i>
                     </Link>
 
                     <Link href="/tags">
-                        <div>Tags</div>
+                        <i className="bi bi-bookmarks text-[20px]"></i>
                     </Link>
 
                     <DarkModeBtn />
