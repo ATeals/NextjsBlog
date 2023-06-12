@@ -5,13 +5,13 @@ import CollectionList from "./CollectionList";
 import { Toc } from "./toc/Toc";
 import TocMenu from "./toc/TocMenu";
 
-// export async function generateStaticParams() {
-//     const posts = getPostAll;
+export async function generateStaticParams() {
+    const posts = getPostAll;
 
-//     return posts.map((post) => ({
-//         slug: post._raw.flattenedPath.split("/"),
-//     }));
-// }
+    return posts.map((post) => ({
+        slug: post._raw.flattenedPath.split("/"),
+    }));
+}
 
 export default ({ params: { slug } }: { params: { slug: Array<string> } }) => {
     const post = getPostAll.find((p) => p._raw.flattenedPath === slug.map((url: string) => unescape(url)).join("/"));
@@ -19,8 +19,7 @@ export default ({ params: { slug } }: { params: { slug: Array<string> } }) => {
 
     return (
         <>
-            hello
-            {/* <section className="w-full">
+            <section className="w-full">
                 <div className="w-[100%] flex flex-col items-center justify-center">
                     <section className="w-full flex flex-col items-center justify-center shadowBottom m-[10px]">
                         <h1 className="font-bold text-[2em] md:text-[3em]  my-[100px]">{post && post.title}</h1>
@@ -56,7 +55,7 @@ export default ({ params: { slug } }: { params: { slug: Array<string> } }) => {
                 </div>
 
                 <TocMenu post={post} />
-            </section> */}
+            </section>
         </>
     );
 };
