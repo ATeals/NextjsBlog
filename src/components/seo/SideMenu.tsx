@@ -64,7 +64,7 @@ export default () => {
                             key={item._id}
                             className=""
                         >
-                            <h1 className="text-highlight pb-2 flex justify-between items-center font-bold">
+                            <h1 className="text-highlight pb-2 flex justify-between items-center font-bold hover:underline">
                                 <Link href={"/collection/" + item._raw.flattenedPath}>
                                     <span>{item.title}</span>
                                 </Link>
@@ -82,7 +82,7 @@ export default () => {
                                         href={"/collection/" + post._raw.flattenedPath}
                                         key={post._id}
                                     >
-                                        <h1 className="pl-2 pb-2">{post.title}</h1>
+                                        <h1 className="pl-2 pb-2 hover:underline">{post.title}</h1>
                                     </Link>
                                 ))}
                             </div>

@@ -8,7 +8,7 @@ export default ({ tag }: { tag: tagObj }) => {
                     backgroundColor: tag.color.bg,
                     color: tag.color.text,
                 }}
-                className={"bg-[#cfcfcf] whitespace-nowrap text-[15px] mr-[5px] py-[5px] px-[15px] inline-block text-center"}
+                className={"hover:underline whitespace-nowrap text-[15px] mr-[5px] py-[5px] px-[15px] inline-block text-center"}
             >
                 #{tag.tag}
             </span>

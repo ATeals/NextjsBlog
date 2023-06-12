@@ -42,8 +42,8 @@ export const getTags = Array.from(
         color: {
             text: colors[index % colors.length].text,
             bg: colors[index % colors.length].bg,
-            darkText: "",
-            darkBg: "",
+            darkText: "#f5f5f5",
+            darkBg: "#5172A5",
         },
     };
 });

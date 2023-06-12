@@ -106,7 +106,7 @@ export const Toc = ({ post, menuToggle }) => {
                                 // href={`#${item.title}`}
 
                                 style={{ marginLeft: `${item.count * 3}px`, padding: "5px", fontWeight: `${800 - item.count * 10}`, fontSize: "15px" }}
-                                className={(activeId === item.title ? `text-[#577CF1]` : `text-[#aeaeae]`) + ` whitespace-nowrap  cursor-pointer`}
+                                className={(activeId === item.title ? `text-[#577CF1]` : `text-[#aeaeae]`) + ` whitespace-nowrap  cursor-pointer hover:underline`}
                                 onClick={clickHander}
                             >
                                 {item.title}
