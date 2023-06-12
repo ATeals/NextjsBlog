@@ -1,7 +1,7 @@
 "use client";
 
 import { useMDXComponent } from "next-contentlayer/hooks";
-import tagList from "@/app/collection/[...slug]/tagList";
+import tagList from "./tagList";
 
 export default ({ post }) => {
     const MDXComponent = useMDXComponent(post);

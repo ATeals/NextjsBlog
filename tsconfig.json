@@ -33,7 +33,9 @@
         "src/lib/Postdata.js",
         "./.contentlayer/generated",
         "contentlayer.config.js",
-        "src/app/collection/[...slug]/MarkdownPost.tsx"
+        "src/app/collection/[...slug]/MarkdownPost.tsx",
+        "src/app/tags/[slug]/[id]/page.jsx",
+        "src/app/collection/[slug]/[id]/page.jsx"
     ],
     "exclude": ["node_modules"]
 }
