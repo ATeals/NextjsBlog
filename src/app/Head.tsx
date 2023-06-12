@@ -49,7 +49,10 @@ export default () => {
                     rel="stylesheet"
                     href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.1/font/bootstrap-icons.css"
                 />
-
+                <meta
+                    http-equiv="Content-Security-Policy"
+                    content="upgrade-insecure-requests"
+                ></meta>
                 <title>Ateal's Blog</title>
             </head>
         </>
