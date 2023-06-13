@@ -1,7 +1,7 @@
 import { getPostAll, getTags } from "@/lib/Postdata";
 import TagBox from "@/components/tags/TagBox";
 import CardList from "@/components/blog/blogUi/CardList";
-import TagList from "@/components/seo/TagList";
+import TagList from "@/components/tags/TagList";
 
 export default () => {
     const tags = getTags;

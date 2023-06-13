@@ -3,8 +3,8 @@ import { getPostAll } from "@/lib/Postdata";
 
 import CardList from "@/components/blog/blogUi/CardList";
 import { unescape } from "querystring";
-import TagList from "@/components/seo/TagList";
-import Tag from "@/components/seo/Tag";
+import TagList from "@/components/tags/TagList";
+import Tag from "@/components/tags/Tag";
 
 export default ({ params: { slug } }: { params: { slug: string } }) => {
     const tags = getTags;

@@ -25,9 +25,7 @@ export default ({ params: { slug, id } }: { params: { slug: string; id: string }
                     </section>
 
                     <article className="w-full  relative flex justify-center mb-[40px] m-[10px]">
-                        <div className="px-[3px] m-[10px] w-[95%] md:w-[80%] ml-0 box-border md:shadowBottom">
-                            <MarkdownPost post={post && post.body.code} />
-                        </div>
+                        <div className="px-[3px] m-[10px] w-[95%] md:w-[80%] ml-0 box-border md:shadowBottom">{/* <MarkdownPost post={post && post.body.code} /> */}</div>
                         <div className="relative w-[20%] my-[10px] hidden md:block">
                             <div className="sticky right-[50%] top-[25%]">
                                 <Toc
