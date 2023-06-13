@@ -6,6 +6,7 @@ import { Toc } from "./toc/Toc";
 import TocMenu from "./toc/TocMenu";
 
 import { Suspense } from "react";
+import ButtonMenu from "./ui/button/ButtonMenu";
 
 export default ({ params: { slug, id } }: { params: { slug: string; id: string } }) => {
     const post = getPostAll.find((p) => p._raw.flattenedPath === `${slug}/${unescape(id)}`);
@@ -38,6 +39,7 @@ export default ({ params: { slug, id } }: { params: { slug: string; id: string }
                                     post={post}
                                     menuToggle={null}
                                 />
+                                <ButtonMenu />
                             </div>
                         </div>
                     </article>

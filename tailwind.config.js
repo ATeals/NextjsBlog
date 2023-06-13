@@ -11,7 +11,7 @@ module.exports = {
         },
         colors: {
             darkText: "#E0E0E0",
-            darkBg: "#121212",
+            darkBg: "#1E1E1E",
             highlight: "#577cf1",
         },
         boxShadow: {
