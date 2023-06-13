@@ -17,7 +17,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             <Head />
             <body
                 suppressHydrationWarning={true}
-                className=" dark:bg-[#1E1E1E] dark:text-[#EDEDED] w-screen min-h-screen relative flex flex-col"
+                className=" dark:bg-[#1E1E1E] dark:text-[#e0e4e6] w-screen min-h-screen relative flex flex-col"
             >
                 <header className="shadowBottom mb-[10px] ">
                     <Nav />
