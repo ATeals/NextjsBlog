@@ -9,10 +9,11 @@ import javascriptDeepDive___14Mdx from './javascriptDeepDive__[14]전역 변수�
 import javascriptDeepDive___17Mdx from './javascriptDeepDive__[17] 생성자 함수에 의한 객체 생성.mdx.json' assert { type: 'json' }
 import javascriptDeepDive___23Mdx from './javascriptDeepDive__[23]실행 컨텍스트.mdx.json' assert { type: 'json' }
 import javascriptDeepDive___26Es6Mdx from './javascriptDeepDive__[26]ES6 함수의 추가 기능.mdx.json' assert { type: 'json' }
+import javascriptDeepDive___35Mdx from './javascriptDeepDive__[35] 스프레드 문법.mdx.json' assert { type: 'json' }
 import javascriptDeepDive__indexMdx from './javascriptDeepDive__index.mdx.json' assert { type: 'json' }
 import js__jsType2Mdx from './js__JS type2.mdx.json' assert { type: 'json' }
 import js__jsValueMdx from './js__JS value.mdx.json' assert { type: 'json' }
 import js__indexMdx from './js__index.mdx.json' assert { type: 'json' }
 import js__jsTypeMdx from './js__js type.mdx.json' assert { type: 'json' }
 
-export const allPosts = [blog__Mdx, blog__indexMdx, javascriptDeepDive___04VariableMdx, javascriptDeepDive___06DataTypeMdx, javascriptDeepDive___13Mdx, javascriptDeepDive___14Mdx, javascriptDeepDive___17Mdx, javascriptDeepDive___23Mdx, javascriptDeepDive___26Es6Mdx, javascriptDeepDive__indexMdx, js__jsType2Mdx, js__jsValueMdx, js__indexMdx, js__jsTypeMdx]
+export const allPosts = [blog__Mdx, blog__indexMdx, javascriptDeepDive___04VariableMdx, javascriptDeepDive___06DataTypeMdx, javascriptDeepDive___13Mdx, javascriptDeepDive___14Mdx, javascriptDeepDive___17Mdx, javascriptDeepDive___23Mdx, javascriptDeepDive___26Es6Mdx, javascriptDeepDive___35Mdx, javascriptDeepDive__indexMdx, js__jsType2Mdx, js__jsValueMdx, js__indexMdx, js__jsTypeMdx]
