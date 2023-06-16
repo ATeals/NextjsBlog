@@ -11,7 +11,7 @@ const nextConfig = {
         return [
             {
                 source: "/api/og",
-                destination: `/api/getog?api_key=hu6HzhQY07Zq79MA98dhYV2Mp`,
+                destination: `/api/getOg?api_key=${process.env.NEXT_PUBLIC_API_KEY}`,
             },
         ];
     },

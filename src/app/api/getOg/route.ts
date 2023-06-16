@@ -14,6 +14,7 @@ const getOg = (url: string) =>
 
 export async function GET(request: NextRequest, response: NextResponse) {
     const url = request.nextUrl.searchParams.get("url");
+    console.log(decodeURIComponent(request.headers.get("x-invoke-query") || ""));
     const { api_key } = JSON.parse(decodeURIComponent(request.headers.get("x-invoke-query") || ""));
 
     console.log(api_key);
