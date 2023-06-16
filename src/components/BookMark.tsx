@@ -12,8 +12,7 @@ export default ({ url }: { url: string }) => {
     const [data, setData] = useState<data>();
 
     const getOgData = async (url: string) => {
-        const data = await (await fetch(`/api/getOg?api_key=hu6HzhQY07Zq79MA98dhYV2Mp&url=${url}`)).json();
-        console.log(data);
+        const data = await (await fetch(`/api/getOg?api_key=${process.env.NEXT_PUBLIC_API_KEY}&url=${url}`)).json();
         setData(data);
     };
 
