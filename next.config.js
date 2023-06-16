@@ -7,14 +7,6 @@ const nextConfig = {
     experimental: {
         appDir: true,
     },
-    async rewrites() {
-        return [
-            {
-                source: "/api/og",
-                destination: `/api/getOg?api_key=${process.env.NEXT_PUBLIC_API_KEY}`,
-            },
-        ];
-    },
 };
 
 module.exports = withContentlayer(nextConfig);
