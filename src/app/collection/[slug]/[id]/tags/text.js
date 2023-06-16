@@ -1,3 +1,5 @@
+import BookMark from "@/components/BookMark";
+
 function strong({ node, children, ...props }) {
     return (
         <strong
@@ -47,23 +49,6 @@ function pre({ node, children, ...props }) {
     );
 }
 
-function a({ node, children, ...props }) {
-    return (
-        <>
-            <a
-                className="italic font-bold mx-1 text-[#292E85] underline"
-                style={
-                    {
-                        // marginBottom: "10px",
-                    }
-                }
-                {...props}
-            >
-                {children}
-            </a>
-        </>
-    );
-}
 function em({ node, children, ...props }) {
     return (
         <em
@@ -80,4 +65,4 @@ function em({ node, children, ...props }) {
     );
 }
 
-export { pre, p, strong, a, em };
+export { pre, p, strong, em };

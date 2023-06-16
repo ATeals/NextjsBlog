@@ -1,9 +1,10 @@
 import { h1, h2, h3 } from "./tags/h";
 import { blockquote } from "./tags/blockquote";
 import { ul, li, ol } from "./tags/list";
-import { pre, p, strong, a, em } from "./tags/text";
+import { pre, p, strong, em } from "./tags/text";
 import { table, td, th, tr } from "./tags/table";
 import { code } from "./tags/codeBlock";
+import { a, del } from "./tags/LinkBlock";
 
 function aside({ node, children, ...props }) {
     return (
@@ -35,6 +36,7 @@ const tagList = {
     em,
     aside,
     code,
+    del,
 };
 
 export default tagList;
