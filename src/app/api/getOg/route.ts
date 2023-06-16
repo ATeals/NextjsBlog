@@ -1,4 +1,3 @@
-import { NextApiHandler, NextApiRequest } from "next";
 import { NextRequest, NextResponse } from "next/server";
 import og from "open-graph";
 
@@ -13,7 +12,7 @@ const getOg = (url: string) =>
         });
     });
 
-export async function GET(request: NextApiRequest, response: NextResponse) {
+export async function GET(request: NextRequest, response: NextResponse) {
     // const url = request.nextUrl.searchParams.get("url");
     // const { api_key } = JSON.parse(decodeURIComponent(request.headers.get("x-invoke-query") || ""));
     const head = request.headers;
