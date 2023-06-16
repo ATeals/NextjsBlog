@@ -21,7 +21,7 @@ export async function GET(request: NextRequest, response: NextResponse) {
     // if (!url) return NextResponse.json({ title: "NO URL" });
 
     // const data = await getOg(encodeURI(url));
-    return NextResponse.json(data);
+    return NextResponse.json(request.headers);
 }
 
 // export async function GET(request: NextRequest) {
