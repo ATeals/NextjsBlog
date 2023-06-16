@@ -12,7 +12,7 @@ export default ({ url }: { url: string }) => {
     const [data, setData] = useState<data>();
 
     const getOgData = async (url: string) => {
-        const data = await (await fetch(`/api/getOg?url=${url}`)).json();
+        const data = await (await fetch(`/api/og?url=${url}`)).json();
         setData(data);
     };
 
