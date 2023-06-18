@@ -1,43 +1,54 @@
 {
-    "compilerOptions": {
-        "target": "es5",
-        "lib": ["dom", "dom.iterable", "esnext"],
-        "allowJs": true,
-        "skipLibCheck": true,
-        "strict": true,
-        "forceConsistentCasingInFileNames": true,
-        "noEmit": true,
-        "esModuleInterop": true,
-        "module": "esnext",
-        "moduleResolution": "node",
-        "resolveJsonModule": true,
-        "isolatedModules": true,
-        "jsx": "preserve",
-        "incremental": true,
-        "plugins": [
-            {
-                "name": "next"
-            }
-        ],
-        "baseUrl": ".",
-        "paths": {
-            "@/*": ["./src/*"],
-            "contentlayer/gererated": ["./.contentlayer/generated"]
-        }
-    },
-    "include": [
-        "next-env.d.ts",
-        "**/*.ts",
-        "**/*.tsx",
-        ".next/types/**/*.ts",
-        "src/lib/Postdata.js",
-        "./.contentlayer/generated",
-        "contentlayer.config.js",
-        "src/app/collection/[...slug]/MarkdownPost.tsx",
-        "src/app/tags/[slug]/[id]/page.jsx",
-        "src/app/collection/[slug]/[id]/page.tsx",
-        "src/app/api/getOg/route.ts",
-        "src/app/til/page.jsx"
+  "compilerOptions": {
+    "target": "es5",
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
     ],
-    "exclude": ["node_modules"]
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "incremental": true,
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ],
+    "baseUrl": ".",
+    "paths": {
+      "@/*": [
+        "./src/*"
+      ],
+      "contentlayer/gererated": [
+        "./.contentlayer/generated"
+      ]
+    }
+  },
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts",
+    "src/lib/Postdata.js",
+    "./.contentlayer/generated",
+    "contentlayer.config.js",
+    "src/app/collection/[...slug]/MarkdownPost.tsx",
+    "src/app/tags/[slug]/[id]/page.jsx",
+    "src/app/collection/[slug]/[id]/page.tsx",
+    "src/app/api/getOg/route.ts",
+    "src/app/til/page.jsx",
+    "sitemap.config.ts"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
 }
