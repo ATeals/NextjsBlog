@@ -11,7 +11,7 @@ function code({ node, inline, className, children, ...props }) {
         />
     ) : (
         <code
-            className="text-[#ffffff]"
+            className="text-[gray]"
             {...props}
         >
             {children}

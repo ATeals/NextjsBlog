@@ -1,5 +1,4 @@
 import Link from "next/link";
-import og from "open-graph";
 import { use } from "react";
 
 interface data {
