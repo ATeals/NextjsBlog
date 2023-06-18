@@ -23,12 +23,14 @@ export default ({ match, children, ...props }) => {
             >
                 {String(children).replace(/\n$/, "")}
             </SyntaxHighlighter>
-            <button
-                onClick={onclick}
-                className="transition-all duration-200 opacity-0 group-hover:opacity-100 absolute bottom-0 right-0 text-[gray] p-1 text-[25px] rounded-[8px] m-5"
-            >
-                <i className="bi bi-clipboard"></i>
-            </button>
+            {match ? (
+                <button
+                    onClick={onclick}
+                    className="transition-all duration-200 opacity-0 group-hover:opacity-100 absolute bottom-0 right-0 text-[gray] p-1 text-[25px] rounded-[8px] m-5"
+                >
+                    <i className="bi bi-clipboard"></i>
+                </button>
+            ) : null}
         </>
     );
 };
