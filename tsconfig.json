@@ -36,7 +36,8 @@
         "src/app/collection/[...slug]/MarkdownPost.tsx",
         "src/app/tags/[slug]/[id]/page.jsx",
         "src/app/collection/[slug]/[id]/page.tsx",
-        "src/app/api/getOg/route.ts"
+        "src/app/api/getOg/route.ts",
+        "src/app/til/page.jsx"
     ],
     "exclude": ["node_modules"]
 }
