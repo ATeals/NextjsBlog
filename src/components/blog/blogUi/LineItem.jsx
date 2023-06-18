@@ -1,5 +1,3 @@
-import { faPaperclip } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Link from "next/link";
 
 export default ({ post }) => {
@@ -14,7 +12,7 @@ export default ({ post }) => {
                     <h4>{post.description}</h4>
                 </div>
                 <h4 className=" absolute text-[#aaaaaa] w-[100%] h-[100%] text-end bottom-[-2] right-0 p-[1em] text-[1.5em] font-bold">
-                    {post.posts.length} <FontAwesomeIcon icon={faPaperclip} />
+                    {post.posts.length} <i className="bi bi-collection ml-2"></i>
                 </h4>
             </div>
         </Link>

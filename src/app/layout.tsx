@@ -1,6 +1,4 @@
 import "@/styles/globals.css";
-import { config } from "@fortawesome/fontawesome-svg-core";
-import "@fortawesome/fontawesome-svg-core/styles.css";
 
 import Nav from "@/components/Nav";
 import Footer from "@/components/seo/Footer";
@@ -8,7 +6,6 @@ import SideMenu from "@/components/seo/SideMenu";
 import Head from "./Head";
 import metaObj from "./metadata";
 
-config.autoAddCss = false;
 export const metadata = metaObj;
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

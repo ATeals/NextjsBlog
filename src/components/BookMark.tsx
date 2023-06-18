@@ -25,7 +25,7 @@ export default ({ url }: { url: string }) => {
                     <div className="shadowBottom my-10 flex h-[200px] hover:scale-105">
                         <div className="h-full w-[30%] relative">
                             <img
-                                src={data.image.url}
+                                src={data.image?.url}
                                 alt="Image"
                                 className="h-full w-full object-cover "
                             />
