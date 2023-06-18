@@ -8,12 +8,12 @@ import TocMenu from "./toc/TocMenu";
 import { Suspense } from "react";
 import ButtonMenu from "./ui/button/ButtonMenu";
 
-export async function generateStaticParams() {
-    return getPostAll.map((post) => ({
-        slug: post._raw.flattenedPath.split("/")[0],
-        id: post._raw.flattenedPath.split("/")[1],
-    }));
-}
+// export async function generateStaticParams() {
+//     return getPostAll.map((post) => ({
+//         slug: post._raw.flattenedPath.split("/")[0],
+//         id: post._raw.flattenedPath.split("/")[1],
+//     }));
+// }
 
 export default ({ params: { slug, id } }: { params: { slug: string; id: string } }) => {
     const post = getPostAll.find((p) => p._raw.flattenedPath === `${slug}/${unescape(id)}`);
