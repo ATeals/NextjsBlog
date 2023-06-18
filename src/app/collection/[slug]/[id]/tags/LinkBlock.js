@@ -1,4 +1,5 @@
-import BookMark from "@/components/BookMark";
+import BookMark, { SkeletonBookmark } from "@/components/BookMark";
+import { Suspense } from "react";
 
 export function a({ node, children, ...props }) {
     return (
@@ -24,10 +25,12 @@ export function del({ node, children, ...props }) {
             {typeof children === typeof "" ? (
                 <del {...props}>{children}</del>
             ) : (
-                <BookMark
-                    {...props}
-                    url={children.props.href}
-                />
+                <Suspense fallback={<SkeletonBookmark />}>
+                    <BookMark
+                        {...props}
+                        url={children.props.href}
+                    />
+                </Suspense>
             )}
         </>
     );

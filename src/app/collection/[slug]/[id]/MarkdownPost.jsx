@@ -1,5 +1,3 @@
-"use client";
-
 import { useMDXComponent } from "next-contentlayer/hooks";
 import tagList from "./tagList";
 

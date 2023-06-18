@@ -1,9 +1,9 @@
 import { h1, h2, h3 } from "./tags/h";
 import { blockquote } from "./tags/blockquote";
 import { ul, li, ol } from "./tags/list";
-import { pre, p, strong, em } from "./tags/text";
+import { p, strong, em } from "./tags/text";
 import { table, td, th, tr } from "./tags/table";
-import { code } from "./tags/codeBlock";
+import { code, pre } from "./tags/code";
 import { a, del } from "./tags/LinkBlock";
 
 function aside({ node, children, ...props }) {

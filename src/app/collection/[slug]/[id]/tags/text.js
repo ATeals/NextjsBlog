@@ -1,4 +1,4 @@
-import BookMark from "@/components/BookMark";
+import BookMark from "@/components/BookMark_API";
 
 function strong({ node, children, ...props }) {
     return (
@@ -19,7 +19,7 @@ function strong({ node, children, ...props }) {
 
 function p({ node, children, ...props }) {
     return (
-        <p
+        <div
             className="mx-5 mb-2 leading-8"
             style={
                 {
@@ -29,23 +29,7 @@ function p({ node, children, ...props }) {
             {...props}
         >
             {children}
-        </p>
-    );
-}
-
-function pre({ node, children, ...props }) {
-    return (
-        <pre
-            style={{
-                padding: "20px 20px",
-                background: "#2B303B",
-                borderRadius: " 10px",
-                margin: "30px 10px",
-            }}
-            {...props}
-        >
-            {children}
-        </pre>
+        </div>
     );
 }
 
@@ -65,4 +49,4 @@ function em({ node, children, ...props }) {
     );
 }
 
-export { pre, p, strong, em };
+export { p, strong, em };

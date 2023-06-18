@@ -19,20 +19,15 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 suppressHydrationWarning={true}
                 className=" dark:bg-[#1E1E1E] dark:text-[#e0e4e6] w-screen min-h-screen relative flex flex-col"
             >
-                <header className="shadowBottom mb-[10px] ">
+                <header className="shadowBottom mb-[10px]">
                     <Nav />
                 </header>
 
-                <main className="mb-[150px] flex box-border w-full">
-                    <aside className="w-[20%] m-[10px] hidden lg:block">
+                <main className="mb-[150px] lg:flex box-border w-full">
+                    <section className="w-full lg:w-[80%] order-2">{children}</section>
+                    <aside className="lg:w-[20%] m-[10px] order-1">
                         <SideMenu />
                     </aside>
-                    <section className="w-full lg:w-[80%]">
-                        {children}
-                        <article className="p-[10px] md:mx-[20%] lg:hidden">
-                            <SideMenu />
-                        </article>
-                    </section>
                 </main>
                 <Footer />
             </body>

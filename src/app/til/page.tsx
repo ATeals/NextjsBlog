@@ -1,10 +1,13 @@
-import BookMark from "@/components/BookMark";
+import BookMark, { SkeletonBookmark } from "@/components/BookMark";
+import BookMark_API from "@/components/BookMark_API";
+import { Suspense } from "react";
 
 export default () => {
     return (
         <>
-            <h1>hi?</h1>
-            <BookMark url="https://velog.io/" />
+            <Suspense fallback={<SkeletonBookmark />}>
+                <BookMark url="https://www.youtube.com/watch?v=HbTTDJFn-k4" />
+            </Suspense>
         </>
     );
 };
