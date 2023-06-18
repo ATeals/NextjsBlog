@@ -22,10 +22,12 @@ export default () => {
                     rel="icon"
                     href="https://nextjs-blog-ateals.vercel.app/favicon.ico"
                 />
+
                 <meta
                     name="google-site-verification"
-                    content="Vf0Y1AEjfuPI3lth_ZcM3F4TI0bW9UxJ_7ZJQm_pC4w"
+                    content="SWzdnKcr1a_u4qCWr_61fw6PxQf4NZkXWHl1aDrwaeg"
                 />
+
                 <meta
                     name="naver-site-verification"
                     content="514746f4453f87d737d5f285ed615084022639fc"
@@ -40,6 +42,7 @@ export default () => {
                     href="https://fonts.gstatic.com"
                     crossOrigin="anonymous"
                 />
+
                 <link
                     href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Dancing+Script:wght@700&family=Monomaniac+One&family=Nunito&display=swap"
                     rel="stylesheet"
