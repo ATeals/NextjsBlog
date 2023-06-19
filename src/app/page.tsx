@@ -8,18 +8,19 @@ export default function Home() {
     return (
         <>
             <section className="w-full ">
-                <section className="px-[5%] m-[10px] shadowBottom">
-                    <h1 className="font-bold text-[2em] w-full text-center my-[20px] py-[20px] border-b-[#577CF1] border-b-[2px] border-solid">최근 포스트</h1>
-                    <div className="flex justify-end">
-                        <span className=" mx-[5%] text-end text-[#c6d6f5] hover:scale-105 hover:text-[#74a0e0]">
-                            <a href="/collection"> 모든 포스트 &rarr;</a>
-                        </span>
-                    </div>
-                </section>
+                <section className=" shadowBottom  m-[10px]"></section>
                 <CardList
                     posts={posts}
                     num={4}
                 />
+                <div className="w-full text-end  mb-5">
+                    <a
+                        href="/collection"
+                        className="text-[highlight] mx-10 text-end"
+                    >
+                        ALL POST &rarr;
+                    </a>
+                </div>
             </section>
         </>
     );
