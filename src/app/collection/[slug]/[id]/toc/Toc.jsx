@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 
 export const useIntersectionObserver = (
@@ -83,12 +84,6 @@ export const Toc = ({ post, menuToggle }) => {
             return { title: item.split("# ")[1].replace(/`/g, "").trim(), count };
         });
 
-    const clickHander = (e) => {
-        //히스토리 저장안할래!
-        window.location.replace(`#${e.target.innerText}`);
-        if (menuToggle !== null) menuToggle();
-    };
-
     useIntersectionObserver(setActiveId, post);
 
     return (
@@ -102,15 +97,14 @@ export const Toc = ({ post, menuToggle }) => {
                 {result.map((item, index) => {
                     return (
                         <li key={item + index}>
-                            <a
-                                // href={`#${item.title}`}
-
+                            <Link
+                                href={`#${item.title}`}
+                                replace
                                 style={{ marginLeft: `${item.count * 3}px`, padding: "5px", fontWeight: `${800 - item.count * 10}`, fontSize: "15px" }}
                                 className={(activeId === item.title ? `text-[#577CF1]` : `text-[#aeaeae]`) + ` whitespace-nowrap  cursor-pointer hover:underline`}
-                                onClick={clickHander}
                             >
                                 {item.title}
-                            </a>
+                            </Link>
                         </li>
                     );
                 })}
