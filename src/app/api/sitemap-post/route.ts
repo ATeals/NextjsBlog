@@ -2,7 +2,7 @@ import { NextRequest, NextResponse } from "next/server";
 import { getPostAll } from "../../../lib/Postdata";
 
 export async function GET(request: NextRequest, response: NextResponse) {
-    const siteUrl = "https://tealslog.vercel.app";
+    const siteUrl = "https://tealslog.vercel.app/collection/";
     const posts = getPostAll;
 
     const xmlData = `<?xml version="1.0" encoding="UTF-8"?>
