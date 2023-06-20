@@ -20,7 +20,10 @@ export default ({ url }: { url: string }) => {
     return (
         <>
             {data && (
-                <Link href={url}>
+                <Link
+                    href={url}
+                    target="_blank"
+                >
                     <div className="shadowBottom my-10 flex h-[200px] hover:scale-105">
                         <div className="h-full w-[30%] relative">
                             <img
