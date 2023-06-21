@@ -1,4 +1,4 @@
-import { h1, h2, h3 } from "./tags/h";
+import { h1, h2, h3, hr } from "./tags/h";
 import { blockquote } from "./tags/blockquote";
 import { ul, li, ol } from "./tags/list";
 import { p, strong, em } from "./tags/text";
@@ -37,6 +37,7 @@ const tagList = {
     aside,
     code,
     del,
+    hr,
 };
 
 export default tagList;

@@ -9,6 +9,8 @@ img: "https://velog.velcdn.com/images/ateals_12/post/fe7cb1c1-8d2c-43d9-947e-aa7
 
 # 👋
 
+---
+
 이번에 next13이 어느정도 안정화되고… 여러 기능들을 읽어보니까 너무 사용하고 싶어서..
 
 이거 저거 만져보고 지금 블로그도 13버전으로 마이그레이션 하다보니까.. 시간이 너무 부족했습니다.
@@ -24,6 +26,8 @@ img: "https://velog.velcdn.com/images/ateals_12/post/fe7cb1c1-8d2c-43d9-947e-aa7
 사용자가 mdx파일에 `~~url~~` 형식으로 작성하면 페이지의 og테그 내용을 가져와 북마크로 만들어 줍니다
 
 # 시작!
+
+---
 
 og테그를 가져오기 위한 라이브러리는
 
@@ -53,6 +57,8 @@ og테그를 가져오기 위한 라이브러리는
 코드를 보시죠!
 
 ## api
+
+---
 
 ```jsx
 //app/api/getOg
@@ -95,6 +101,8 @@ api키가 동일하다면, getOg함수를 이용하여 open-graph 태그를 가�
 이렇게 받아온 코드를 bookmark 컴포넌트에서는 다음과 같은 방법으로 받아옵니다.
 
 ## Bookmark
+
+---
 
 ```tsx
 import Link from "next/link";
@@ -178,6 +186,8 @@ suspend에 fallback에 넘겨진 스켈레톤 ui를 먼저 보여준뒤,
 데이터를 받으면 bookmark 컴포넌트를 렌더합니다.
 
 # 🚪
+
+---
 
 이걸 만드는데 정말 많은 시행착오를 지난 것 같습니다..
 

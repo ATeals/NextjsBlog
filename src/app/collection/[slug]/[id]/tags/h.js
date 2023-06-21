@@ -4,8 +4,6 @@ function h1({ node, children, ...props }) {
             id={children}
             style={{
                 fontSize: "2em",
-                borderBottom: "1px solid #A1AAC6",
-                margin: "1em 0",
                 padding: "0.4em",
                 fontWeight: "700",
             }}
@@ -21,8 +19,6 @@ function h2({ node, children, ...props }) {
             id={children}
             style={{
                 fontSize: "1.5em",
-                borderBottom: "1px solid #A1AAC6",
-                margin: "1em 0",
                 padding: "0.4em",
                 fontWeight: "600",
             }}
@@ -38,7 +34,6 @@ function h3({ node, children, ...props }) {
             id={children}
             style={{
                 fontSize: "1.5em",
-                margin: "1em 0",
                 padding: "0.4em",
             }}
             {...props}
@@ -48,4 +43,8 @@ function h3({ node, children, ...props }) {
     );
 }
 
-export { h1, h2, h3 };
+function hr({ node, children, ...props }) {
+    return <hr className="border-1 border-solid border-[#A1AAC6] mx-2 mb-10" />;
+}
+
+export { h1, h2, h3, hr };
