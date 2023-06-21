@@ -29,7 +29,7 @@ function add(x, y) {
 
 그림을 보시면 더 이해하기 쉽겠죠?
 
-<aside className="my-10 py-[20px] px-[10px] dark:bg-[#1E1E1E] bg-[#efefef] rounded-[10px]">
+ <aside className="shadowBottom my-10 py-[20px] px-[10px] dark:bg-[#1E1E1E] bg-[#efefef] rounded-[10px]">
 📌 var의 중복선언
 
 var키워드로 선언한 변수는 같은 스코프 내에서 중복 선언이 가능하다.
@@ -88,14 +88,14 @@ function bar() {
 
 변수 선언이 실행되면 변수 식별자가 **렉시컬 환경**에 **key**로 등록 되고, 변수 할당이 일어나면, 이 자료구조의 변수 식별자에 해당하는 값을 변경합니다. 변수의 검색 또한 이 자료구조 상에서 이루어집니다.
 
-<aside className="my-10 py-[20px] px-[10px] dark:bg-[#1E1E1E] bg-[#efefef] rounded-[10px]">
+ <aside className="shadowBottom my-10 py-[20px] px-[10px] dark:bg-[#1E1E1E] bg-[#efefef] rounded-[10px]">
 📌 스코프 체인은 실행 컨텍스트의 렉시컬 환경을 단 방향으로 연결한 것이다.
 전역 렉시컬 환경은 코드가 로드되면 곹바로 생성되고 함수의 렉시컬 환경은 함수가 호출되면 곧바로 생성된다.
 이에 대해서는 23장에서 더 살펴보자
 
 </aside>
 
-<aside className="my-10 py-[20px] px-[10px] dark:bg-[#1E1E1E] bg-[#efefef] rounded-[10px]">
+ <aside className="shadowBottom my-10 py-[20px] px-[10px] dark:bg-[#1E1E1E] bg-[#efefef] rounded-[10px]">
 📌 렉시컬 환경의 동작 과정은 다음과 같습니다:
 
 -   변수나 함수가 선언될 때, 해당 식별자와 값을 포함하는 환경 레코드가 생성됩니다.
@@ -188,7 +188,7 @@ console.log(i); // 5
 
 > 즉, 자바스크립트에서 함수의 상위 스코프는 항상 자신이 정의된 위치에서 상위 스코프를 결정한다.
 
-<aside className="my-10 py-[20px] px-[10px] dark:bg-[#1E1E1E] bg-[#efefef] rounded-[10px]">
+ <aside className="shadowBottom my-10 py-[20px] px-[10px] dark:bg-[#1E1E1E] bg-[#efefef] rounded-[10px]">
 📌 렉시컬 스코프는 클로저와 깊은 관계가 있다. 이에 대해서는 “클로저”에서 자세히 살펴보자
 
 </aside>
