@@ -20,7 +20,7 @@ export default () => {
                 ></script>
                 <link
                     rel="icon"
-                    href="https://nextjs-blog-ateals.vercel.app/favicon.ico"
+                    href="/favicon.ico"
                 />
 
                 <meta
