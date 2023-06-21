@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Host
-Host: https://nextjs-blog-ateals.vercel.app
+Host: https://tealslog.vercel.app/
 
 # Sitemaps
-Sitemap: https://nextjs-blog-ateals.vercel.app/sitemap.xml
+Sitemap: https://tealslog.vercel.app/sitemap.xml

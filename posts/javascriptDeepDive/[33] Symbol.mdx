@@ -1,0 +1,174 @@
+---
+title: "[33] 7번째 등장 Symbol"
+description: "아니 그래서 Symbol이 뭔데 맨날 나오냐니까?"
+collection: 모딥다
+tags: ["Javascript", "모딥다", "이론", "ES6"]
+date: 2023-06-14
+img: "https://image.yes24.com/goods/92742567/XL"
+---
+
+> Symbol : ES6에서 도입된 7번째 데이터 타입으로 변경 불가능한 원시 타입
+
+심벌은 다른 값과 중복되지 않는 유일무이한 값이고, 주로 이름 충돌 위험이 없는 유일한 프로퍼티 키를 만들기 위해 사용합니다!
+
+![](https://velog.velcdn.com/images/ateals_12/post/52dad9dc-69f4-4df5-bd2a-a1d4095404f1/image.png)
+
+_나를 괴롭히던 NEXT 13 Request 객체 프로퍼티 키들이 다 이놈이였구나.._
+
+# 심벌 값의 생성
+
+심벌 값은 Symbol 함수를 호출하여 생성할 수 있습니다.
+
+심벌은 Symbol 함수 호출 없이는 생성할 수 없고, 생성된 심벌 값은 외부로 노출되지 않아 확인할 수 없으며, 다른 값과는 중복되지 않습니다.
+
+```jsx
+const tag = Symbol();
+console.log(typeof tag); // symbol
+
+console.log(tag); // Symbol()
+```
+
+Symbol함수는 선택적으로 문자열을 인수로 전달 할 수 있습니다.
+
+이 문자열은 생성된 심벌 값에 대한 설명으로 디버깅 용도로만 사용 되고, 심벌 값에 어떠한 영향도 주지 않습니다.
+
+고로, 이 문자열이 같아도 둘은 다른 심벌값이기 때문에 서로 간섭이 없죠.
+
+```
+const tag = Symbol("name");
+const list = Symbol("name");
+
+console.log(tag === list); // false
+```
+
+심벌값도 래퍼 객체를 생성합니다. description, toString 은 Symbol.prototype의 메서드입니다.
+
+```jsx
+const tag = Symbol("name");
+
+console.log(tag.description); // name
+console.log(tag.toString()); // Symbol(name)
+```
+
+심벌타입은 숫자 문자 타입으로 암묵적 변환이 일어나지 않습니다.
+
+다만 불리언타입으로는 변환 되죠.
+
+_다행히 지옥의 암묵적 변환은 없…_
+
+# Symbol.for() / Symbol.keyFor()
+
+## Symbol.for()
+
+Symbol.for 메서드는 인수로 받은 문자열을 키로 사용하여 키와 심벌 값들이 저장되어 있는 전역 심벌 레지스트리에서 해당 키와 일치하는 심벌값을 검색합니다.
+
+-   검색에 실패하면 새로운 심벌 값을 생성하여 Symbol.for() 메서드의 인수로 전달된 키로 전역 심벌 레지스트리에 저장한 후 생성된 심벌값을 반환
+-   검색에 성공하면 검색된 심벌 값을 반환.
+
+```jsx
+const tag = Symbol.for("tag");
+const tag2 = Symbol.for("tag");
+console.log(tag === tag2); // true
+```
+
+Symbol 과 Stmbol.for의 차이는 전역 심벌 레지스트리에 저장되어 검색할 수 있는 지 없는 지입니다.
+
+## Symbol.keyFor()
+
+Symbol.keyFor()를 사용하면 심볼의 키를 추출 할 수 있다.
+
+```jsx
+const tag = Symbol.for("name");
+
+Symbol.keyFor(tag); // "name"
+```
+
+# 그렇다면 심볼을 어떤식으로 사용할까?
+
+## 값에 특별한 의미가 없고 상수 이름 자체에 의미가 있는 경우
+
+```jsx
+const Direction = {
+    UP: 1,
+    DOWN: 2,
+};
+
+const myDirection = Direction.UP;
+
+console.log(myDirection === Direction.UP);
+```
+
+위의 코드에서 Direction에 존재하는 UP, DOWN 프로퍼티의 값은 중요하지 않습니다.
+
+그저 UP을 표시하는 지, DOWN을 표시하는 지가 궁금할 뿐이죠.
+
+하지만 상수 값은 변경이 가능하고 중복될 가능성이 있기 때문에 Symbol 값으로 바꾸는 것이 좋습니다.
+
+```jsx
+const Direction = {
+    UP: Symbol("up"),
+    DOWN: Symbol("down"),
+};
+
+const myDirection = Direction.UP;
+
+console.log(myDirection === Direction.UP);
+```
+
+## 심벌과 프로퍼티 키
+
+객체의 프로퍼티 키로 심볼을 이용할 수 있습니다.
+
+```jsx
+const obj = {
+    [Symbol.for("num")]: 1,
+};
+
+console.log(obj[Symbol.for("num")]); //1
+```
+
+이때 프로퍼티 키로 사용할 심벌 값에 대괄호를 사용해야 하고, 프로퍼티에 접근할 때도 마찬가지로 대괄호를 사용해야합니다.
+
+## 프로퍼티 은닉
+
+심벌 값을 프로퍼티 키로 사용하여 생성한 프로퍼티는 찾을 수 없습니다.
+
+고로, 프로퍼티를 숨겨놓을 수 있겠네요..
+
+이렇게 숨긴 프로퍼티는 for … of.. 와 같은 방법으로는 찾을 수 없습니다.
+
+```jsx
+const obj = {
+    [Symbol("num")]: 1,
+};
+
+console.log(obj[Symbol("num")]); //undefined
+```
+
+하지만 완전히 숨길 수 있는 것은 아닙니다.
+
+ES6에 추가된 Object.getOwnPropertySymbols() 메서드를 이용하면 심벌 값을 프로퍼티 키로 사용하여 찾을 수 있죠.
+
+```jsx
+const obj = {
+    [Symbol("num")]: 1,
+};
+
+console.log(obj[Object.getOwnPropertySymbols(obj)[0]]); //1
+```
+
+# Well-known Symbol
+
+자바스크립트가 기본적으로 제공하는 빌트인 심벌 값이 있습니다.
+
+이런 값들을 ECMAScript에서는 Well-known Symbol이라 칭합니다.
+
+예를 들어 빌트인 이터러블은 Well-known Symbol인 Symbol.iterator를 키로 갖는 메서드를 가지며, Symbol.iterator 메서드를 호출하면 이터레이터를 반환하도록 ECMAScript 사양에 규정되어 있습니다.
+
+# 🚪
+
+오늘은 심벌에 대해 알아봤습니다.
+
+처음에 만났을 때는 꽤 당황했는데… 쉽게 유일무이한 원시 값이라고 생각하고 접근하니 괜찮은 것 같습니다.
+
+이제 두려움 떨치고 사용해 봅시다… 심벌…
