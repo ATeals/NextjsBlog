@@ -1,67 +1,16 @@
-"use client";
+import { Suspense } from "react";
+import TilList from "./TilList";
 
-import tagList from "../collection/[slug]/[id]/tagList";
-import React, { Component, useEffect, useState } from "react";
-import { ReactElement, ReactMarkdown } from "react-markdown/lib/react-markdown";
-import remarkGfm from "remark-gfm";
+// export const revalidate = 0;
 
-export default () => {
-    const [input, setInput] = useState("");
-    const [post, setPost] = useState("");
-    const onChange = (e) => {
-        setInput(e.target.value);
-    };
-
-    const addblockquote = () => {
-        setInput((e) => (e += "\n" + "```language\n\n```"));
-    };
-
-    useEffect(() => {
-        setPost(input.replaceAll("\n", "\n\n"));
-    }, [input]);
-
+export default async () => {
     return (
         <>
-            <div>
-                <input
-                    type="button"
-                    value={"버튼!"}
-                    className="bg-[gray] text-[white]"
-                    onClick={addblockquote}
-                />
-            </div>
-            <div className="flex ">
-                <section className="w-[50%] h-full bg-darkBg shadowBottom p-2">
-                    <textarea
-                        className="w-full bg-[gray]"
-                        value={input}
-                        onChange={onChange}
-                    />
-                </section>
-                <section className="w-[50%] shadowBottom p-2">
-                    {true && (
-                        <>
-                            <ReactMarkdown
-                                children={post}
-                                remarkPlugins={[remarkGfm]}
-                                components={{
-                                    ...tagList,
-                                    del({ node, children, ...props }) {
-                                        return (
-                                            <>
-                                                <del {...props}>{children}</del>
-                                            </>
-                                        );
-                                    },
-                                }}
-                            ></ReactMarkdown>
-                        </>
-                    )}
-                </section>
-            </div>
-
-            <section>
-                <div>{input}</div>
+            <section className="m-5 mb-10">
+                <h1 className="font-bold text-[48px] mb-5">오늘 한 공부!</h1>
+                <Suspense fallback={<h1>Loading...</h1>}>
+                    <TilList />
+                </Suspense>
             </section>
         </>
     );
