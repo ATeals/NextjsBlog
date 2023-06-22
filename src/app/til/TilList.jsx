@@ -1,11 +1,14 @@
 import Link from "next/link";
 import { getDb } from "@/lib/notion/getDb";
-import { li } from "../collection/[slug]/[id]/tags/list";
 
 export const revalidate = 0;
 
+const formatDate = (date) => (typeof date === typeof "" ? date.slice(0, 10) : date.toISOString().slice(0, 10));
+
 export default async () => {
     const db = await getDb();
+    // console.log(new Date(db[0].created_time), new Date("2023-06-19"));
+    // console.log(formatDate(db[0].created_time));
     console.log(db);
     return (
         <ul className="flex flex-col">

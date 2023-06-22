@@ -1,4 +1,7 @@
+const formatDate = (date) => (typeof date === typeof "" ? date.slice(0, 10) : date.toISOString().slice(0, 10));
+
 export const getDb = async () => {
+    console.log(formatDate(new Date()));
     const data = await (
         await fetch("https://api.notion.com/v1/databases/16d1ab3326ca4d5a9744798f5cefe5e4/query", {
             method: "POST",
@@ -8,19 +11,25 @@ export const getDb = async () => {
                 "Content-Type": "application/json",
             },
             body: JSON.stringify({
-                page_size: 2,
+                page_size: 100,
                 filter: {
                     and: [
-                        {
-                            property: "name",
-                            rich_text: {
-                                contains: "테스트",
-                            },
-                        },
+                        // {
+                        //     property: "name",
+                        //     rich_text: {
+                        //         contains: "테스트",
+                        //     },
+                        // },
                         {
                             property: "공개",
                             checkbox: {
                                 equals: true,
+                            },
+                        },
+                        {
+                            timestamp: "created_time",
+                            created_time: {
+                                on_or_after: formatDate(new Date()),
                             },
                         },
                     ],
@@ -29,6 +38,5 @@ export const getDb = async () => {
             next: { revalidate: 0 },
         })
     ).json();
-    console.log(data);
     return data.results;
 };
