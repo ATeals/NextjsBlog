@@ -1,7 +1,6 @@
 const formatDate = (date) => (typeof date === typeof "" ? date.slice(0, 10) : date.toISOString().slice(0, 10));
 
 export const getDb = async () => {
-    console.log(formatDate(new Date()));
     const data = await (
         await fetch("https://api.notion.com/v1/databases/16d1ab3326ca4d5a9744798f5cefe5e4/query", {
             method: "POST",

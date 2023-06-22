@@ -3,8 +3,6 @@ import { getDb } from "@/lib/notion/getDb";
 
 export const revalidate = 0;
 
-const formatDate = (date) => (typeof date === typeof "" ? date.slice(0, 10) : date.toISOString().slice(0, 10));
-
 export default async () => {
     const db = await getDb();
     // console.log(new Date(db[0].created_time), new Date("2023-06-19"));
