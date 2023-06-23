@@ -7,7 +7,7 @@ export default async () => {
     const db = await getDb();
     // console.log(new Date(db[0].created_time), new Date("2023-06-19"));
     // console.log(formatDate(db[0].created_time));
-    console.log(db);
+    // console.log(db);
     return (
         <ul className="flex flex-col">
             {db &&
@@ -39,6 +39,33 @@ export default async () => {
                         </Link>
                     </li>
                 ))}
+        </ul>
+    );
+};
+
+export const SkeletonTilList = () => {
+    return (
+        <ul>
+            {[1, 2, 3].map((i) => (
+                <li>
+                    <article className="shadowBottom m-2 p-5 rounded-[10px]">
+                        <div className="text-[24px] font-bold mb-2">
+                            <div className=" bg-[gray] h-[12px] animate-pulse w-[10%] h-[30px]"></div>
+                        </div>
+
+                        <div className="flex mb-2">
+                            {[1, 2, 3].map((tag) => (
+                                <div className="flex justify-center items-center m-2">
+                                    <div className=" bg-[gray] h-[12px] animate-pulse w-[40px]"></div>
+                                </div>
+                            ))}
+                        </div>
+                        <div className="text-[gray] opacity-[0.8]">
+                            <div className=" bg-[gray] h-[12px] animate-pulse w-[40%]"></div>
+                        </div>
+                    </article>
+                </li>
+            ))}
         </ul>
     );
 };

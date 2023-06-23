@@ -1,13 +1,13 @@
 import CardList from "@/components/blog/blogUi/CardList";
 import GithubGrass from "@/components/til/GithubGrass";
 
-import { getPostAll } from "@/lib/Postdata";
-import { Post } from "contentlayer/gererated";
+import { getPostList } from "@/lib/Postdata";
 import { Suspense } from "react";
-import TilList from "./til/TilList";
+import TilList, { SkeletonTilList } from "./til/TilList";
+import { PostItem } from "@/lib/dataType";
 
 export default function Home() {
-    const posts: Array<Post> = getPostAll.sort((a: Post, b: Post) => Number(new Date(b.date)) - Number(new Date(a.date)));
+    const posts: Array<PostItem> = getPostList.sort((a: PostItem, b: PostItem) => Number(new Date(b.date)) - Number(new Date(a.date)));
     return (
         <>
             <section className="w-full ">
@@ -15,7 +15,7 @@ export default function Home() {
 
                 <section className="m-10">
                     <h1 className="font-bold text-[32px] mx-2 mb-10">TIL</h1>
-                    <Suspense>
+                    <Suspense fallback={<SkeletonTilList />}>
                         <TilList />
                     </Suspense>
                 </section>

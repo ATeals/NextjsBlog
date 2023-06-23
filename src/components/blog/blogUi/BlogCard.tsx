@@ -2,8 +2,9 @@ import Link from "next/link";
 
 import { Post } from "contentlayer/gererated";
 import TagBox from "@/components/tags/TagBox";
+import { PostItem } from "@/lib/dataType";
 
-export default ({ post }: { post: Post }) => {
+export default ({ post }: { post: PostItem }) => {
     return (
         <div className="shadowBottom dark:bg-[#1E1E1E] transform transition-transform duration-200 hover:scale-105 m-[1.2em] max-w-[650px] w-full bg-white shadow-md rounded-lg overflow-hidden px-4 ">
             <Link href={`/collection/${post._raw.flattenedPath}`}>
