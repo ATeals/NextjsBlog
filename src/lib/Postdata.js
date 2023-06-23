@@ -35,12 +35,10 @@ export const getPostList = allPosts
         type,
     }));
 
-export const getCollectionAll = allPosts
-    .filter((i) => i._raw.sourceFilePath.includes("/index.mdx"))
-    .map((item) => ({
-        ...item,
-        posts: getPostList.filter((i) => i._raw.sourceFilePath.includes(item._raw.flattenedPath)),
-    }));
+export const getCollectionAll = getPostList.map((item) => ({
+    ...item,
+    posts: getPostList.filter((i) => i._raw.sourceFilePath.includes(item._raw.flattenedPath)),
+}));
 
 export const getTags = Array.from(
     new Set(

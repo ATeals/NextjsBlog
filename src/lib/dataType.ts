@@ -2,7 +2,7 @@ import { Post } from "contentlayer/gererated";
 import * as Local from "contentlayer/source-files";
 
 export type collection = PostItem & {
-    posts: Array<Post>;
+    posts: Array<PostItem>;
 };
 
 export type PostItem = {
