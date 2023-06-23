@@ -20,7 +20,7 @@ function strong({ node, children, ...props }) {
 function p({ node, children, ...props }) {
     return (
         <div
-            className="mx-5 mb-5 leading-8"
+            className="mx-5 mb-5 leading-8 text-[18px]"
             style={
                 {
                     // marginBottom: "10px",

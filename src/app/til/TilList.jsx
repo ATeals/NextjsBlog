@@ -14,7 +14,7 @@ export default async () => {
                 db.map((i) => (
                     <li key={i.id}>
                         <Link href={i.url}>
-                            <article className="shadowBottom m-2 p-5 rounded-[10px]">
+                            <article className="shadowBottom m-2 p-5 rounded-[10px] hover:scale-105">
                                 <h1 className="text-[24px] font-bold">{i.properties.name.title[0].plain_text}</h1>
 
                                 <div className="flex">
