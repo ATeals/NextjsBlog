@@ -56,7 +56,6 @@ export default () => {
                     httpEquiv="Content-Security-Policy"
                     content="upgrade-insecure-requests"
                 ></meta>
-                <title>Ateal's Blog</title>
             </head>
         </>
     );
