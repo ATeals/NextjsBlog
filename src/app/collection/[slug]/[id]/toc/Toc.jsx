@@ -100,7 +100,6 @@ export const Toc = ({ post, menuToggle }) => {
                 }}
             >
                 {result.map((item, index) => {
-                    console.log(item);
                     return (
                         <li key={item + index}>
                             <a
