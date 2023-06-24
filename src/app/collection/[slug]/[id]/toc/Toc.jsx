@@ -77,7 +77,7 @@ export const Toc = ({ post, menuToggle }) => {
             let count = item.match(/#/g)?.length;
             if (count) {
                 // 갯수에 따라 목차에 그릴때 들여쓰기 하기위해 *10을 함.
-                count = count * 5;
+                count = (count - 1) * 5;
             }
 
             // 제목의 내용물만 꺼내기 위해 '# '을 기준으로 나누고, 백틱과 공백을 없애주고 count와 묶어서 리턴
@@ -100,12 +100,13 @@ export const Toc = ({ post, menuToggle }) => {
                 }}
             >
                 {result.map((item, index) => {
+                    console.log(item);
                     return (
                         <li key={item + index}>
                             <a
                                 // href={`#${item.title}`}
 
-                                style={{ marginLeft: `${item.count * 3}px`, padding: "5px", fontWeight: `${800 - item.count * 10}`, fontSize: "15px" }}
+                                style={{ marginLeft: `${item.count * 3}px`, padding: "5px", fontWeight: `${600 - item.count * 10}`, fontSize: "12px" }}
                                 className={(activeId === item.title ? `text-[#577CF1]` : `text-[#aeaeae]`) + ` whitespace-nowrap  cursor-pointer hover:underline`}
                                 onClick={clickHander}
                             >

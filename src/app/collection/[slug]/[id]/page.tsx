@@ -24,12 +24,12 @@ export default ({ params: { slug, id } }: { params: { slug: string; id: string }
             <section className="w-full">
                 <div className="w-[100%] flex flex-col items-center justify-center">
                     <section className="w-full flex flex-col items-center justify-center shadowBottom m-[10px]">
-                        <h1 className="font-bold text-[2em] md:text-[3em] text-center break-keep  my-[100px]">{post && post.title}</h1>
+                        <h1 className="font-bold text-[2em] md:text-[3em] px-10 text-center break-keep  my-[100px]">{post && post.title}</h1>
                         {post && post.img ? (
                             <img
                                 src={post.img}
                                 alt=""
-                                className="rounded-[15px] w-[10rem] h-auto  mb-[100px]"
+                                className="rounded-[15px] w-[300px] h-auto  mb-[100px]"
                             />
                         ) : null}
                     </section>
