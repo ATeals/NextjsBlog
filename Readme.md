@@ -5,6 +5,7 @@
 -   Next.js (v_13 App dir)
 -   Typescript
 -   Tailwind
+-   contentlayer
 
 # 폴더 구조 (아래와 같이 변경 예정)
 
