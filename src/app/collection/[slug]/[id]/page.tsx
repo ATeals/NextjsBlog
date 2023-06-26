@@ -9,12 +9,12 @@ import { Suspense } from "react";
 import ButtonMenu from "./ui/button/ButtonMenu";
 import TagBox from "@/components/tags/TagBox";
 
-// export async function generateStaticParams() {
-//     return getPostAll.map((post) => ({
-//         slug: post._raw.flattenedPath.split("/")[0],
-//         id: post._raw.flattenedPath.split("/")[1],
-//     }));
-// }
+export async function generateStaticParams() {
+    return getPostAll.map((post) => ({
+        slug: post._raw.flattenedPath.split("/")[0],
+        id: post._raw.flattenedPath.split("/")[1],
+    }));
+}
 
 export default ({ params: { slug, id } }: { params: { slug: string; id: string } }) => {
     const post = getPostAll.find((p) => p._raw.flattenedPath === `${slug}/${unescape(id)}`);
@@ -39,7 +39,7 @@ export default ({ params: { slug, id } }: { params: { slug: string; id: string }
                     </section>
 
                     <article className="w-full relative flex justify-center mb-[40px]">
-                        <div className="px-[3px] md:m-[10px] w-full md:w-[80%] ml-0 box-border shadowBottom">
+                        <div className="px-[3px] md:m-[5px] w-full md:w-[80%] ml-0 box-border shadowBottom">
                             <Suspense fallback={<h1>loading..</h1>}>
                                 <MarkdownPost post={post && post.body.code} />
                             </Suspense>
