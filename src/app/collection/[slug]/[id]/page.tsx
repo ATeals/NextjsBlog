@@ -7,6 +7,7 @@ import TocMenu from "./toc/TocMenu";
 
 import { Suspense } from "react";
 import ButtonMenu from "./ui/button/ButtonMenu";
+import TagBox from "@/components/tags/TagBox";
 
 // export async function generateStaticParams() {
 //     return getPostAll.map((post) => ({
@@ -23,19 +24,22 @@ export default ({ params: { slug, id } }: { params: { slug: string; id: string }
         <>
             <section className="w-full">
                 <div className="w-[100%] flex flex-col items-center justify-center">
-                    <section className="w-full flex flex-col items-center justify-center shadowBottom m-[10px]">
-                        <h1 className="font-bold text-[2em] md:text-[3em] px-10 text-center break-keep  my-[100px]">{post && post.title}</h1>
+                    <section className="w-full flex flex-col items-center justify-center m-[10px]">
+                        <h1 className="font-bold text-[2em] md:text-[3em] px-10 text-center break-keep my-[100px]">{post && post.title}</h1>
                         {post && post.img ? (
                             <img
                                 src={post.img}
                                 alt=""
-                                className="rounded-[15px] w-[300px] h-auto  mb-[100px]"
+                                className="rounded-[15px] w-[300px] h-auto  mb-10"
                             />
                         ) : null}
+                        <div className="mb-10">
+                            <TagBox tags={post?.tags} />
+                        </div>
                     </section>
 
-                    <article className="w-full  relative flex justify-center mb-[40px] m-[10px]">
-                        <div className="px-[3px] m-[10px] w-[95%] md:w-[80%] ml-0 box-border md:shadowBottom">
+                    <article className="w-full relative flex justify-center mb-[40px]">
+                        <div className="px-[3px] md:m-[10px] w-full md:w-[80%] ml-0 box-border shadowBottom">
                             <Suspense fallback={<h1>loading..</h1>}>
                                 <MarkdownPost post={post && post.body.code} />
                             </Suspense>

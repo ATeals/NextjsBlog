@@ -20,10 +20,10 @@ export default () => {
                 />
             </Suspense>
             <Suspense>
-                <AsideCollections collections={collections} />
+                <AsideTagList tags={tags} />
             </Suspense>
             <Suspense>
-                <AsideTagList tags={tags} />
+                <AsideCollections collections={collections} />
             </Suspense>
         </>
     );

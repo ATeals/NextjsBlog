@@ -4,7 +4,7 @@ import Tag from "./Tag";
 
 export default ({ tags }: { tags: Array<tagObj> }) => {
     return (
-        <div className=" text-sm text-gray-500 flex-wrap flex m-[10px] p-[10px] [&>*]:my-1">
+        <div className=" text-sm text-gray-500 flex-wrap flex px-5 pb-10 [&>*]:my-1">
             {tags ? (
                 tags.map((item) => (
                     <Link

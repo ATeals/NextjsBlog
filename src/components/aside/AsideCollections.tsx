@@ -1,3 +1,4 @@
+"use client";
 import { collection } from "@/lib/dataType";
 import Link from "next/link";
 
@@ -18,12 +19,18 @@ export default ({ collections }: { collections: Array<collection> }) => {
 
                             <div
                                 className="text-highlight"
+                                onClick={() => {
+                                    document.querySelector(`#${item.collection}`)?.classList.toggle("hidden");
+                                }}
                                 // className=" bg-highlight text-darkText rounded-[50%] w-[20px] h-[20px] flex justify-center items-center"
                             >
                                 {item.posts.length}
                             </div>
                         </h1>
-                        <div className="border-l-[1px] border-l-solid border-l-[#65737E] ml-1 pb-5">
+                        <div
+                            id={item.collection}
+                            className="border-l-[1px] border-l-solid border-l-[#65737E] ml-1 pb-5"
+                        >
                             {item.posts.map((post) => (
                                 <Link
                                     href={"/collection/" + post._raw.flattenedPath}

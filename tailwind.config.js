@@ -21,6 +21,7 @@ module.exports = {
             bottom: `5px 5px 24px #d4d4d4, -5px -5px 24px #d4d4d4`,
             topDark: `-15px -15px 24px #0f0f0f, 15px 15px 24px #151515`,
             bottomDark: `15px 15px 24px #151515, -15px -15px 24px #151515`,
+            none: `0 0 #000000`,
         },
     },
     plugins: [],
