@@ -1,6 +1,6 @@
 "use client";
 
-import DarkModeBtn from "@/components/DarkModeBtn";
+import DarkModeBtn from "@/components/nav/DarkModeBtn";
 import MoveTop from "./MoveTop";
 
 export default () => {

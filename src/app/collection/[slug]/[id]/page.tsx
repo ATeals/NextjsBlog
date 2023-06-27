@@ -2,11 +2,11 @@ import { getCollection, getPostAll } from "@/lib/Postdata";
 import MarkdownPost from "./MarkdownPost";
 import { unescape } from "querystring";
 import CollectionList from "./CollectionList";
-import { Toc } from "./toc/Toc";
-import TocMenu from "./toc/TocMenu";
+import { Toc } from "@/components/blog/toc/Toc";
+import TocMenu from "@/components/blog/toc/TocMenu";
 
 import { Suspense } from "react";
-import ButtonMenu from "./ui/button/ButtonMenu";
+import ButtonMenu from "@/components/blog/ui/button/ButtonMenu";
 import TagBox from "@/components/tags/TagBox";
 
 // export async function generateStaticParams() {

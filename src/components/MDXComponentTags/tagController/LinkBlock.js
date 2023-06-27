@@ -1,4 +1,4 @@
-import BookMark, { SkeletonBookmark } from "@/components/BookMark";
+import BookMark, { SkeletonBookmark } from "@/components/MDXComponentTags/BookMark";
 import { Suspense } from "react";
 
 export function a({ node, children, ...props }) {

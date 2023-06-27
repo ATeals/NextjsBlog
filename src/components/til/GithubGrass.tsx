@@ -1,3 +1,5 @@
+const revalidate = 6000;
+
 export default () => (
     <section className="m-5">
         <h1 className="font-bold text-[32px] mb-5 mx-5">GIT HUB</h1>
