@@ -34,7 +34,7 @@ export const getDb = async () => {
                     ],
                 },
             }),
-            next: { revalidate: 1800 },
+            next: { revalidate: 600 },
         })
     ).json();
     return data.results;
