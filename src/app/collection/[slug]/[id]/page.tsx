@@ -74,7 +74,7 @@ export const generateMetadata = ({ params: { slug, id } }: { params: { slug: str
     return (
         post && {
             title: "Ateals Blog",
-            description: "Welcome my Blog!",
+            description: post.description,
             canonical: "https://www.carrotins.com",
             openGraph: {
                 type: "website",
