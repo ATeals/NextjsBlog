@@ -7,7 +7,6 @@
 -   Tailwind
 -   contentlayer
 
-페이지 정적으로 만들기
 
 # 폴더 구조 (아래와 같이 변경 예정)
 
