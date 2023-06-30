@@ -1,10 +1,10 @@
-import { h1, h2, h3, hr } from "./tags/h";
-import { blockquote } from "./tags/blockquote";
-import { ul, li, ol } from "./tags/list";
-import { p, strong, em } from "./tags/text";
-import { table, td, th, tr } from "./tags/table";
-import { code, pre } from "./tags/code";
-import { a, del } from "./tags/LinkBlock";
+import { h1, h2, h3, hr } from "./tagController/h";
+import { blockquote } from "./tagController/blockquote";
+import { ul, li, ol } from "./tagController/list";
+import { p, strong, em } from "./tagController/text";
+import { table, td, th, tr } from "./tagController/table";
+import { code, pre } from "./tagController/code";
+import { a, del } from "./tagController/LinkBlock";
 
 function aside({ node, children, ...props }) {
     return (

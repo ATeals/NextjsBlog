@@ -1,8 +1,8 @@
 import "@/styles/globals.css";
 
-import Nav from "@/components/Nav";
-import Footer from "@/components/seo/Footer";
-import SideMenu from "@/components/seo/SideMenu";
+import Nav from "@/components/nav/Nav";
+import Footer from "@/app/Footer";
+import SideMenu from "@/app/SideMenu";
 import Head from "./Head";
 import metaObj from "./metadata";
 
