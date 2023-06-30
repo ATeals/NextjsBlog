@@ -74,13 +74,14 @@ export const generateMetadata = ({ params: { slug, id } }: { params: { slug: str
     return (
         post && {
             title: "Ateals Blog",
-            description: post.description,
+            description: "Welcome my Blog!",
             canonical: "https://www.carrotins.com",
             openGraph: {
                 type: "website",
                 locale: "ko_KR",
                 url: `https://tealslog.vercel.app/collection/${post._raw.flattenedPath}`,
                 title: post.title,
+                description: post.description,
                 site_name: "Ateals Blog",
                 images: [
                     {
