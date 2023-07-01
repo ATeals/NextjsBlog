@@ -8,6 +8,7 @@ import TocMenu from "@/components/blog/toc/TocMenu";
 import { Suspense } from "react";
 import ButtonMenu from "@/components/blog/ui/button/ButtonMenu";
 import TagBox from "@/components/tags/TagBox";
+import MoveTop from "@/components/blog/ui/button/MoveTop";
 
 // export async function generateStaticParams() {
 //     return getPostAll.map((post) => ({
@@ -63,7 +64,7 @@ export default ({ params: { slug, id } }: { params: { slug: string; id: string }
                     )}
                 </div>
 
-                <TocMenu post={post} />
+                {/* <TocMenu post={post} /> */}
             </section>
         </>
     );
