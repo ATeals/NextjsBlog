@@ -1,6 +1,20 @@
 import { allPosts } from "contentlayer/gererated";
 import { getColor } from "./type/tagType";
 
+const bodyFilter = (item) => {
+    return item.map(({ title, date, description, collection, tags, img, _id, _raw, type }) => ({
+        title,
+        date,
+        description,
+        collection,
+        tags,
+        img,
+        _id,
+        _raw,
+        type,
+    }));
+};
+
 export const getPost = (url) => {
     return allPosts.find((p) => p._raw.flattenedPath === url);
 };
@@ -21,37 +35,12 @@ export const getCollection = (url) => {
 
 export const getPostAll = allPosts.filter((i) => !i._raw.sourceFilePath.includes("/index.mdx"));
 
-export const getPostList = allPosts
-    .filter((i) => !i._raw.sourceFilePath.includes("/index.mdx"))
-    .map(({ title, date, description, collection, tags, img, _id, _raw, type }) => ({
-        title,
-        date,
-        description,
-        collection,
-        tags,
-        img,
-        _id,
-        _raw,
-        type,
-    }));
+export const getPostList = bodyFilter(allPosts.filter((i) => !i._raw.sourceFilePath.includes("/index.mdx")));
 
-export const getCollectionAll = allPosts
-    .filter((i) => i._raw.sourceFilePath.includes("/index.mdx"))
-    .map(({ title, date, description, collection, tags, img, _id, _raw, type }) => ({
-        title,
-        date,
-        description,
-        collection,
-        tags,
-        img,
-        _id,
-        _raw,
-        type,
-    }))
-    .map((item) => ({
-        ...item,
-        posts: getPostAll.filter((i) => i._raw.sourceFilePath.includes(item._raw.flattenedPath)),
-    }));
+export const getCollectionAll = bodyFilter(allPosts.filter((i) => i._raw.sourceFilePath.includes("/index.mdx"))).map((item) => ({
+    ...item,
+    posts: getPostAll.filter((i) => i._raw.sourceFilePath.includes(item._raw.flattenedPath)),
+}));
 
 export const getTags = Array.from(
     new Set(

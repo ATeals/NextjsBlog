@@ -11,6 +11,7 @@ export default ({ posts, tags, collections }: { posts: Array<Post>; tags: Array<
                     src="https://avatars.githubusercontent.com/u/125727432?v=4"
                     alt="User Profile Img"
                     className="w-[50%] h-[auto] rounded-[50%] my-5"
+                    loading="lazy"
                 />
                 <h1>A_Teals</h1>
             </section>

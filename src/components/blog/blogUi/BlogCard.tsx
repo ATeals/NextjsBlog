@@ -3,6 +3,7 @@ import Link from "next/link";
 import { Post } from "contentlayer/gererated";
 import TagBox from "@/components/tags/TagBox";
 import { PostItem } from "@/lib/dataType";
+import Image from "next/image";
 
 export default ({ post }: { post: PostItem }) => {
     return (
@@ -14,6 +15,7 @@ export default ({ post }: { post: PostItem }) => {
                             src={post.img ? post.img : "/images/logoImg.jpg"}
                             alt="Image"
                             className="object-contain object-center h-full w-full"
+                            loading="lazy"
                         />
                     </div>
                     <div className="card-content p-4">

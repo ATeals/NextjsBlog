@@ -12,19 +12,15 @@ export default () => {
 
     return (
         <>
-            <Suspense>
-                <UserProfile
-                    posts={posts}
-                    collections={collections}
-                    tags={tags}
-                />
-            </Suspense>
-            <Suspense>
-                <AsideTagList tags={tags} />
-            </Suspense>
-            <Suspense>
-                <AsideCollections collections={collections} />
-            </Suspense>
+            <UserProfile
+                posts={posts}
+                collections={collections}
+                tags={tags}
+            />
+
+            <AsideTagList tags={tags} />
+
+            <AsideCollections collections={collections} />
         </>
     );
 };
