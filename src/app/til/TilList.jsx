@@ -43,10 +43,10 @@ export default async () => {
                     </li>
                 ))}
             {db.length === 0 ? (
-                <article className="shadowBottom flex items-center justify-center m-2 p-5 rounded-[10px] hover:scale-105">
-                    <i className="bi bi-tree-fill text-[32px]"></i>
-                    <h1 className="font-bold text-[32px]">TAKE A REST</h1>
-                    <i className="bi bi-tree-fill text-[32px]"></i>
+                <article className="shadowBottom flex items-center justify-center m-2 p-5 rounded-[10px] hover:scale-105 text-[1.5rem]">
+                    <i className="bi bi-tree-fill "></i>
+                    <h1 className="font-bold ">TAKE A REST</h1>
+                    <i className="bi bi-tree-fill "></i>
                 </article>
             ) : null}
         </ul>
