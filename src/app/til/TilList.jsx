@@ -7,7 +7,7 @@ export default async () => {
     const db = await getDb();
     // console.log(new Date(db[0].created_time), new Date("2023-06-19"));
     // console.log(formatDate(db[0].created_time));
-    // console.log(db);
+    console.log(db);
     return (
         <ul className="flex flex-col">
             {db &&
@@ -42,6 +42,13 @@ export default async () => {
                         </Link>
                     </li>
                 ))}
+            {db.length === 0 ? (
+                <article className="shadowBottom flex items-center justify-center m-2 p-5 rounded-[10px] hover:scale-105">
+                    <i className="bi bi-tree-fill text-[32px]"></i>
+                    <h1 className="font-bold text-[32px]">TAKE A REST</h1>
+                    <i className="bi bi-tree-fill text-[32px]"></i>
+                </article>
+            ) : null}
         </ul>
     );
 };
