@@ -1,5 +1,7 @@
 # Ateals Next.js Blog
 
+Next.js의 app dir, vercel을 이용한 개인 웹 블로그
+
 # 사용 기술
 
 -   Next.js (v_13 App dir)
