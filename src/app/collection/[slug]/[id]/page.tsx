@@ -8,14 +8,13 @@ import TocMenu from "@/components/blog/toc/TocMenu";
 import { Suspense } from "react";
 import ButtonMenu from "@/components/blog/ui/button/ButtonMenu";
 import TagBox from "@/components/tags/TagBox";
-import MoveTop from "@/components/blog/ui/button/MoveTop";
 
-// export async function generateStaticParams() {
-//     return getPostAll.map((post) => ({
-//         slug: post._raw.flattenedPath.split("/")[0],
-//         id: post._raw.flattenedPath.split("/")[1],
-//     }));
-// }
+export async function generateStaticParams() {
+    return getPostAll.map((post) => ({
+        slug: post._raw.flattenedPath.split("/")[0],
+        id: post._raw.flattenedPath.split("/")[1],
+    }));
+}
 
 export default ({ params: { slug, id } }: { params: { slug: string; id: string } }) => {
     const post = getPostAll.find((p) => p._raw.flattenedPath === `${slug}/${unescape(id)}`);
