@@ -1,7 +1,7 @@
 import { getCollection, getPostAll } from "@/lib/Postdata";
-import MarkdownPost from "./MarkdownPost";
+import MarkdownPost from "../[slug]/[id]/MarkdownPost";
 import { unescape } from "querystring";
-import CollectionList from "./CollectionList";
+import CollectionList from "../[slug]/[id]/CollectionList";
 import { Toc } from "@/components/blog/toc/Toc";
 import TocMenu from "@/components/blog/toc/TocMenu";
 
@@ -9,15 +9,14 @@ import { Suspense } from "react";
 import ButtonMenu from "@/components/blog/ui/button/ButtonMenu";
 import TagBox from "@/components/tags/TagBox";
 
-// export async function generateStaticParams() {
-//     return getPostAll.map((post) => ({
-//         slug: post._raw.flattenedPath.split("/")[0],
-//         id: post._raw.flattenedPath.split("/")[1],
-//     }));
-// }
+export async function generateStaticParams() {
+    return getPostAll.map((post) => ({
+        slug: [post._raw.flattenedPath.split("/")[0], post._raw.flattenedPath.split("/")[1]],
+    }));
+}
 
-export default ({ params: { slug, id } }: { params: { slug: string; id: string } }) => {
-    const post = getPostAll.find((p) => p._raw.flattenedPath === `${slug}/${unescape(id)}`);
+export default ({ params: { slug } }: { params: { slug: string; id: string } }) => {
+    const post = getPostAll.find((p) => p._raw.flattenedPath === `${slug[0]}/${unescape(slug[1])}`);
     const collection = getCollection(post && post._raw.sourceFileDir);
 
     return (
