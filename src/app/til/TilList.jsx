@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { getDb } from "@/lib/notion/getDb";
 
-export const revalidate = 0;
+export const revalidate = 60;
 
 export default async () => {
     const db = await getDb();
