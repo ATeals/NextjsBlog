@@ -3,7 +3,6 @@ import MarkdownPost from "./MarkdownPost";
 import { unescape } from "querystring";
 import CollectionList from "./CollectionList";
 import { Toc } from "@/components/blog/toc/Toc";
-import TocMenu from "@/components/blog/toc/TocMenu";
 
 import { Suspense } from "react";
 import ButtonMenu from "@/components/blog/ui/button/ButtonMenu";
@@ -40,7 +39,7 @@ export default ({ params: { slug, id } }: { params: { slug: string; id: string }
                     <article className="w-full relative flex justify-center mb-[40px]">
                         <div className="px-[3px] md:m-[5px] w-full md:w-[80%] ml-0 box-border shadowBottom">
                             <Suspense fallback={<h1>loading..</h1>}>
-                                <MarkdownPost post={post && post.body.code} />
+                                <MarkdownPost post={post?.body.code || ""} />
                             </Suspense>
                         </div>
                         <div className="relative w-[20%] my-[10px] hidden md:block">
