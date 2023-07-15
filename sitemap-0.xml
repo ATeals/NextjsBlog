@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
+<url><loc>https://tealslog.vercel.app</loc><lastmod>2023-07-15T12:09:08.576Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://tealslog.vercel.app/collection</loc><lastmod>2023-07-15T12:09:08.576Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://tealslog.vercel.app/tags</loc><lastmod>2023-07-15T12:09:08.576Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://tealslog.vercel.app/collection/blog/bookmark</loc><lastmod>2023-07-15T12:09:08.576Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://tealslog.vercel.app/collection/carving/des</loc><lastmod>2023-07-15T12:09:08.576Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://tealslog.vercel.app/collection/carving/onelinecode</loc><lastmod>2023-07-15T12:09:08.576Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://tealslog.vercel.app/collection/js/JS type2</loc><lastmod>2023-07-15T12:09:08.576Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://tealslog.vercel.app/collection/js/JS value</loc><lastmod>2023-07-15T12:09:08.576Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://tealslog.vercel.app/collection/js/js type</loc><lastmod>2023-07-15T12:09:08.577Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://tealslog.vercel.app/collection/react/useForm을 만들어보아요</loc><lastmod>2023-07-15T12:09:08.577Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://tealslog.vercel.app/collection/react/vite</loc><lastmod>2023-07-15T12:09:08.577Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+</urlset>
