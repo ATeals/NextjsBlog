@@ -2,8 +2,6 @@ import CardList from "@/components/blog/blogUi/CardList";
 import GithubGrass from "@/components/til/GithubGrass";
 
 import { getPostList } from "@/lib/Postdata";
-import { Suspense } from "react";
-import TilList, { SkeletonTilList } from "./til/TilList";
 import { PostItem } from "@/lib/dataType";
 
 export default function Home() {
@@ -12,13 +10,6 @@ export default function Home() {
         <>
             <section className="w-full ">
                 <GithubGrass />
-
-                <section className="m-10">
-                    <h1 className="font-bold text-[32px] mx-2 mb-10">TIL</h1>
-                    <Suspense fallback={<SkeletonTilList />}>
-                        <TilList />
-                    </Suspense>
-                </section>
 
                 <section>
                     <h1 className="font-bold text-[32px] mx-10">최근 포스트</h1>

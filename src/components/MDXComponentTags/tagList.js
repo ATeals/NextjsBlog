@@ -4,7 +4,7 @@ import { ul, li, ol } from "./tagController/list";
 import { p, strong, em } from "./tagController/text";
 import { table, td, th, tr } from "./tagController/table";
 import { code, pre } from "./tagController/code";
-import { a, del } from "./tagController/LinkBlock";
+import { a } from "./tagController/LinkBlock";
 
 function aside({ node, children, ...props }) {
     return (
@@ -36,7 +36,6 @@ const tagList = {
     em,
     aside,
     code,
-    del,
     hr,
 };
 
