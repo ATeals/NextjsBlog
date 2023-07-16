@@ -29,6 +29,11 @@ export default () => {
                 />
 
                 <meta
+                    name="google-site-verification"
+                    content="JDJ-T3hfMGZBH0kZu9R8xxEZGcLKaWeMYgstuXZGJVw"
+                />
+
+                <meta
                     name="naver-site-verification"
                     content="514746f4453f87d737d5f285ed615084022639fc"
                 />

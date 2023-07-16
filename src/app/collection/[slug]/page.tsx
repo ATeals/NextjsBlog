@@ -1,6 +1,11 @@
 import CardList from "@/components/blog/blogUi/CardList";
-import { getCollection } from "@/lib/Postdata";
-import { Post } from "contentlayer/gererated";
+import { getCollection, getPostAll } from "@/lib/Postdata";
+
+export async function generateStaticParams() {
+    return getPostAll.map(({ _raw: { sourceFileDir } }) => ({
+        slug: sourceFileDir,
+    }));
+}
 
 export default ({ params: { slug } }: { params: { slug: string } }) => {
     const collection = getCollection(slug);

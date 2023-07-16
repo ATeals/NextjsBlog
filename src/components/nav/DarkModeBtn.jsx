@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useLayoutEffect, useState } from "react";
 
 export default () => {
     const [isDarkMode, setIsDarkMode] = useState(false);
@@ -14,7 +14,7 @@ export default () => {
         }
     }, []);
 
-    useEffect(() => {
+    useLayoutEffect(() => {
         localStorage.setItem("darkMode", isDarkMode);
     }, [isDarkMode]);
 

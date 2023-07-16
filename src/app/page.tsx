@@ -3,6 +3,7 @@ import GithubGrass from "@/components/til/GithubGrass";
 
 import { getPostList } from "@/lib/Postdata";
 import { PostItem } from "@/lib/dataType";
+import Link from "next/link";
 
 export default function Home() {
     const posts: Array<PostItem> = getPostList.sort((a: PostItem, b: PostItem) => Number(new Date(b.date)) - Number(new Date(a.date)));
@@ -18,12 +19,12 @@ export default function Home() {
                         num={4}
                     />
                     <div className="w-full text-end  mb-5">
-                        <a
+                        <Link
                             href="/collection"
                             className="text-[highlight] mx-10 text-end"
                         >
                             ALL POST &rarr;
-                        </a>
+                        </Link>
                     </div>
                 </section>
             </section>
