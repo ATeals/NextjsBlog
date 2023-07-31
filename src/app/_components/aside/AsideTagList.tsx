@@ -1,5 +1,5 @@
 import { tagObj } from "@/lib/type/tagType";
-import TagList from "../tags/TagList";
+import TagList from "../../../components/tags/TagList";
 
 export default ({ tags }: { tags: Array<tagObj> }) => {
     return (

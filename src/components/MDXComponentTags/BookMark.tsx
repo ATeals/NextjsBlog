@@ -10,7 +10,7 @@ interface data {
 }
 const getOgData = async (url: string) => {
     const baseUrl = process.env.NODE_ENV === "development" ? `http://localhost:3000` : "https://tealslog.vercel.app";
-    const data = await (await fetch(baseUrl + `/api/getOg?api_key=${process.env.NEXT_PUBLIC_API_KEY}&url=${url}`)).json();
+    const data = await (await fetch(baseUrl + `/api/getOg?api_key=${process.env.API_KEY}&url=${url}`)).json();
     return data;
 };
 

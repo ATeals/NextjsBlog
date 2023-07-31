@@ -1,4 +1,4 @@
-import SiteIconBox from "../components/seo/SiteIconBox";
+import SiteIconBox from "@/components/seo/SiteIconBox";
 
 export default () => {
     return (

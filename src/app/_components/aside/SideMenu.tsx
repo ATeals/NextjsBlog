@@ -1,9 +1,8 @@
 import { getCollectionAll, getPostAll, getTags } from "@/lib/Postdata";
 
-import AsideCollections from "../components/aside/AsideCollections";
-import AsideTagList from "../components/aside/AsideTagList";
-import UserProfile from "../components/seo/UserProfile";
-import { Suspense } from "react";
+import AsideCollections from "./AsideCollections";
+import AsideTagList from "./AsideTagList";
+import UserProfile from "./UserProfile";
 
 export default () => {
     const posts = getPostAll;

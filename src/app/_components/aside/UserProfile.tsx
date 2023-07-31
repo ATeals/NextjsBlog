@@ -1,7 +1,7 @@
 import { collection } from "@/lib/dataType";
 import { tagObj } from "@/lib/type/tagType";
 import { Post } from "contentlayer/gererated";
-import SiteIconBox from "./SiteIconBox";
+import SiteIconBox from "../../../components/seo/SiteIconBox";
 
 export default ({ posts, tags, collections }: { posts: Array<Post>; tags: Array<tagObj>; collections: Array<collection> }) => {
     return (
