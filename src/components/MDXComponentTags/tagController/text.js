@@ -1,7 +1,7 @@
 function strong({ node, children, ...props }) {
     return (
         <strong
-            className="dark:bg-[#0D0F30] dark:text-[#cfcfcf] bg-[#cfcfcf] text-[#292E85] mx-1"
+            className=" dark:text-[#cfcfcf] text-[#292E85] mx-1"
             style={{
                 padding: "1px 5px",
                 borderRadius: "10px",
