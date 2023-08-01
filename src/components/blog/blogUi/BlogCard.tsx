@@ -4,6 +4,7 @@ import { Post } from "contentlayer/gererated";
 import TagBox from "@/components/tags/TagBox";
 import { PostItem } from "@/lib/dataType";
 import Image from "next/image";
+import { elapsedTime } from "@/util/formatTime";
 
 export default ({ post }: { post: PostItem }) => {
     return (
@@ -25,7 +26,7 @@ export default ({ post }: { post: PostItem }) => {
                 </div>
             </Link>
             <TagBox tags={post.tags} />
-            <div className="card-likes text-sm text-gray-500 text-end w-full m-[5px]">{post.date}</div>
+            <div className="card-likes text-sm text-gray-500 text-end w-full m-[5px]">{elapsedTime(post.date)}</div>
         </div>
     );
 };

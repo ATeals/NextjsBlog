@@ -1,4 +1,7 @@
+"use client";
+
 import { collection } from "@/lib/dataType";
+import { elapsedTime } from "@/util/formatTime";
 import { Post } from "contentlayer/gererated";
 
 import Link from "next/link";
@@ -21,7 +24,7 @@ export default ({ post, collection }: { post: Post; collection: collection }) =>
                             <h1 className={item.title === post.title ? `font-bold text-[#577cf1]` : `` + "truncate"}>
                                 {index + 1}. {item.title}
                             </h1>
-                            <h1 className="text-[#858585] hidden sm:block">{item.date}</h1>
+                            <h1 className="text-[#858585] hidden sm:block">{elapsedTime(item.date)}</h1>
                         </div>
                     </Link>
                 ))}
