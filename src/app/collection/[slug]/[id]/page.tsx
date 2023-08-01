@@ -38,10 +38,8 @@ export default ({ params: { slug, id } }: { params: { slug: string; id: string }
                     </section>
 
                     <article className="w-full relative flex justify-center mb-[40px]">
-                        <div className="px-[3px] md:m-[5px] w-full md:w-[80%] ml-0 box-border shadowBottom">
-                            <Suspense fallback={<h1>loading..</h1>}>
-                                <MarkdownPost post={post?.body.code || ""} />
-                            </Suspense>
+                        <div className="px-[3px] md:m-[5px] pt-10 w-full md:w-[80%] ml-0 box-border shadowBottom">
+                            <MarkdownPost post={post?.body.code || ""} />
                         </div>
                         <div className="relative w-[20%] my-[10px] hidden md:block">
                             <div className="sticky right-[50%] top-[25%]">
