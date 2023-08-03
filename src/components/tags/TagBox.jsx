@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default ({ tags }) => {
     return (
-        <div className=" text-sm text-gray-500 overflow-x-scroll text-[#000000] flex m-[10px] p-[10px]">
+        <div className="h-10 text-sm text-gray-500 overflow-x-scroll text-[#000000] flex m-[10px] p-[10px]">
             {tags ? (
                 tags.map((item, index) => (
                     <Link

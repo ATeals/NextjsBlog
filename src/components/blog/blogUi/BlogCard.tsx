@@ -26,7 +26,7 @@ export default ({ post }: { post: PostItem }) => {
                 </div>
             </Link>
             <TagBox tags={post.tags} />
-            <div className="card-likes text-sm text-gray-500 text-end w-full m-[5px]">{elapsedTime(post.date)}</div>
+            <div className="text-sm text-gray-500 text-end w-full m-[5px]">{elapsedTime(post.date)}</div>
         </div>
     );
 };
