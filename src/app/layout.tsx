@@ -2,7 +2,7 @@ import "@/styles/globals.css";
 
 import Nav from "@/components/nav/Nav";
 import Footer from "@/app/_components/Footer";
-import SideMenu from "@/app/_components/aside/SideMenu";
+// import SideMenu from "@/app/_components/aside/SideMenu";
 import Head from "./_components/Head";
 import metaObj from "./metadata";
 import { Suspense } from "react";

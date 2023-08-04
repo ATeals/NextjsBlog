@@ -1,9 +1,9 @@
 import CardList from "@/components/blog/blogUi/CardList";
-import GithubGrass from "@/components/til/GithubGrass";
+// import GithubGrass from "@/components/til/GithubGrass";
 
 import { getPostList } from "@/lib/Postdata";
-import { Suspense } from "react";
-import TilList, { SkeletonTilList } from "./til/TilList";
+// import { Suspense } from "react";
+// import TilList, { SkeletonTilList } from "./til/TilList";
 import { PostItem } from "@/lib/dataType";
 
 export default function Home() {
