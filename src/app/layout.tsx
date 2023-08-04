@@ -24,9 +24,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 <main className="mb-[150px] lg:flex box-border w-full mt-[70px] md:mt-0">
                     <section className="w-full lg:w-[78%] box-border order-2">{children}</section>
                     <aside className="lg:w-[20%] m-[10px] order-1">
-                        <Suspense>
-                            <SideMenu />
-                        </Suspense>
+                        <SideMenu />
                     </aside>
                 </main>
                 <Footer />
