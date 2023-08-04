@@ -1,9 +1,9 @@
 import CardList from "@/components/blog/blogUi/CardList";
-// import GithubGrass from "@/components/til/GithubGrass";
+import GithubGrass from "@/components/til/GithubGrass";
 
 import { getPostList } from "@/lib/Postdata";
-// import { Suspense } from "react";
-// import TilList, { SkeletonTilList } from "./til/TilList";
+import { Suspense } from "react";
+import TilList, { SkeletonTilList } from "./til/TilList";
 import { PostItem } from "@/lib/dataType";
 
 export default function Home() {
@@ -11,14 +11,14 @@ export default function Home() {
     return (
         <>
             <section className="w-full ">
-                {/* <GithubGrass />
+                <GithubGrass />
 
                 <section className="m-10">
                     <h1 className="font-bold text-[32px] mx-2 mb-10">TIL</h1>
                     <Suspense fallback={<SkeletonTilList />}>
                         <TilList />
                     </Suspense>
-                </section> */}
+                </section>
 
                 <section>
                     <h1 className="font-bold text-[32px] mx-10">최근 포스트</h1>
