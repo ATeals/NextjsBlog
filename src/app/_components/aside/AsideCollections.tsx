@@ -13,9 +13,9 @@ export default ({ collections }: { collections: Array<collection> }) => {
                         className=""
                     >
                         <h1 className="text-highlight pb-2 flex justify-between items-center font-bold hover:underline">
-                            <a href={"/collection/" + item._raw.flattenedPath}>
+                            <Link href={"/collection/" + item._raw.flattenedPath}>
                                 <span>{item.title}</span>
-                            </a>
+                            </Link>
 
                             <div
                                 className="text-highlight"
@@ -32,12 +32,12 @@ export default ({ collections }: { collections: Array<collection> }) => {
                             className="border-l-[1px] border-l-solid border-l-[#65737E] ml-1 pb-5"
                         >
                             {item.posts.map((post) => (
-                                <a
+                                <Link
                                     href={"/collection/" + post._raw.flattenedPath}
                                     key={post._id}
                                 >
                                     <h1 className="pl-2 pb-2 hover:underline">{post.title}</h1>
-                                </a>
+                                </Link>
                             ))}
                         </div>
                     </article>
