@@ -7,7 +7,7 @@
         "build": "next build",
         "start": "next start",
         "lint": "next lint",
-        "sitemap": "ts-node --project tsconfig.node.json ./sitemap.config.ts"
+        "sitemap": "next-sitemap"
     },
     "dependencies": {
         "@types/node": "20.2.5",
