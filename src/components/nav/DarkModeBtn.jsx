@@ -1,22 +1,15 @@
 "use client";
 
+import useDark from "@/hooks/useDark";
 import { useEffect, useState } from "react";
 
 export default () => {
-    const [isDarkMode, setIsDarkMode] = useState(false);
+    const [isDarkMode, setIsDarkMode] = useDark();
+
     const modeToggle = () => {
         document.querySelector("html").classList.toggle("dark");
         setIsDarkMode((i) => !i);
     };
-    useEffect(() => {
-        if (localStorage.getItem("darkMode") === "true") {
-            setIsDarkMode(localStorage.getItem("darkMode"));
-        }
-    }, []);
-
-    useEffect(() => {
-        localStorage.setItem("darkMode", isDarkMode);
-    }, [isDarkMode]);
 
     return (
         <>

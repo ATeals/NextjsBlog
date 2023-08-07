@@ -6,6 +6,7 @@ import { Toc } from "@/components/blog/toc/Toc";
 
 import ButtonMenu from "@/components/blog/ui/button/ButtonMenu";
 import TagBox from "@/components/tags/TagBox";
+import Giscus from "./Comments";
 
 // export async function generateStaticParams() {
 //     return getPostAll.map((post) => ({
@@ -39,6 +40,8 @@ export default ({ params: { slug, id } }: { params: { slug: string; id: string }
                     <article className="w-full relative flex justify-center mb-[40px]">
                         <div className="px-[3px] md:m-[5px] pt-10 w-full md:w-[80%] ml-0 box-border shadowBottom">
                             <MarkdownPost post={post?.body.code || ""} />
+                            <hr className="my-10 border-highlight" />
+                            <Giscus />
                         </div>
                         <div className="relative w-[20%] my-[10px] hidden md:block">
                             <div className="sticky right-[50%] top-[25%]">
@@ -71,7 +74,7 @@ export const generateMetadata = ({ params: { slug, id } }: { params: { slug: str
         post && {
             title: "Ateals Blog",
             description: "Welcome my Blog!",
-            canonical: "https://www.carrotins.com",
+            canonical: `https://tealslog.vercel.app/collection/carving/${post._raw.flattenedPath}`,
             openGraph: {
                 type: "website",
                 locale: "ko_KR",

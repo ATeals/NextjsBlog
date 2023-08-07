@@ -57,7 +57,7 @@ export const SkeletonTilList = () => {
     return (
         <ul>
             {[1, 2, 3].map((i) => (
-                <li>
+                <li key={i}>
                     <article className="shadowBottom m-2 p-5 rounded-[10px]">
                         <div className="text-[24px] font-bold mb-2">
                             <div className=" bg-[gray] h-[12px] animate-pulse w-[10%] h-[30px]"></div>
@@ -65,7 +65,10 @@ export const SkeletonTilList = () => {
 
                         <div className="flex mb-2">
                             {[1, 2, 3].map((tag) => (
-                                <div className="flex justify-center items-center m-2">
+                                <div
+                                    key={1}
+                                    className="flex justify-center items-center m-2"
+                                >
                                     <div className=" bg-[gray] h-[12px] animate-pulse w-[40px]"></div>
                                 </div>
                             ))}
