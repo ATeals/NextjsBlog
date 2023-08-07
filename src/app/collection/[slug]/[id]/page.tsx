@@ -72,7 +72,7 @@ export const generateMetadata = ({ params: { slug, id } }: { params: { slug: str
     const post = getPostAll.find((p) => p._raw.flattenedPath === `${slug}/${unescape(id)}`);
     return (
         post && {
-            title: "Ateals Blog",
+            title: ` ${post.title} | Ateals Blog`,
             description: "Welcome my Blog!",
             canonical: `https://tealslog.vercel.app/collection/carving/${post._raw.flattenedPath}`,
             openGraph: {

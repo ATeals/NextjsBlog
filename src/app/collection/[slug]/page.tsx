@@ -33,7 +33,7 @@ export const generateMetadata = ({ params: { slug } }: { params: { slug: string 
 
     return (
         collection && {
-            title: "Ateals Blog",
+            title: `${collection.title} | Ateals Blog`,
             description: "Welcome my Blog!",
             canonical: "https://www.carrotins.com",
             openGraph: {
