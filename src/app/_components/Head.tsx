@@ -44,7 +44,7 @@ export default () => {
                 />
 
                 <link
-                    href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Dancing+Script:wght@700&family=Monomaniac+One&family=Nunito&display=swap"
+                    href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Gowun+Batang:wght@700&family=Noto+Sans+KR&display=swap"
                     rel="stylesheet"
                 />
 

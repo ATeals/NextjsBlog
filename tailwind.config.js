@@ -23,6 +23,9 @@ module.exports = {
             bottomDark: `15px 15px 24px #151515, -15px -15px 24px #151515`,
             none: `0 0 #000000`,
         },
+        fontFamily: {
+            hanSan: ["Black Han Sans", "sans-serif"],
+        },
     },
     plugins: [],
 };

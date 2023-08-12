@@ -1,12 +1,12 @@
 const metaObj = {
-    title: "Ateals Blog",
+    title: "쇠오리 블로그",
     description: "Welcome my Blog!",
     canonical: "https://www.carrotins.com",
     openGraph: {
         type: "website",
         locale: "ko_KR",
         url: "https://tealslog.vercel.app/",
-        title: "Ateals Blog",
+        title: "쇠오리 블로그",
         site_name: "Ateals Blog",
         images: [
             {
