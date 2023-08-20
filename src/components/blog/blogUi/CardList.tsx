@@ -1,6 +1,5 @@
 import BlogCard from "@/components/blog/blogUi/BlogCard";
 import { PostItem, collection } from "@/lib/dataType";
-import { Post } from "contentlayer/gererated";
 
 export default ({ posts, num }: { posts: Array<PostItem> | collection[]; num?: number }) => {
     return (
